@@ -1,0 +1,31 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+    <view>
+        <text>pages/profile/profile.wxml</text>
+        <text>Hi,{{userInfo.nickName}}</text>
+        <text>{{description}}</text>
+        <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </view>
+    <view>
+        <image src=""></image>
+        <text>20 Happy Hours</text>
+        <image src=""></image>
+        <text>20 Happy people</text>
+    </view>
+    <view>
+        <text>Your next Happy Hours</text>
+        <view wx:for="{{eventsForTest}}" wx:for-item="event" bindtap="goToShow" >
+            <view>
+                {{event.event_name}} 
+                {{event.event_date}}
+                {{event.start_time}}
+                {{event.location}}
+            </view>
+        </view>
+    </view>
+<text bindtap="goToCreate" >Host New Event</text>
+<text bindtap="goToIndex" >Find More Events</text>
+
+
+
+</view>
