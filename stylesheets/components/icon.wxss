@@ -1,0 +1,45 @@
+.icon {
+  height:50rpx;
+  width:50rpx;
+}
+
+.icon-micro {
+  height: 10rpx;
+  width: 15rpx;
+  margin-left: 3px;
+}
+
+.icon-mini {
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.icon-sm {
+  width:40rpx;
+  height:40rpx;
+}
+
+.icon-ms {
+  width:50rpx;
+  height:50rpx;
+}
+
+.icon60 { width: 60rpx;height: 60rpx; }
+.icon70 { width: 70rpx;height: 70rpx; }
+.icon80 { width: 80rpx;height: 80rpx; }
+.icon90 { width: 90rpx;height: 90rpx; }
+
+.icon-md {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.icon-ml {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.icon-lg {
+  height:150rpx;
+  width:150rpx;
+}

@@ -1,0 +1,73 @@
+@import 'fonts';
+
+page {
+  /* colors (DON'T CHANGE VARIABLE NAMES)*/
+  --pri: #74B149;
+  --body: #333333;
+  --bodyDim: #666666;
+  --bodyLight: #999999;
+  --white: #fff;
+  --black: #333333;
+  --white: #fff;
+  --dim: #efefef;
+  --greyLight: #CCCCCC;
+  --grey: #999999;
+  --greyDim: #C4C4C4;
+  --greyDark: #666666;
+  --yellow: #F2AF2D;
+  --orange: #F08302;
+  --red: #F45D47;
+  --redLight: #d86964;
+  --purple: #AB758C;
+  --navy: #0f1221;
+  --blue: #242e49;
+  --blueLight: #4c5985;
+  --green: #76D5AB;
+  --teal: #C9DED6;
+  --blueCream: #bac2d9;
+  --blueCreamDark: #757b95;
+  --blueCreamVDark: #2b3451;
+  --blueGradient: linear-gradient(to left, #0575e6, #021b79);
+  --bottomSafe: env(safe-area-inset-bottom);
+
+  /* fonts */
+  font-family: 'nunito', sans-serif;
+
+  /* other styles */
+  box-sizing: border-box;
+
+  /* TEXT */
+  /* headers f36 */
+  /* content f28 */
+  color: var(--grey);
+  font-size: 32rpx;
+  background-color: #FFF;
+}
+
+.wrapper {
+  padding: 20rpx 20rpx;
+}
+
+.x-wrapper {
+  padding: 0 20rpx;
+}
+
+.y-wrapper {
+  padding: 20rpx 0;
+}
+
+.page-footer {
+  height: calc(200rpx + var(--bottomSafe)) /* tabbar height + pt & pb + safe area */
+}
+
+.bottom-safe { height: var(--bottomSafe); }
+
+.container {
+  padding: 60rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-box { box-sizing: border-box; }

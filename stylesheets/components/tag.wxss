@@ -1,0 +1,21 @@
+.tag {
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #fff;
+}
+
+.tag-service {
+  border-radius: 50px;
+  padding: 5px 10px;
+  border: solid 1px #fff;
+}
+
+.tag-service.active {
+  background: #fff;
+  color: #3c63ab;
+}
+
+.tag-service.inactive {
+  /* background: #3c63ab; */
+  color: #fff;
+}
