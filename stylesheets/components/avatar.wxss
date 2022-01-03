@@ -1,0 +1,46 @@
+.avatar-sm {
+  width:60rpx;
+  height:60rpx;
+  border-radius:50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.avatar-md {
+  width:90rpx;
+  height:90rpx;
+  border-radius:50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.avatar-ml {
+  width:160rpx;
+  height:160rpx;
+  border-radius:50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.avatar-lg {
+  width:240rpx;
+  height:240rpx;
+  border-radius:50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  object-fit: cover;
+}
+
+.avatar-shadow {
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+}
+
+.avatar-sq {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 5px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
