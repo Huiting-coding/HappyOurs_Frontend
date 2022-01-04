@@ -1,2 +1,61 @@
 <!--pages/createEvent/createEvent.wxml-->
 <text>pages/createEvent/createEvent.wxml</text>
+<view class="page-body">
+ <form catchsubmit="formSubmit" catchreset="formReset">
+  <view class="page-section">
+    <view class="page-section-title">TITLE</view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur" auto-height />
+    </view>
+    <view class="page-section-title">SUMMARY</view>
+    <view class="textarea-wrp">
+        <textarea auto-focus="true" style="height: 3em" />
+    </view>
+    <view class="page-section-title">DATE</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+    </picker>
+
+    <view class="page-section-title">START AT</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+    当前选择: {{time}}
+    </view>
+    </picker>
+
+    <view class="page-section-title">END AT</view>
+    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+    当前选择: {{time}}
+    </view>
+    </picker>
+
+    <view class="page-section-title">LOCATION</view>
+
+    <view class="page-section-title">PHOTOS</view>
+    <button name="image" bindtap="addPhoto" class="button" type="file">+</button>
+
+    <view class="page-section-title">SEAT NUMBER</view>
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+  </view>
+    <view class="btn-area">
+     <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+    </view>
+</form>
+</view>
