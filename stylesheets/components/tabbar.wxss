@@ -1,0 +1,25 @@
+/* .tabbar {
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  height: 100rpx;
+  background-color:white;
+  border-top:solid 1px #f0f0f0;
+  z-index: 99999;
+}
+
+.tabs-underlined {
+  width: 100%;
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.15);
+  min-width: 70px;
+}
+
+.tab-active {
+  border-bottom: solid 3px #F08302;
+  color: #535353;
+}
+
+.tab-inactive {
+  border-bottom: solid 3px rgba(0,0,0,0.1);
+} */

@@ -1,0 +1,102 @@
+.btn-unset { 
+  min-height: unset !important;
+  /* width: unset !important; */
+  line-height: 0;
+  padding: 0;
+  background-color: transparent;
+  margin: 0 !important;
+}
+
+.unset-btn {
+  width: unset !important;
+  /* padding: 0; */
+  background: unset;
+  min-height: unset !important;
+  line-height: 0.5;
+}
+
+/* upcase bg-pri radius-full shadow-dark white my30 mr w50 medium f28 row-center */
+.btn {
+  text-transform: uppercase;
+  background-color: var(--pri);
+  color: white;
+  box-sizing: border-box;
+}
+
+/* .btn:active{
+  transform: scale(0.98);
+} */
+
+.clicked:active{
+  transform: scale(0.98);
+}
+
+.btn-invert {
+  text-transform: uppercase;
+  border: 2rpx solid var(--pri);
+  color: var(--pri);
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.btn-red-invert {
+  text-transform: uppercase;
+  border: 2rpx solid var(--red);
+  color: var(--red);
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.rounded-large-no-shadow {
+  border-radius: 50rpx;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 0;
+}
+
+.rounded-large {
+  border-radius: 50rpx;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rounded-large:active {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.btn.full-bottom {
+  position: fixed; bottom: 0; left: 0;
+  height: 104rpx; z-index:200;
+  margin:0;
+  border-radius: 0px;
+  width: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.btn-sm {
+  text-align: center;
+  font-weight: normal;
+  font-size: 24rpx;
+  padding: 20rpx 60rpx;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  /* height: 60rpx !important; */
+  border-radius: 25px !important;
+  width: unset !important;
+  min-height: unset !important;
+}
+
+.btn-transparent {
+  background-color:white;
+  color:var(--pri);
+  font-weight:bold;
+}

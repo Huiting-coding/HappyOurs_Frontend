@@ -1,0 +1,21 @@
+/* fonts */
+@font-face {
+  font-family: 'nunito';
+  src: url(https://papercrane-general.oss-cn-shanghai.aliyuncs.com/fonts/Nunito-SemiBold.ttf) format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url(https://papercrane-general.oss-cn-shanghai.aliyuncs.com/fonts/Nunito-Light.ttf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito';
+  src: url(https://papercrane-general.oss-cn-shanghai.aliyuncs.com/fonts/Nunito-LightItalic.ttf) format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}

@@ -1,73 +1,63 @@
 {
-	"description": "项目配置文件",
+	"description": "Project configuration file",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"enhance": false,
 		"postcss": true,
-		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": false,
-		"coverView": true,
 		"nodeModules": false,
 		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
 		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"useMultiFrameRuntime": true,
-		"useApiHook": true,
-		"useApiHostProcess": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"enableEngineNative": false,
-		"bundle": false,
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"userConfirmedBundleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": [],
-		"minifyWXSS": true
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.21.2",
 	"appid": "wx7a2dbbc1b8353429",
 	"projectname": "HappyOurs!",
+	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"scripts": {},
-	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
+			"current": -1,
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
 			"list": []
 		},
 		"game": {
 			"list": []
 		},
-		"plugin": {
-			"list": []
-		},
-		"gamePlugin": {
-			"list": []
-		},
 		"miniprogram": {
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "Event sign-up",
+					"pathName": "pages/sign-up/sign-up",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Event confirmation",
+					"pathName": "pages/confirmation/confirmation",
+					"scene": null
+				}
+			]
 		}
 	}
 }

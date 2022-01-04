@@ -1,0 +1,64 @@
+.form-group {
+  margin-bottom:20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form-group-h {
+  width: 100%;
+  margin-bottom:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--blueCreamVDark);
+}
+
+.form-label {
+  padding-bottom: 28rpx;
+  box-sizing: border-box;
+}
+
+.form-value {
+  text-align: left;
+  padding-bottom: 28rpx;
+  width: 70%;
+}
+
+.input-text-box {
+  border: solid 2px var(--greyLight);
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,0.1); */
+  border-radius: 5px;
+  padding: 4rpx 10rpx;
+  height: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.no-edit {
+  top:0px;left:0px;right:0px;bottom:0px;z-index:99;
+  background-color: white; opacity: 0.5;
+}
+
+.text-area{
+  border: solid 2px var(--greyLight);
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,0.1); */
+  border-radius: 5px;
+  padding: 8rpx 10rpx;
+  height: 120rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text-area_height-unset {
+  border: solid 2px var(--greyLight);
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,0.1); */
+  border-radius: 5px;
+  padding: 8rpx 10rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.picker image{
+  width: 30rpx; height: 30rpx; 
+  position: absolute; top: 10rpx; right: 10rpx;
+}
