@@ -1,0 +1,5 @@
+/* pages/sign-up/sign-up.wxss */
+
+.header{
+margin: 50rpx
+}
