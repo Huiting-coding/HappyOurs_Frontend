@@ -1,0 +1,10 @@
+/* pages/eventdetails/eventdetails.wxss */
+
+.icons {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+
+}
