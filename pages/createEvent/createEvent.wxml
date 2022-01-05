@@ -10,7 +10,8 @@
     <view class="page-section-title">SUMMARY</view>
     <view class="textarea-wrp">
         <textarea auto-focus="true" style="height: 3em" />
-    </view>
+    </view>  
+   
     <view class="page-section-title">DATE</view>
     <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
     <view class="picker">
@@ -38,6 +39,11 @@
     <button name="image" bindtap="addPhoto" class="button" type="file">+</button>
 
     <view class="page-section-title">SEAT NUMBER</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{index}}
+    </view>
+  </picker>
 
 
 

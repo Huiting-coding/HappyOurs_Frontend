@@ -1,13 +1,18 @@
 <!--pages/profile/profile.wxml-->
 <view class="container">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+
+   
     <view>
-        <text>pages/profile/profile.wxml</text>
         <text>Hi,{{userInfo.nickName}}</text>
         <text>{{description}}</text>
         <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </view>
     <view>
-        <image src=""></image>
+        <image src="/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"></image>
         <text>20 Happy Hours</text>
         <image src=""></image>
         <text>20 Happy people</text>
@@ -26,6 +31,7 @@
 <text bindtap="goToCreate" >Host New Event</text>
 <text bindtap="goToIndex" >Find More Events</text>
 
-
+</block>
 
 </view>
+
