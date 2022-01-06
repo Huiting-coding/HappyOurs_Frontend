@@ -1,8 +1,8 @@
 <!--pages/eventdetails/eventdetails.wxml-->
-<text>pages/eventdetails/eventdetails.wxml</text>
+<!-- <text>pages/eventdetails/eventdetails.wxml</text> -->
 <view>
   <view> 
-    <image src="/pages/new/edward-howell-55bQ7g3ZlQU-unsplash.jpg">
+    <image src="/pages/eventdetails/edward-howell-55bQ7g3ZlQU-unsplash.jpg">
       <view>
         <image></image>
         <image></image>
@@ -12,27 +12,29 @@
 
   <view>
     <view>
-      <text>Gin Tasting</text>
+      <text>{{event.name}}</text>
     </view>
 
     <view>
       <view>
         <image class="icons" src="/pages/eventdetails/location.png">icon</image>
-        <text>Location</text>
+        <text>{{event.location}}</text>
       </view>
 
       <view>
         <image class="icons" src="/pages/eventdetails/calendar.png"> icon</image>
-        <text>Date</text>
+        <text>{{event.begins_at}}</text>
       </view>
 
       <view>
         <image class="icons" src="/pages/eventdetails/instagram.png">icon</image>
-        <text>Instagram</text>
+        <text>{{event.capacity}} seats available</text>
       </view>
 
     </view>
   </view>
+
+  <text>{{event.summary}}</text>
 
   <text class="gallery">Gallery</text>
 

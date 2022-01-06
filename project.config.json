@@ -1,63 +1,75 @@
 {
-	"description": "Project configuration file",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": false,
-		"nodeModules": false,
-		"autoAudits": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.21.2",
-	"appid": "wx7a2dbbc1b8353429",
-	"projectname": "HappyOurs!",
-	"cloudfunctionTemplateRoot": "",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"scripts": {},
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"miniprogram": {
-			"current": 1,
-			"list": [
-				{
-					"id": -1,
-					"name": "Event sign-up",
-					"pathName": "pages/sign-up/sign-up",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Event confirmation",
-					"pathName": "pages/confirmation/confirmation",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "Project configuration file",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": false,
+    "nodeModules": false,
+    "autoAudits": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.21.2",
+  "appid": "wx7a2dbbc1b8353429",
+  "projectname": "HappyOurs!",
+  "cloudfunctionTemplateRoot": "",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "Event sign-up",
+          "pathName": "pages/sign-up/sign-up",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "Event confirmation",
+          "pathName": "pages/confirmation/confirmation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/main/main",
+          "pathName": "pages/main/main",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/eventdetails/eventdetails",
+          "pathName": "pages/eventdetails/eventdetails",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
