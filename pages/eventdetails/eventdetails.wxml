@@ -1,6 +1,6 @@
 <view class="contain">
   <view> 
-    <view>
+    <view class="flex justify-between">
       <image class= "icons" bindtap="bindViewTap" src="/pages/eventdetails/leftbutton.png"></image>
       <image class="icons" src="/pages/eventdetails/coolicon.png"></image>
     </view>

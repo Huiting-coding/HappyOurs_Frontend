@@ -35,7 +35,7 @@
 }
 
 .btn-flat {
-  color: white;
+  color: white;g
   padding: 8px 24px;
   border-radius: 4px;
   background: #E9B741;
