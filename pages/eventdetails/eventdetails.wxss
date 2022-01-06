@@ -8,3 +8,43 @@
   margin-top: 30px;
 
 }
+
+.gallery {
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.contain {
+  margin: 20px;
+}
+
+.mainImage {
+  margin-left: 10px;
+  border-radius: 10%;
+  margin-bottom: 15px;
+}
+
+.slideGallery {
+  width:100px;
+  height: 80px;
+  margin: 5px;
+}
+
+.location {
+  height: 100px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #E9B741;
+  transition: background 0.3s ease;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
