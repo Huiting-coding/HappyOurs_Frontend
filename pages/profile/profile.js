@@ -16,6 +16,43 @@ Page({
         { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
     ]
     },
+    onShow: function () {
+      const page = this
+      wx.request({
+        url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
+        success(res) {
+          page.setData(res.data)
+        }
+      })
+  },
+
+    onLoad: function (options) {
+      let page = this;
+      wx.request({
+        url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
+        method:'GET',
+        success(res){
+          const user = res.data
+          page.setData(
+            user
+          )
+        }
+      })
+    },
+
+    goToEventShow: function(options){
+      let page =this;
+      wx.request({
+        url: `${getApp().globalData.baseUrl}/user/${page.data.options.event.id}`,
+        method:'GET',
+        success(res) {
+          const event = res.data;
+          page.setData(
+            event
+          );
+        }
+      })
+    },
   
   onLoad() {
     if (wx.getUserProfile) {
