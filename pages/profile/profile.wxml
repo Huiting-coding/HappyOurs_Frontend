@@ -1,33 +1,56 @@
 <!--pages/profile/profile.wxml-->
-<view class="container">
+<view>
     <block wx:if="{{!hasUserInfo}}">
       <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
     </block>
     <block wx:else>
 
    
-    <view>
-        <text>Hi,{{userInfo.nickName}}</text>
-        <text>{{description}}</text>
-        <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class=" flex row px50 justify-between items-center">
+        <view class=" flex column ">
+            <text class="f40 semibold ">Hi,{{userInfo.nickName}}!</text>
+            <text>You haven't edit your description yet</text>
+        </view>
+        <image class= "avatar-ml" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </view>
-    <view>
-        <image src="/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"></image>
-        <text>20 Happy Hours</text>
-        <image src=""></image>
-        <text>20 Happy people</text>
-    </view>
-    <view>
-        <text>Your next Happy Hours</text>
-        <view wx:for="{{eventsForTest}}" wx:for-item="event" bindtap="goToShow" >
-            <view>
-                {{event.event_name}} 
-                {{event.event_date}}
-                {{event.start_time}}
-                {{event.location}}
+
+    <view class="flex row px80 mt80 justify-around items-center">
+        <view class=" flex column ">
+            <view class=" flex row">
+                <image class="icon-ms" src="/pages/profile/Happyhours.png"></image>
+                <text>ENJOY</text>
             </view>
+            <text>20 Happy Hours</text>
+        </view>
+        <view>
+            <view class=" flex row">
+                <image class= "icon-ms" src="/pages/profile/happypeople.png"></image>
+                <text>HOST</text>
+            </view> 
+            <text>27 Happy People</text>
         </view>
     </view>
+
+    <view class="mt80 px50 text-right">
+        <text class="f40 semibold ">Your Next Happy Hours</text>
+        <view class="page-section page-section-spacing swiper">
+        <swiper snap-to-edge="true" previous-margin="10 rpx" next-margin="10 rpx" display-multiple-items="2">
+            <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" bindtap="goToShow">
+            <swiper-item>
+                <view class="swiper-item">
+                    <image src="{{event.images_url}}"></image>
+                    <text>{{event.event_name}}</text>
+                    <text>{{event.event_date}}</text>
+                    <text>{{event.start_time}}</text>
+                    <text>{{event.location}}</text>
+                </view>
+            </swiper-item>
+            </block>
+        </swiper>
+        </view>
+    </view>
+
+
 <text bindtap="goToCreate" >Host New Event</text>
 <text bindtap="goToIndex" >Find More Events</text>
 
