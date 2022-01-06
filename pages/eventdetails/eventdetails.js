@@ -15,6 +15,12 @@ Page({
 
   },
 
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../main/main'
+    })
+  },
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
