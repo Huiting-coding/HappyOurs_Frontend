@@ -10,10 +10,13 @@ Page({
     canIUseGetUserProfile: false,
     eventsForTest:
     [
-        { event_name: "Gin Tasting", event_date: "2020-10-12", start_time:"7:00PM", location:"Jing'an"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road"}
+        { event_name: "Gin Tasting", event_date: "2020-10-12", start_time:"7:00PM", location:"Jing'an", images_url:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},
+        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
     ]
-  },
+    },
+  
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
