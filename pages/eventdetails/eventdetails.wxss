@@ -45,6 +45,6 @@
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #C36A2D;
   color: white;
 }
