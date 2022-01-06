@@ -1,7 +1,5 @@
 {
   "pages": [
-    "pages/profile/profile",
-    "pages/createEvent/createEvent",
     "pages/index/index",
     "pages/logs/logs", 
     "pages/sign-up/sign-up",
@@ -15,20 +13,5 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents",
-  
-  "plugins": {
-    "chooseLocation": {
-    "version": "1.0.9",
-    "provider": "wx76a9a06e5b4e693e"
-    }
-},
-
-  "permission": {
-      "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序定位"
-      }
-  }
+  "lazyCodeLoading": "requiredComponents"
 }
-
-

@@ -5,5 +5,8 @@
   <text class='h1'> Confirmation</text>
 </view>
 
-<view class='h2'> Nearly there... </view>
+<view class='container'>
+  <view class='h2'> Nearly there... </view>
+</view>
 
+<view></view>

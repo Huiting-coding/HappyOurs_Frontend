@@ -5,45 +5,45 @@
   <text class='h1'> Booking information </text>
 </view>
 
-<view class='h2'> Gin Tasting </view>
-
-<view class="page-section">
+<view class='container'>
+  <text class='h2'> Gin Tasting </text>
+</view>
+ 
+<view class='container'>
+  <view class="page-section">
     <view class="page-section-title">Date</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "yy-mm-dd"/>
-          </view>
-        </view>
-     </view>
+        <view class='input-text-box'>
+              <input name="Date" placeholder= "yy-mm-dd"/>
+    </view>
+  </view>
 </view>
 
-<view class="page-section">
+<view class='container'>
+  <view class="page-section">
     <view class="page-section-title">Number of seats</view>
-     <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "??"/>
-          </view>
-        </view>
-     </view>
+     <view class='input-text-box'>
+            <input  name="Date" placeholder= "##"/>
+      </view>
+  </view>
 </view>
 
-<view class="page-section">
+<view class='container'>
+  <view class="page-section">
     <view class="page-section-title">Phone number</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "132435367"/>
-          </view>
-        </view>
+      <view class='input-text-box'>
+              <input name="Date" placeholder= "132435367"/>
      </view>
+  </view>
 </view>
 
-<view class='h3'> The event booking details will be displayed on your profile! </view>
+<view class = "container">
+  <text> The event booking details will be displayed on your profile! </text>
+</view>
 
-<view class="button-sp-area">
-  <button class="mini-btn" type="primary" size="mini"> Book now > </button>
+<view class='container'>
+  <view class="button-sp-area">
+    <button class="mini-btn" type="primary" size="mini"> Book now > </button>
+  </view>
 </view>
 
 
