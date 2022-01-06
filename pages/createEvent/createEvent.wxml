@@ -5,30 +5,30 @@
   <view class="page-section">
     <view class="page-section-title">TITLE</view>
     <view class="textarea-wrp">
-      <textarea bindblur="bindTextAreaBlur" auto-height />
+      <textarea name="title" bindblur="bindTextAreaBlur" auto-height />
     </view>
     <view class="page-section-title">SUMMARY</view>
     <view class="textarea-wrp">
-        <textarea auto-focus="true" style="height: 3em" />
+        <textarea name ="summary" auto-focus="true" style="height: 3em" />
     </view>  
    
     <view class="page-section-title">DATE</view>
     <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view class="picker">
+    <view name="date" class="picker">
       当前选择: {{date}}
     </view>
     </picker>
 
     <view class="page-section-title">START AT</view>
     <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view class="picker">
+    <view name= "startTime" class="picker">
     当前选择: {{time}}
     </view>
     </picker>
 
     <view class="page-section-title">END AT</view>
     <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view class="picker">
+    <view name= "endTime"class="picker">
     当前选择: {{time}}
     </view>
     </picker>
@@ -40,7 +40,7 @@
 
     <view class="page-section-title">SEAT NUMBER</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
+    <view name="capacity" class="picker">
       当前选择：{{index}}
     </view>
   </picker>
@@ -53,15 +53,9 @@
 
 
 
-
-
-
-    
-
-
   </view>
     <view class="btn-area">
-     <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+     <button style="margin: 30rpx 0" type="primary" formType="submit" >Submit</button>
     </view>
 </form>
 </view>

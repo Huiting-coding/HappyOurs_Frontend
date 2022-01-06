@@ -1,5 +1,32 @@
 // pages/createEvent/createEvent.js
 Page({
+  formSubmit: function(e) {
+    let title = e.detail.value.title;
+    let summary = e.detail.value.summary;
+    let date = e.detail.value.date;
+    let capacity = e.detail.value.capacity;
+    let id = this.data.id;
+    
+    let event ={
+      title: title,
+      summary: summary,
+      date: date,
+      capacity: capacity
+    }
+
+    wx.request({
+      url:`${getApp().globalData.baseUrl}/events/${id}`,
+      method: 'POST',
+      data: event,
+      success(){
+        wx.redirectTo({
+          url:'/pages/eventdetails/eventdetails'
+        });
+      }
+    });
+
+
+  },
 
     /**
      * 页面的初始数据
