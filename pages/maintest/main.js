@@ -1,6 +1,12 @@
 // pages/maintest/main.js
 Page({
 
+  bindTap() {
+    wx.navigateTo({
+      url: '../eventdetails/eventdetails'
+    })
+  },
+ 
   /**
    * Page initial data
    */
@@ -8,10 +14,34 @@ Page({
 
   },
 
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../eventdetails/eventdetails'
+    })
+  },
+
+  bindTap() {
+    wx.navigateTo({
+      url: '../sign-up/sign-up'
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events`, 
+      header: header,
+      method: "GET",
+      success(res) {
+        const events = res.data.events;
+        page.setData ({
+          events: events
+        })
+      }
+    })
 
   },
 
