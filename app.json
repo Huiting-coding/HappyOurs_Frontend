@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/maintest/main",
+    "pages/index/index",
+    "pages/main/main",
     "pages/eventdetails/eventdetails",
     "pages/profile/profile",
     "pages/createEvent/createEvent",
