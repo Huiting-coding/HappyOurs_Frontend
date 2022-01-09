@@ -12,6 +12,18 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events`, 
+      header: header,
+      method: "GET",
+      success(res) {
+        const events = res.data.events;
+        page.setData ({
+          events: events
+        })
+      }
+    })
 
   },
 

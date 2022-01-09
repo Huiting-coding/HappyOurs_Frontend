@@ -14,14 +14,14 @@
     </view>
   </view>
 
-  <view class="flex upcomingEvent ml">
-    <view class="ma20">
+  <view  class="flex upcomingEvent ml">
+    <view class="ma20" wx:for="{{events}}">
       <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
-      <text>Wine Tasting</text>
+      <text>{{event.name}}</text>
     </view>
     <view class="ma20">
       <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-      <text>Whiskey Tasting</text>
+      <text>{{events.name}}</text>
     </view>
   </view>
 
