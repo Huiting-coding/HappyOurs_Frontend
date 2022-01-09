@@ -29,6 +29,7 @@ page {
   --blueCreamVDark: #2b3451;
   --blueGradient: linear-gradient(to left, #0575e6, #021b79);
   --bottomSafe: env(safe-area-inset-bottom);
+  
 
   /* fonts */
   font-family: 'nunito', sans-serif;
