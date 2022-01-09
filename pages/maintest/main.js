@@ -1,11 +1,29 @@
 // pages/maintest/main.js
 Page({
 
+  bindTap() {
+    wx.navigateTo({
+      url: '../eventdetails/eventdetails'
+    })
+  },
+ 
   /**
    * Page initial data
    */
   data: {
 
+  },
+
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../eventdetails/eventdetails'
+    })
+  },
+
+  bindTap() {
+    wx.navigateTo({
+      url: '../sign-up/sign-up'
+    })
   },
 
   /**

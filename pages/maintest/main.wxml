@@ -15,7 +15,7 @@
   </view>
 
   <view  class="flex upcomingEvent ml">
-    <view class="ma20" wx:for="{{events}}">
+    <view class="ma20" >
       <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
       <text>{{event.name}}</text>
     </view>
@@ -51,8 +51,8 @@
           </view> 
         </view>
         <view class="flex justify-between mt15">
-          <navigator class="btn btn-flat" href="#">Join</navigator>
-          <navigator class="btn btn-flat" href="#">View</navigator>
+          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
+          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>
@@ -76,8 +76,8 @@
           </view> 
         </view>
         <view class="flex justify-between mt15">
-          <navigator class="btn btn-flat" href="#">Join</navigator>
-          <navigator class="btn btn-flat" href="#">View</navigator>
+          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
+          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>
@@ -101,8 +101,8 @@
           </view> 
         </view>
         <view class="flex justify-between mt15">
-          <navigator class="btn btn-flat" href="#">Join</navigator>
-          <navigator class="btn btn-flat" href="#">View</navigator>
+          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
+          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>
