@@ -68,6 +68,11 @@
           "pathName": "pages/eventdetails/eventdetails",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/profile/profile",
+          "pathName": "pages/profile/profile",
+          "scene": null
         }
       ]
     }

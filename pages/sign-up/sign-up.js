@@ -5,14 +5,88 @@ Page({
    * Page initial data
    */
   data: {
-
+    array:[ 1, 2, 3, 4, 5],
+    pickerHidden: true,
+    chosen: '',
+    modalHidden: true,
+    seats: '',
+    phoneNumber: '',
   },
+
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  bindSubmit: function (e) {
+    const page = this
+    const value =  e.detail.value;
+    console.log(value);
+    const phonenumber = value.phoneNumber
+    console.log(phonenumber);
+    const reservation = {
+      phonenumber: phonenumber
+    }
+    // const seats = value.seats
+    // console.log(seats);
+    page.setData(
+      {
+        modalHidden: false,
+        // seats: seats
+        // phoneNumber: phonenumber
+      }
+    );
+
+    console.log('form发生了submit事件，携带数据为：', value)
+    },
+
+    formReset: function(e) {
+      console.log('form发生了reset事件，携带数据为：', e.detail.value)
+      this.setData({
+        chosen: ''
+      })
+    },
+
+    modalChange: function(e) {
+      this.setData({
+        modalHidden: true
+
+      })
+      console.log(e);
+
+      wx.request({
+        url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
+        method: 'POST',
+        data: reservation,
+        success() {
+          wx.redirectTo({
+            url: '/pages/main/main',
+          });
+        }
+      });
+    },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
 
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events/1`,
+      data: {},
+      method: 'GET',
+      success(res) {
+        const event = res.data;
+        console.log(event);
+        page.setData (
+          event
+        );
+        wx.hideToast();
+      }
+    })
   },
 
   /**

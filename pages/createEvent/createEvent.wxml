@@ -40,10 +40,10 @@
 
     <view class="page-section-title">SEAT NUMBER</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view name="capacity" class="picker">
-      当前选择：{{index}}
-    </view>
-  </picker>
+      <view name="capacity" class="picker">
+        当前选择：{{index}}
+      </view>
+    </picker>
 
 
 

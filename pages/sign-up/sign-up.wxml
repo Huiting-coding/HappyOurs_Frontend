@@ -1,13 +1,18 @@
 <!--pages/sign-up/sign-up.wxml-->
 <!-- <text>pages/sign-up/sign-up.wxml</text> -->
-
+<view class="page">
 <view class='header'>
-  <text class='h1'> Booking information </text>
+  <text class='h1'> Booking Your Happy Hours </text>
 </view>
 
-<view class='h2'> Gin Tasting </view>
+<view class='eventinfo'>
+  <text class='h1'> {{event.name}} </text>
+  <text class='h1'> {{event.summary}} </text> 
+  <text class='h1'> {{event.begins_at}} </text>
+</view>
 
-<view class="page-section">
+<form catchsubmit="bindSubmit" catchreset="formReset">
+  <!-- <view class="page-section">
     <view class="page-section-title">Date</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
@@ -16,36 +21,43 @@
           </view>
         </view>
      </view>
-</view>
-
-<view class="page-section">
-    <view class="page-section-title">Number of seats</view>
-     <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "??"/>
-          </view>
+  </view> -->
+  <view class="page-section">
+      <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
+      <picker bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+        <view name="seats" class="picker" style="margin: 30rpx 0">
+          Choose seats： {{array[index]}} 
         </view>
-     </view>
-</view>
+      </picker>
+  </view>
 
-<view class="page-section">
-    <view class="page-section-title">Phone number</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "132435367"/>
+  <view class="page-section">
+      <view class="page-section-title" style="margin: 30rpx 0">Phone number</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+                <input class="weui-input" name="phoneNumber" placeholder= "132435367"/>
+            </view>
           </view>
-        </view>
-     </view>
+      </view>
+  </view>
+
+  <view class='h3'> The event booking details will be displayed on your profile! </view>
+
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+
+  <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+    <view> Your reservation is as below: </view>
+    <view> Happy Event:{{event.name}} </view>
+    <view> Happy Date:{{event.begins_at}} </view>
+    <view> Number of seats:{{array[index]}} </view>
+    <view> Phone Number：{{phoneNumber}} </view>
+  </modal>
+</form>
 </view>
-
-<view class='h3'> The event booking details will be displayed on your profile! </view>
-
-<view class="button-sp-area">
-  <button class="mini-btn" type="primary" size="mini"> Book now > </button>
-</view>
-
 
 
 
