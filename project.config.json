@@ -59,7 +59,7 @@
         },
         {
           "name": "pages/main/main",
-          "pathName": "pages/main/main",
+          "pathName": "pages/maintest/main",
           "query": "",
           "scene": null
         },

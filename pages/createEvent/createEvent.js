@@ -1,38 +1,101 @@
 // pages/createEvent/createEvent.js
+const chooseLocation = requirePlugin('chooseLocation');
+
 Page({
   formSubmit: function(e) {
+    console.log(e)
     let title = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
+    let startTime = e.detail.value.startTime;
+    let endTime = e.detail.value.endTime;
+    let location = e.detail.value.location;
     let capacity = e.detail.value.capacity;
-    let id = this.data.id;
+    console.log(capacity);
     
     let event ={
       title: title,
       summary: summary,
       date: date,
+      startTime: startTime,
+      endTime: endTime,
+      location: location,
       capacity: capacity
     }
+    console.log(event);
 
     wx.request({
-      url:`${getApp().globalData.baseUrl}/events/${id}`,
+      url:`http://localhost:3000/api/v1/events`,
       method: 'POST',
       data: event,
-      success(){
+      success(res){
+
         wx.redirectTo({
-          url:'/pages/eventdetails/eventdetails'
+          url:`pages/eventdetails/eventdetails?id=${res.id}`
         });
       }
     });
 
 
   },
+  showLocation: function(e) {
+    let page = this;
+    wx.chooseLocation({
+      // location = {
+      // name:'',
+      // address:'',
+      latitude: 0,
+      // longitude:0},
+    success(res) {
+      console.log('hi',res)
+      let name = res.name; 
+      console.log('hihi',res.name)
+      let address = res.address;
+      let latitude = res.latitude;
+      let longitude = res.longitude;
+        page.setData(
+         { location: {
+            name:name, address:address, latitude:latitude, longitude:longitude
+          },
+        }
+
+        );
+        // wx.request({
+        //   url: `http://localhost:3000/api/v1/events`,
+        //   method: 'POST',
+        //   data: location,
+        //   success() {
+        //     // redirect 
+        //     wx.redirectTo({
+        //       url: '/pages/index/index'
+        //     });
+        //   }
+        // })
+
+  }
+})
+
+
+
+
+// const key = 'ILOBZ-HG3L6-2D5SJ-EN2SN-EAZ72-2TBQ4'; //使用在腾讯位置服务申请的key
+// const referer = 'HappyOurs'; //调用插件的app的名称
+// const location = JSON.stringify({
+//   latitude: 31.23347,
+//   longitude: 121.43754
+// });
+// const category = '生活服务,娱乐休闲';
+ 
+// wx.navigateTo({
+//   url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
+// });
+},
 
     /**
      * 页面的初始数据
      */
     data: {
-      array:[ '1', '2', '3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30'],
+      array:[ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
     },
 
     bindDateChange: function (e) {
@@ -48,13 +111,20 @@ Page({
         })
     },
 
+    bindEndTimeChange: function (e){
+      console.log('picker发送选择改变，携带值为', e.detail.value)
+      this.setData({
+        endtime: e.detail.value
+      })
+  },
+
     bindPickerChange: function (e) {
         console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
           index: e.detail.value
         })
-      },
-      addPhoto() {
+    },
+    addPhoto() {
         wx.chooseMedia({
           count: 9,
           mediaType: ['image','video'],
@@ -66,27 +136,26 @@ Page({
             console.log(res.tempFiles.size)
           }
         })
-    
-      },
+    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-
+    onLoad: function () {
     },
+
+
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      const location = chooseLocation.getLocation(); // 如果点击确认选点按钮，则返回选点结果对象，否则返回null
     },
 
     /**
@@ -100,14 +169,14 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
-
+      // 页面卸载时设置插件选点数据为null，防止再次进入页面，geLocation返回的是上次选点结果
+      chooseLocation.setLocation(null);
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
     },
 
     /**
