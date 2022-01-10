@@ -3,7 +3,7 @@ const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
   formSubmit: function(e) {
-    console.log(e)
+    console.log(e.detail)
     let title = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
@@ -12,7 +12,7 @@ Page({
     let location = e.detail.value.location;
     let capacity = e.detail.value.capacity;
     console.log(capacity);
-    
+    console.log('hiling15')
     let event ={
       title: title,
       summary: summary,
@@ -22,16 +22,17 @@ Page({
       location: location,
       capacity: capacity
     }
-    console.log(event);
+    console.log('hello',event);
 
     wx.request({
       url:`http://localhost:3000/api/v1/events`,
       method: 'POST',
       data: event,
       success(res){
-
+        console.log('res',res)
         wx.redirectTo({
-          url:`pages/eventdetails/eventdetails?id=${res.id}`
+          url:`/pages/maintest/main`
+          // eventdetails/eventdetails?id=${res.currentTarget.id}`
         });
       }
     });

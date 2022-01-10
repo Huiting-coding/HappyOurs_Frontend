@@ -1,80 +1,101 @@
 {
-  "description": "Project configuration file",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "postcss": true,
-    "minified": true,
-    "newFeature": false,
-    "nodeModules": false,
-    "autoAudits": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.21.2",
-  "appid": "wx7a2dbbc1b8353429",
-  "projectname": "HappyOurs!",
-  "cloudfunctionTemplateRoot": "",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {
-    "plugin": {
-      "list": []
+    "description": "Project configuration file",
+    "packOptions": {
+        "ignore": []
     },
-    "game": {
-      "list": []
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": false,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
-    "gamePlugin": {
-      "list": []
+    "compileType": "miniprogram",
+    "libVersion": "2.21.2",
+    "appid": "wx7a2dbbc1b8353429",
+    "projectname": "HappyOurs!",
+    "cloudfunctionTemplateRoot": "",
+    "debugOptions": {
+        "hidedInDevtools": []
     },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "Event sign-up",
-          "pathName": "pages/sign-up/sign-up",
-          "query": "",
-          "scene": null
+    "scripts": {},
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "id": -1,
-          "name": "Event confirmation",
-          "pathName": "pages/confirmation/confirmation",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/main/main",
-          "pathName": "pages/maintest/main",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/eventdetails/eventdetails",
-          "pathName": "pages/eventdetails/eventdetails",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/profile/profile",
-          "pathName": "pages/profile/profile",
-          "scene": null
+
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "Event sign-up",
+                    "pathName": "pages/sign-up/sign-up",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Event confirmation",
+                    "pathName": "pages/confirmation/confirmation",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/maintest/main",
+                    "pathName": "pages/maintest/main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/eventdetails/eventdetails",
+                    "pathName": "pages/eventdetails/eventdetails",
+                    "query": "",
+                    "scene": null
         }
-      ]
     }
-  }
 }
