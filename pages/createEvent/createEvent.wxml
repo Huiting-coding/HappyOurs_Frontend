@@ -52,14 +52,6 @@
     </view>
   </picker>
 
-
-
-
-    
-
-
-
-
   </view>
     <view class="btn-area">
      <button style="margin: 30rpx 0" type="primary" formType="submit" >Submit</button>

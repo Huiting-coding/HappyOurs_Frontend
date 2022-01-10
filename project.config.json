@@ -62,6 +62,7 @@
         "gamePlugin": {
             "list": []
         },
+
         "miniprogram": {
             "list": [
                 {
@@ -95,8 +96,6 @@
                     "pathName": "pages/eventdetails/eventdetails",
                     "query": "",
                     "scene": null
-                }
-            ]
         }
     }
 }
