@@ -31,7 +31,7 @@ Page({
       success(res){
         console.log('res',res)
         wx.redirectTo({
-          url:`/pages/main/main`
+          url:`/pages/maintest/main`
           // eventdetails/eventdetails?id=${res.currentTarget.id}`
         });
       }

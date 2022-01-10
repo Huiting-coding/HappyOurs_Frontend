@@ -31,7 +31,7 @@ Page({
 
   bindViewTap() {
     wx.navigateTo({
-      url: '../main/main'
+      url: '../maintest/main'
     })
   },
 
