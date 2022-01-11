@@ -1,1 +1,46 @@
 /* pages/createEvent/createEvent.wxss */
+.card-wrapper {
+
+justify-content: between;
+
+
+
+
+    
+}
+
+.page-section-title {
+color: #C36A2D;
+font-size: 36;
+font-weight: bold;
+margin: 10rpx;
+
+}
+
+.textarea-wrp{
+margin: 350 rpx;
+background-color: #f7f7f7;
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+width:700rpx
+}
+
+.greyinputarea {
+margin: 350 rpx;
+background-color: #f7f7f7;
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+height: 2.5em;
+width: 180rpx;
+}
+
+
+.createbutton {
+background: #C36A2D;
+color:white;
+text-align: center;
+justify-content: center;
+align-items: center;
+border-radius: 25px;
+}
+
