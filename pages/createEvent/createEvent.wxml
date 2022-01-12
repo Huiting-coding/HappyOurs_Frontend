@@ -49,7 +49,6 @@
           </view>
           </picker>
         </view>
-
       </view>
 
 
@@ -79,9 +78,6 @@
       </view>
     </picker>
     </view>
-
- 
-
   </view>
     <view class="btn-area flex justify-center mr40">
      <button style="margin: 30rpx 0" class="createbutton justify-center" formType="submit" >CREATE</button>

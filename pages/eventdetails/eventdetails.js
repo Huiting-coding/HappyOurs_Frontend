@@ -15,7 +15,7 @@ Page({
     const page = this
 
     wx.request({
-      url: `http://localhost:3000/api/v1/events/1`, 
+      url: `${getApp().globalData.baseUrl}/events/1`,
       data: {},
       method: 'GET',
       success(res) {
@@ -31,7 +31,7 @@ Page({
 
   bindViewTap() {
     wx.navigateTo({
-      url: '../maintest/main'
+      url: '../main/main'
     })
   },
 

@@ -6,7 +6,7 @@
     "setting": {
         "urlCheck": false,
         "es6": true,
-        "enhance": false,
+        "enhance": true,
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
@@ -37,66 +37,41 @@
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
+        "minifyWXML": true,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false,
-        "minifyWXML": true
+        "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.21.2",
+    "libVersion": "2.21.3",
     "appid": "wx7a2dbbc1b8353429",
     "projectname": "HappyOurs!",
-    "cloudfunctionTemplateRoot": "",
     "debugOptions": {
         "hidedInDevtools": []
     },
     "scripts": {},
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
+    "staticServerOptions": {
+        "baseURL": "",
+        "servePath": ""
+    },
+    "isGameTourist": false,
     "condition": {
-        "plugin": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
             "list": []
         },
         "game": {
+            "list": []
+        },
+        "plugin": {
             "list": []
         },
         "gamePlugin": {
             "list": []
         },
         "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "Event sign-up",
-                    "pathName": "pages/sign-up/sign-up",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "Event confirmation",
-                    "pathName": "pages/confirmation/confirmation",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/maintest/main",
-                    "pathName": "pages/maintest/main",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/eventdetails/eventdetails",
-                    "pathName": "pages/eventdetails/eventdetails",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+            "list": []
         }
     }
 }
