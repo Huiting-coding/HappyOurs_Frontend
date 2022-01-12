@@ -5,50 +5,58 @@
     </block>
     <block wx:else>
 
-   
-    <view class=" flex row px50 justify-between items-center">
-        <view class=" flex column ">
-            <text class="f40 semibold ">Hi,{{userInfo.nickName}}!</text>
-            <text>You haven't edit your description yet</text>
+    <view class= "card1 pt20 pb20">
+        <view class=" flex row px80 justify-between items-center">
+            <view class=" flex column ">
+                <text class="mt10 f40 mt30 orange1 semibold ">Hi, {{userInfo.nickName}}!</text>
+                <!-- <text class="h4 mt10">You haven't edit your description yet</text> -->
+            </view>
+            <image class= "avatar-md mt30" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         </view>
-        <image class= "avatar-ml" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-    </view>
 
-    <view class="flex row px80 mt80 justify-around items-center">
+    <view class=" flex row mt40 px40 justify-around items-center">
         <view class=" flex column ">
             <view class=" flex row">
                 <image class="icon-ms" src="/pages/profile/Happyhours.png"></image>
-                <text>ENJOY</text>
+                <text class= "f28 pl20 orange1">ENJOY</text>
             </view>
-            <text>20 Happy Hours</text>
+            <text class= "f40 pt20 whitetext">20 Happy</text>
+            <text class= "f40 whitetext"> Hours</text>
         </view>
-        <view>
+        <view class=" flex column ">
             <view class=" flex row">
                 <image class= "icon-ms" src="/pages/profile/happypeople.png"></image>
-                <text>HOST</text>
+                <text class= "f28 pl20 orange1">  HOST</text>
             </view> 
-            <text>27 Happy People</text>
+            <text class= "f40 pt20 whitetext">27 Happy</text>
+            <text class= "f40 whitetext">People</text>
         </view>
     </view>
+</view>
 
-    <view class="mt80 px50 text-right">
-        <text class="f40 semibold ">Your Next Happy Hours</text>
-        <view class="page-section page-section-spacing swiper">
-        <swiper style="height: 400rpx" snap-to-edge="true" previous-margin="10 rpx" next-margin="10 rpx" display-multiple-items="2">
-            <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
-            <swiper-item>
-                <view class="swiper-item flex column">
-                    <image src="{{event.images_url}}"></image>
-                    <text>{{event.event_name}}</text>
-                    <text>{{event.event_date}}</text>
-                    <text>{{event.start_time}}</text>
-                    <text>{{event.location}}</text>
-                </view>
-            </swiper-item>
-            </block>
-        </swiper>
+    <image class= "card2" src="/pages/profile/Slice 2.png"></image>
+    
+  
+        <view class="pt20 card3 px50 text-right">
+            <text class="f40 semibold  redtext">Your Next Happy Hours</text>
+            <view class="swiper pt30">
+            <swiper snap-to-edge="false" display-multiple-items="1" style="height:480rpx;" previous-margin="0rpx" next-margin="0rpx" >
+                <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
+                <swiper-item class="swiper-item flex column ma"  bindload="cardPadding" style="width:600rpx;" >
+                    <!-- <view > -->
+                        <image class= "eventimage" src="{{event.images_url}}"></image>
+                        <view class="eventinfo flex column">
+                            <text>{{event.event_name}}</text>
+                            <text>{{event.event_date}}</text>
+                            <text>{{event.start_time}}</text>
+                            <text>{{event.location}}</text>
+                        </view>
+                    <!-- </view> -->
+                </swiper-item>
+                </block>
+            </swiper>
+            </view>
         </view>
-    </view>
 
 
 <text bindtap="goToCreate" >Host New Event</text>

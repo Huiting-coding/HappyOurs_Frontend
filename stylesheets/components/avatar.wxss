@@ -7,8 +7,8 @@
 }
 
 .avatar-md {
-  width:90rpx;
-  height:90rpx;
+  width:130rpx;
+  height:130rpx;
   border-radius:50%;
   flex-shrink: 0;
   flex-grow: 0;

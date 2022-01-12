@@ -111,6 +111,7 @@
 .pb50 { padding-bottom: 50rpx !important; }
 .pb60 { padding-bottom: 60rpx !important; }
 .pb100 { padding-bottom: 100rpx !important; }
+.pb150 { padding-bottom: 150rpx !important; }
 .pb200 { padding-bottom: 200rpx !important; }
 .pb300 { padding-bottom: 300rpx !important; }
 
