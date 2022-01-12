@@ -1,6 +1,13 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/index/index",
+=======
+    "pages/maintest/main",
+    "pages/createEvent/createEvent",
+    "pages/eventdetails/eventdetails",
+    "pages/profile/profile",
+>>>>>>> 9b2712663ac0a43aa3b8ba075b3058260aee74c4
     "pages/logs/logs", 
     "pages/sign-up/sign-up",
     "pages/confirmation/confirmation"

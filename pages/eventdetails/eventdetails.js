@@ -11,8 +11,28 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function () {
+    const page = this
 
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events/1`,
+      data: {},
+      method: 'GET',
+      success(res) {
+        const event = res.data;
+        console.log(event);
+        page.setData (
+          event
+        );
+        wx.hideToast();
+      }
+    })
+  },
+
+  bindViewTap() {
+    wx.navigateTo({
+      url: '../maintest/main'
+    })
   },
 
   /**
