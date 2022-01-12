@@ -5,6 +5,48 @@
   <text class='h1'> Booking Your Happy Hours </text>
 </view>
 
+<<<<<<< HEAD
+<view class='container'>
+  <text class='h2'> Gin Tasting </text>
+</view>
+ 
+<view class='container'>
+  <view class="page-section">
+    <view class="page-section-title">Date</view>
+        <view class='input-text-box'>
+              <input name="Date" placeholder= "yy-mm-dd"/>
+    </view>
+  </view>
+</view>
+
+<view class='container'>
+  <view class="page-section">
+    <view class="page-section-title">Number of seats</view>
+     <view class='input-text-box'>
+            <input  name="Date" placeholder= "##"/>
+      </view>
+  </view>
+</view>
+
+<view class='container'>
+  <view class="page-section">
+    <view class="page-section-title">Phone number</view>
+      <view class='input-text-box'>
+              <input name="Date" placeholder= "132435367"/>
+     </view>
+  </view>
+</view>
+
+<view class = "container">
+  <text> The event booking details will be displayed on your profile! </text>
+</view>
+
+<view class='container'>
+  <view class="button-sp-area">
+    <button class="mini-btn" type="primary" size="mini"> Book now > </button>
+  </view>
+</view>
+=======
 <view class='eventinfo'>
   <text class='h1'> {{event.name}} </text>
   <text class='h1'> {{event.summary}} </text> 
@@ -48,6 +90,7 @@
     <button formType="submit">Submit</button>
     <button formType="reset">Reset</button>
   </view>
+>>>>>>> 9b2712663ac0a43aa3b8ba075b3058260aee74c4
 
   <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
     <view> Your reservation is as below: </view>
