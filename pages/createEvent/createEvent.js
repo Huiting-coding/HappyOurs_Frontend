@@ -60,7 +60,7 @@ Page({
       summary: summary,
       begins_at: date + '' + startTime,
       // duration: startTime.to -
-      location: location,
+      location: location.address,
       capacity: capacity
     }
     console.log('hello',event);
