@@ -44,7 +44,7 @@ color: #C36A2D;
 }
 
 .eventinfo {
-align-items: center;
+padding:0 120rpx;
 }
 .eventimage{
 /* height: 100%; */

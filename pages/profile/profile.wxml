@@ -38,18 +38,26 @@
     
   
         <view class="pt20 card3 px50 text-right">
-            <text class="f40 semibold  redtext">Your Next Happy Hours</text>
+            <text class="f40 semibold  redtext ">Your Next Happy Hours</text>
             <view class="swiper pt30">
             <swiper snap-to-edge="false" display-multiple-items="1" style="height:480rpx;" previous-margin="0rpx" next-margin="0rpx" >
                 <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
-                <swiper-item class="swiper-item flex column ma"  bindload="cardPadding" style="width:600rpx;" >
+                <swiper-item class="swiper-item flex column ma" style="width:600rpx;" >
                     <!-- <view > -->
                         <image class= "eventimage" src="{{event.images_url}}"></image>
                         <view class="eventinfo flex column">
                             <text>{{event.event_name}}</text>
-                            <text>{{event.event_date}}</text>
-                            <text>{{event.start_time}}</text>
-                            <text>{{event.location}}</text>
+                            <view class="flex row justify-between">
+                                <image class="icon-mini" src="/pages/eventdetails/calendar.png"> icon</image>
+                                <text>{{event.event_date}}</text>
+                            </view>
+                            <view class="flex row justify-between">
+                                <image class="icon-mini" src="/pages/eventdetails/location.png">icon</image>
+                                <text>{{event.location}}</text>
+                            </view>
+                            
+                            <!-- <text>{{event.start_time}}</text>
+                            <text>{{event.location}}</text> -->
                         </view>
                     <!-- </view> -->
                 </swiper-item>
