@@ -1,39 +1,43 @@
-<!--pages/maintest/main.wxml-->
+<!--pages/main/main.wxml-->
+
 
 <view class="bodies">
   <view >
-    <image class="logo1" src="/pages/maintest/pngaaa.com-1812898.png">
+    <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
     </image>
+  </view>
+  <view class="searchbox">
+      <view class='search'>
+          <view class="search-bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+              <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='Looking for a drink...' />
+          </view>
+      </view>
+  </view>
+
+  <view class="flex justify-between mt40">
+    <text>Popular Event</text>
+  </view>
+
+  <view  class="flex upcomingEvent ml">
+      <view class="ma20" >
+        <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+        <text>{{event.name}} Whiskey</text>
+      </view>
+      <view class="ma20">
+        <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+        <text>{{events.name}} Beer</text>
+      </view>
   </view>
 
   <view class="flex justify-between">
     <text>Upcoming Event</text>
-    <view>
-      <image class="arrows" src="/pages/maintest/leftarrow.png"></image>
-      <image class="arrows" src="/pages/maintest/rightarrow.png"></image>
-    </view>
-  </view>
-
-  <view  class="flex upcomingEvent ml">
-    <view class="ma20" >
-      <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
-      <text>{{event.name}}</text>
-    </view>
-    <view class="ma20">
-      <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-      <text>{{events.name}}</text>
-    </view>
-  </view>
-
-  <view class="flex justify-between">
-    <text>Popular Event</text>
     <text>SEE ALL</text>
   </view>
 
   <view class="ma30">
-    <view class="ma10 popularBackground flex">
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view>
+      <view class="card-product">
         <view>
           <view>
             <view>
@@ -49,14 +53,10 @@
               <Text>18+ Joined</Text>
             </view>
           </view> 
-        </view>
-        <view class="flex justify-between mt15">
-          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
-          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>
-    <view class="ma10 popularBackground flex">
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view>
         <view>
@@ -74,14 +74,10 @@
               <Text>18+ Joined</Text>
             </view>
           </view> 
-        </view>
-        <view class="flex justify-between mt15">
-          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
-          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>
-    <view class="ma10 popularBackground flex">
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view>
         <view>
@@ -99,10 +95,6 @@
               <Text>18+ Joined</Text>
             </view>
           </view> 
-        </view>
-        <view class="flex justify-between mt15">
-          <navigator bindtap="bindTap" class="btn btn-flat" href="#">Join</navigator>
-          <navigator bindtap="bindViewTap" class="btn btn-flat" href="#">View</navigator>
         </view>
       </view>
     </view>

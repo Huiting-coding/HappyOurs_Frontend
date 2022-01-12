@@ -2,24 +2,65 @@
 const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
+  
+  showLocation: function(e) {
+    let page = this;
+    wx.chooseLocation({
+      location: {
+      name:'',
+      address:'',
+      latitude: 0,
+      longitude:0},
+    success(res) {
+      console.log('hi',res)
+      let address = res.address;
+      let name = res.name; 
+      console.log('hihi',res.name)
+      let latitude = res.latitude;
+      let longitude = res.longitude;
+        page.setData(
+         { 
+           location: {
+            name:name, address:address, latitude:latitude, longitude:longitude
+          },
+        }
+        
+        );
+        // wx.request({
+        //   url: `http://localhost:3000/api/v1/events`,
+        //   method: 'POST',
+        //   data: location,
+        //   success() {
+        //     // redirect 
+        //     wx.redirectTo({
+        //       url: '/pages/index/index'
+        //     });
+        //   }
+        // })
+
+  }
+})
+},
+
   formSubmit: function(e) {
-    console.log(e.detail)
-    let title = e.detail.value.title;
+    console.log('e.detail', e.detail)
+    let name = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
     let startTime = e.detail.value.startTime;
     let endTime = e.detail.value.endTime;
-    let location = e.detail.value.location;
+    // let begins_at 
+    let location = this.data.location;
     let capacity = e.detail.value.capacity;
-    console.log(capacity);
-    console.log('hiling15')
+    console.log(location);
+    console.log('hi15')
+    console.log(date)
     let event ={
-      title: title,
+      name: name,
       summary: summary,
-      date: date,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
+      begins_at: date + '' + startTime,
+      // duration: startTime.to -
+      location: location.address,
       capacity: capacity
     }
     console.log('hello',event);
@@ -39,42 +80,6 @@ Page({
 
 
   },
-  showLocation: function(e) {
-    let page = this;
-    wx.chooseLocation({
-      // location = {
-      // name:'',
-      // address:'',
-      latitude: 0,
-      // longitude:0},
-    success(res) {
-      console.log('hi',res)
-      let name = res.name; 
-      console.log('hihi',res.name)
-      let address = res.address;
-      let latitude = res.latitude;
-      let longitude = res.longitude;
-        page.setData(
-         { location: {
-            name:name, address:address, latitude:latitude, longitude:longitude
-          },
-        }
-
-        );
-        // wx.request({
-        //   url: `http://localhost:3000/api/v1/events`,
-        //   method: 'POST',
-        //   data: location,
-        //   success() {
-        //     // redirect 
-        //     wx.redirectTo({
-        //       url: '/pages/index/index'
-        //     });
-        //   }
-        // })
-
-  }
-})
 
 
 
@@ -90,7 +95,7 @@ Page({
 // wx.navigateTo({
 //   url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
 // });
-},
+
 
     /**
      * 页面的初始数据

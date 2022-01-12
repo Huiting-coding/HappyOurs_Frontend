@@ -1,4 +1,4 @@
-// pages/maintest/main.js
+// pages/main/main.js
 Page({
 
   bindTap() {
@@ -33,7 +33,7 @@ Page({
     const page = this
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
-      header: header,
+// headers not being used - removed
       method: "GET",
       success(res) {
         const events = res.data.events;

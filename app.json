@@ -1,13 +1,9 @@
 {
   "pages": [
-<<<<<<< HEAD
-    "pages/index/index",
-=======
-    "pages/maintest/main",
+    "pages/main/main",
     "pages/createEvent/createEvent",
     "pages/eventdetails/eventdetails",
     "pages/profile/profile",
->>>>>>> 9b2712663ac0a43aa3b8ba075b3058260aee74c4
     "pages/logs/logs", 
     "pages/sign-up/sign-up",
     "pages/confirmation/confirmation"
@@ -20,5 +16,30 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  
+  "plugins": {
+    "chooseLocation": {
+    "version": "1.0.9",
+    "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+
+  "permission": {
+      "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+      }
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/main/main",
+      "text": "Index"
+    },{
+      "pagePath": "pages/createEvent/createEvent",
+      "text": "Create your HappyHour!"
+    },{
+      "pagePath": "pages/profile/profile",
+      "text": "My Profile"
+    }]
+  }
 }
