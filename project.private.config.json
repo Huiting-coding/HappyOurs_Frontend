@@ -1,0 +1,68 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "Event sign-up",
+                    "pathName": "pages/sign-up/sign-up",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "Event confirmation",
+                    "pathName": "pages/confirmation/confirmation",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/maintest/main",
+                    "pathName": "pages/maintest/main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/eventdetails/eventdetails",
+                    "pathName": "pages/eventdetails/eventdetails",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/createEvent/createEvent",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/maintest/main",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/profile/profile",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}
