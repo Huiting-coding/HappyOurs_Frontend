@@ -1,11 +1,14 @@
 /* pages/main/main.wxss */
 
 .logo1 {
-  width: 70px;
-  height: 70px;
-  margin-left: 40%;
+  width: 55px;
+  height: 55px;
+  margin-left: 43%;
   margin-right: 50%;
+
 }
+
+
 
 .arrows {
   width: 30px;
@@ -49,4 +52,56 @@
 .btn-flat:hover {
   background: #C36A2D;
   color: white;
+}
+
+.search-bar {
+  display: flex;
+  margin-top: 10rpx;
+  border: 2px solid #18191F;
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  align-items: center;
+  padding: 20rpx;
+  box-shadow: 0px 4px 0px #e7cca7;
+}
+
+
+.category-box {
+  display: flex;
+  margin-top: 30rpx;
+  text-align: center;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 300rpx;
+  white-space: nowrap;  
+}
+
+.category-card {
+  display: inline-block;
+  padding: 10rpx;
+  margin-right: 10rpx;
+}
+
+.category-photo {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 15rpx;
+}
+
+.card-category {
+  border: 2px solid #18191F;
+  /* box-shadow: 0px 4px 0px #18191F; */
+  box-sizing: border-box;
+  border-radius: 32rpx;
+  margin-left: 10rpx;
+  position: relative;
+  width: 250rpx;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
 }
