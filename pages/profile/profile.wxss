@@ -44,10 +44,10 @@ color: #C36A2D;
 }
 
 .eventinfo {
-padding:0 120rpx;
+padding:0rpx 120rpx 30rpx 120rpx;
 }
 .eventimage{
-/* height: 100%; */
+height: 400rpx;
 /* width:350rpx; */
 object-fit: cover;
 }

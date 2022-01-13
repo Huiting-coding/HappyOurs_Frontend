@@ -39,19 +39,19 @@
   
         <view class="pt20 card3 px50 text-right">
             <text class="f40 semibold  redtext ">Your Next Happy Hours</text>
-            <view class="swiper pt30">
-            <swiper snap-to-edge="false" display-multiple-items="1" style="height:480rpx;" previous-margin="0rpx" next-margin="0rpx" >
+            <view class="swiper pt20">
+            <swiper snap-to-edge="false" display-multiple-items="1" style="height:500rpx;" previous-margin="0rpx" next-margin="0rpx" >
                 <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
-                <swiper-item class="swiper-item flex column ma" style="width:600rpx;" >
+                <swiper-item class="swiper-item flex column ma text-left" style="width:540rpx;" >
                     <!-- <view > -->
                         <image class= "eventimage" src="{{event.images_url}}"></image>
                         <view class="eventinfo flex column">
-                            <text>{{event.event_name}}</text>
-                            <view class="flex row justify-between">
+                            <text class="semibold redtext f36 my20" >{{event.event_name}}</text>
+                            <view class="flex row justify-between text-left orange1">
                                 <image class="icon-mini" src="/pages/eventdetails/calendar.png"> icon</image>
-                                <text>{{event.event_date}}</text>
+                                <text class="text-left">{{event.event_date}}</text>
                             </view>
-                            <view class="flex row justify-between">
+                            <view class="flex row justify-between text-left orange1">
                                 <image class="icon-mini" src="/pages/eventdetails/location.png">icon</image>
                                 <text>{{event.location}}</text>
                             </view>
@@ -66,9 +66,17 @@
             </view>
         </view>
 
-
-<text bindtap="goToCreate" >Host New Event</text>
-<text bindtap="goToIndex" >Find More Events</text>
+        <view class="card3 py40 px20 flex row justify-between">
+            <view class="flex row black" bindtap="goToCreate">
+                <image class= "icon-ms" src="/pages/profile/Group 1838.png"></image>
+                <text>Host New Event</text>
+            </view>
+            <view class="flex row black" bindtap="goToEvents" >
+                <text >Find More Events</text>
+                <image class= "icon-ms" src="/pages/profile/Group 1838.png"></image>
+             
+            </view>
+        </view> 
 
 </block>
 
