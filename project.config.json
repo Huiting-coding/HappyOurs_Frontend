@@ -70,25 +70,8 @@
         "gamePlugin": {
             "list": []
         },
-<<<<<<< HEAD
-        {
-          "name": "pages/profile/profile",
-          "pathName": "pages/profile/profile",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/maintest/main",
-          "pathName": "pages/maintest/main",
-          "scene": null
-=======
         "miniprogram": {
             "list": []
->>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
         }
     }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
 }

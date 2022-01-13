@@ -14,17 +14,17 @@ Page({
   onLoad: function (data) {
     console.log(data);
     const page = this
-
     wx.request({
       url: `${getApp().globalData.baseUrl}/events/${data.id}`,
       data: {},
       method: 'GET',
       success(res) {
+        console.log("===res====", res);
         const event = res.data;
-        console.log(event);
-        page.setData (
-          event
-        );
+        console.log("===event====", event);
+        page.setData ({
+          event: event
+        });
         wx.hideToast();
       }
     })
@@ -36,11 +36,14 @@ Page({
     })
   },
 
-  bindTap() {
+  bindTap(e) {
+    console.log(e);
+    let eventId = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../sign-up/sign-up'
+      url: `../sign-up/sign-up?id=${eventId}`
     })
   },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered

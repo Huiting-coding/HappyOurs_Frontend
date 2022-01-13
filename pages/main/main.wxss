@@ -41,6 +41,11 @@
   background-color: #FFE4A5;
   border-radius: 10px;
   margin: 10px;
+  height: 120px;
+  width: 320px;
+  padding: 10px;
+  align-items: center;
+  align-self: center;
 }
 
 .btn-flat {

@@ -1,11 +1,5 @@
 // pages/main/main.js
 Page({
-
-  bindTap() {
-    wx.navigateTo({
-      url: '../eventdetails/eventdetails'
-    })
-  },
  
   /**
    * Page initial data
@@ -51,8 +45,9 @@ Page({
 
   bindViewTap(e) {
     console.log(e);
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../eventdetails/eventdetails'
+      url: `../eventdetails/eventdetails?id=${id}`
     })
   },
 
@@ -69,10 +64,6 @@ Page({
     const page = this
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
-<<<<<<< HEAD:pages/maintest/main.js
-=======
-// headers not being used - removed
->>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a:pages/main/main.js
       method: "GET",
       success(res) {
         const events = res.data.events;

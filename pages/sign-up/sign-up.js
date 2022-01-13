@@ -65,23 +65,8 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (data) {
-    console.log('=====data====', data);
-    const page = this
+  onLoad: function () {
 
-    wx.request({
-      url: `${getApp().globalData.baseUrl}/events/${data.id}`,
-      data: {},
-      method: 'GET',
-      success(res) {
-        const event = res.data;
-        console.log(event);
-        page.setData (
-          event
-        );
-        wx.hideToast();
-      }
-    })
   },
 
   /**

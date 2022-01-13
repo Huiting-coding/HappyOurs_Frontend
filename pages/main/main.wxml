@@ -88,8 +88,8 @@
     <text class="titleDesign">SEE ALL</text>
   </view>
 
-  <view class="ma30">
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+  <view class="my30" wx:for="{{events}}" wx:key="unique">
+    <view data-id="{{item.id}}" bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view class="card-product">
         <view>
@@ -110,7 +110,7 @@
         </view>
       </view>
     </view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view>
         <view>
@@ -151,7 +151,7 @@
           </view> 
         </view>
       </view>
-    </view>
+    </view> -->
   </view>
 
 </view>

@@ -58,13 +58,8 @@
 
 .btn-flat {
   color: white;
-<<<<<<< HEAD
-  padding: 8px, 24px;
-  border-radius: 4px;
-=======
   padding: 8px 24px;
   border-radius: 8px;
->>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
   background: #E9B741;
   transition: background 0.3s ease;
   text-align: center;
@@ -72,7 +67,6 @@
   margin-bottom: 10px;
   font-style: bolder;
   color: black;
-  
 }
 
 .btn-flat:hover {

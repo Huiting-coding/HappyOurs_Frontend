@@ -1,29 +1,7 @@
 <!--pages/createEvent/createEvent.wxml-->
-<<<<<<< HEAD
-<!-- <text>pages/createEvent/createEvent.wxml</text> -->
-<view class="page-body">
- <form catchsubmit="formSubmit" catchreset="formReset">
-  <view class="page-section">
-    <view class="page-section-title">TITLE</view>
-    <view class="textarea-wrp">
-      <textarea name="title" bindblur="bindTextAreaBlur" auto-height />
-    </view>
-    <view class="page-section-title">SUMMARY</view>
-    <view class="textarea-wrp">
-        <textarea name ="summary" auto-focus="true" style="height: 3em" />
-    </view>  
-   
-    <view class="page-section-title">DATE</view>
-    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view name="date" class="picker">
-      当前选择: {{date}}
-    </view>
-    </picker>
-=======
 <view class="card-wrapper ml40">
   <text class='f48'> Create Your Happy Hours </text>
   <form catchsubmit="formSubmit" catchreset="formReset">
->>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
 
     <view class="page-section">
 
