@@ -55,7 +55,7 @@
   </view>
 
   <view>
-    <navigator class="btn btn-flat" href="#">Book now</navigator>
+    <navigator bindtap="bindTap" class="btn btn-flat" href="#">Book now</navigator>
   </view>
 
 </view>

@@ -11,11 +11,12 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (data) {
+    console.log(data);
     const page = this
 
     wx.request({
-      url: `${getApp().globalData.baseUrl}/events/1`,
+      url: `${getApp().globalData.baseUrl}/events/${data.id}`,
       data: {},
       method: 'GET',
       success(res) {
@@ -32,6 +33,12 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../main/main'
+    })
+  },
+
+  bindTap() {
+    wx.navigateTo({
+      url: '../sign-up/sign-up'
     })
   },
 

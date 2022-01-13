@@ -1,5 +1,5 @@
 <!--pages/createEvent/createEvent.wxml-->
-<text>pages/createEvent/createEvent.wxml</text>
+<!-- <text>pages/createEvent/createEvent.wxml</text> -->
 <view class="page-body">
  <form catchsubmit="formSubmit" catchreset="formReset">
   <view class="page-section">

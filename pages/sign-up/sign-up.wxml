@@ -24,8 +24,8 @@
   </view> -->
   <view class="page-section">
       <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
-      <picker bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
-        <view name="seats" class="picker" style="margin: 30rpx 0">
+      <picker name="seats" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+        <view class="picker" style="margin: 30rpx 0">
           Choose seats： {{array[index]}} 
         </view>
       </picker>

@@ -8,6 +8,23 @@
     "pages/sign-up/sign-up",
     "pages/confirmation/confirmation"
   ],
+
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#E9B741",
+    "list": [{
+      "pagePath": "pages/maintest/main",
+      "text": "Explore"
+    }, {
+      "pagePath": "pages/createEvent/createEvent",
+      "text": "Create"
+    }, {
+      "pagePath": "pages/profile/profile",
+      "text": "Mine"
+    }]
+  },
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

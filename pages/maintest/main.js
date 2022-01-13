@@ -14,7 +14,8 @@ Page({
 
   },
 
-  bindViewTap() {
+  bindViewTap(e) {
+    console.log(e);
     wx.navigateTo({
       url: '../eventdetails/eventdetails'
     })
@@ -33,10 +34,10 @@ Page({
     const page = this
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
-      header: header,
       method: "GET",
       success(res) {
         const events = res.data.events;
+        console.log(events);
         page.setData ({
           events: events
         })
