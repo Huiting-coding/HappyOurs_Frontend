@@ -1,4 +1,4 @@
-// pages/maintest/main.js
+// pages/main/main.js
 Page({
 
   bindTap() {
@@ -12,6 +12,41 @@ Page({
    */
   data: {
 
+  },
+  upper(e) {
+    console.log(e)
+  },
+
+  lower(e) {
+    console.log(e)
+  },
+
+  scroll(e) {
+    console.log(e)
+  },
+
+  scrollToTop() {
+    this.setAction({
+      scrollTop: 0
+    })
+  },
+
+  tap() {
+    for (let i = 0; i < order.length; ++i) {
+      if (order[i] === this.data.toView) {
+        this.setData({
+          toView: order[i + 1],
+          scrollTop: (i + 1) * 200
+        })
+        break
+      }
+    }
+  },
+
+  tapMove() {
+    this.setData({
+      scrollTop: this.data.scrollTop + 10
+    })
   },
 
   bindViewTap(e) {
@@ -34,6 +69,10 @@ Page({
     const page = this
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
+<<<<<<< HEAD:pages/maintest/main.js
+=======
+// headers not being used - removed
+>>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a:pages/main/main.js
       method: "GET",
       success(res) {
         const events = res.data.events;

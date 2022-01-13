@@ -2,63 +2,29 @@
 const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
-  formSubmit: function(e) {
-    console.log(e)
-    let title = e.detail.value.title;
-    let summary = e.detail.value.summary;
-    let date = e.detail.value.date;
-    let startTime = e.detail.value.startTime;
-    let endTime = e.detail.value.endTime;
-    let location = e.detail.value.location;
-    let capacity = e.detail.value.capacity;
-    console.log(capacity);
-    
-    let event ={
-      title: title,
-      summary: summary,
-      date: date,
-      startTime: startTime,
-      endTime: endTime,
-      location: location,
-      capacity: capacity
-    }
-    console.log(event);
-
-    wx.request({
-      url:`http://localhost:3000/api/v1/events`,
-      method: 'POST',
-      data: event,
-      success(res){
-
-        wx.redirectTo({
-          url:`pages/eventdetails/eventdetails?id=${res.id}`
-        });
-      }
-    });
-
-
-  },
+  
   showLocation: function(e) {
     let page = this;
     wx.chooseLocation({
-      // location = {
-      // name:'',
-      // address:'',
+      location: {
+      name:'',
+      address:'',
       latitude: 0,
-      // longitude:0},
+      longitude:0},
     success(res) {
       console.log('hi',res)
+      let address = res.address;
       let name = res.name; 
       console.log('hihi',res.name)
-      let address = res.address;
       let latitude = res.latitude;
       let longitude = res.longitude;
         page.setData(
-         { location: {
+         { 
+           location: {
             name:name, address:address, latitude:latitude, longitude:longitude
           },
         }
-
+        
         );
         // wx.request({
         //   url: `http://localhost:3000/api/v1/events`,
@@ -74,6 +40,46 @@ Page({
 
   }
 })
+},
+
+  formSubmit: function(e) {
+    console.log('e.detail', e.detail)
+    let name = e.detail.value.title;
+    let summary = e.detail.value.summary;
+    let date = e.detail.value.date;
+    let startTime = e.detail.value.startTime;
+    let endTime = e.detail.value.endTime;
+    // let begins_at 
+    let location = this.data.location;
+    let capacity = e.detail.value.capacity;
+    console.log(location);
+    console.log('hi15')
+    console.log(date)
+    let event ={
+      name: name,
+      summary: summary,
+      begins_at: date + '' + startTime,
+      // duration: startTime.to -
+      location: location.address,
+      capacity: capacity
+    }
+    console.log('hello',event);
+
+    wx.request({
+      url:`http://localhost:3000/api/v1/events`,
+      method: 'POST',
+      data: event,
+      success(res){
+        console.log('res',res)
+        wx.redirectTo({
+          url:`/pages/maintest/main`
+          // eventdetails/eventdetails?id=${res.currentTarget.id}`
+        });
+      }
+    });
+
+
+  },
 
 
 
@@ -89,7 +95,7 @@ Page({
 // wx.navigateTo({
 //   url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
 // });
-},
+
 
     /**
      * 页面的初始数据

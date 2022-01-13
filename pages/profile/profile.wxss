@@ -1,1 +1,60 @@
 /* pages/profile/profile.wxss */
+.card1{
+    font-weight: bold;
+    background-color:#C36A2D; 
+    font-family: 'nunito';
+
+
+}
+
+
+.orange1 {
+color: #E9B741;
+font-weight:lighter;
+
+
+}
+
+.h4{
+    font-weight: lighter;
+    font-size: 16px;
+    color:white;
+    font-family: 'nunito';
+}
+
+.whitetext{
+    color:white;
+    font-weight:lighter;
+    font-family: 'nunito';
+}
+
+.card2 {
+    width: 750rpx;
+    height: 200rpx;
+    object-fit: cover;
+    
+}
+
+.card3{
+background-color:#FEFCF1;
+}
+
+.redtext{
+color: #C36A2D; 
+}
+
+.eventinfo {
+padding:0rpx 120rpx 30rpx 120rpx;
+}
+.eventimage{
+height: 400rpx;
+/* width:350rpx; */
+object-fit: cover;
+}
+.swiper-item{
+/* height:1000rpx;
+width:350rpx; */
+border:1px solid #E9B741;
+background-color: white;
+/* margin: 10px; */
+}

@@ -1,0 +1,157 @@
+<!--pages/main/main.wxml-->
+
+
+<view class="bodies">
+  <view >
+    <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
+    </image>
+  </view>
+  <view class="searchbox">
+      <view class='search'>
+          <view class="search-bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+              <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='Looking for a drink...' />
+          </view>
+      </view>
+  </view>
+
+  <view>
+    <view class="mt30 titleDesign">Popular Events</view>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-section-spacing">
+          <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view id="demo1" class="scroll-view-item_H demo-text-1">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view id="demo2"  class="scroll-view-item_H demo-text-2">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view id="demo3" class="scroll-view-item_H demo-text-3">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex justify-between">
+    <text class="titleDesign">Upcoming Event</text>
+    <text class="titleDesign">SEE ALL</text>
+  </view>
+
+  <view class="ma30">
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
+      <view class="card-product">
+        <view>
+          <view>
+            <view>
+              <text>Drink</text>
+            </view> 
+            <view>
+              <text>Date</text>
+            </view> 
+            <view>
+              <text>Description</text>
+            </view>
+            <view>
+              <Text>18+ Joined</Text>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
+      <view>
+        <view>
+          <view>
+            <view>
+              <text>Date</text>
+            </view> 
+            <view>
+              <text>Drink</text>
+            </view> 
+            <view>
+              <text>Description</text>
+            </view>
+            <view>
+              <Text>18+ Joined</Text>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
+      <view>
+        <view>
+          <view>
+            <view>
+              <text>Date</text>
+            </view> 
+            <view>
+              <text>Drink</text>
+            </view> 
+            <view>
+              <text>Description</text>
+            </view>
+            <view>
+              <Text>18+ Joined</Text>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

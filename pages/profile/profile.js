@@ -54,6 +54,17 @@ Page({
       })
     },
   
+  goToCreate: function (e){
+wx.navigateTo({
+  url: '/pages/createEvent/createEvent',
+})
+  },
+
+  goToEvents: function (e){
+    wx.navigateTo({
+      url: '/pages/maintest/main',
+    })
+      },
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({

@@ -1,4 +1,5 @@
 <!--pages/createEvent/createEvent.wxml-->
+<<<<<<< HEAD
 <!-- <text>pages/createEvent/createEvent.wxml</text> -->
 <view class="page-body">
  <form catchsubmit="formSubmit" catchreset="formReset">
@@ -18,43 +19,90 @@
       当前选择: {{date}}
     </view>
     </picker>
+=======
+<view class="card-wrapper ml40">
+  <text class='f48'> Create Your Happy Hours </text>
+  <form catchsubmit="formSubmit" catchreset="formReset">
+>>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
 
-    <view class="page-section-title">START AT</view>
-    <picker name= "startTime" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view  class="picker">
-    当前选择: {{time}}
-    </view>
-    </picker>
+    <view class="page-section">
 
-    <view class="page-section-title">END AT</view>
-    <picker name= "endTime" mode="time" value="{{endtime}}" start="09:01" end="21:01" bindchange="bindEndTimeChange">
-    <view class="picker">
-    当前选择: {{endtime}}
-    </view>
-    </picker>
-
-    <view class="page-section-title">LOCATION</view>
-    <button name="location" value="{{location}}" type="primary" bindtap="showLocation">Choose Location</button>
-      <view name="location" >
-        当前选择：{{location.name}}
+      <view class="page-section-title">TITLE</view>
+      <view class="textarea-wrp">
+        <textarea name="title" bindblur="bindTextAreaBlur" style="height: 2.5em" />
       </view>
+
+      <view class="page-section-title">SUMMARY</view>
+      <view class="textarea-wrp">
+          <textarea name ="summary" auto-focus="true" style="height: 2.5em" />
+      </view>  
+
+      <view class ="flex column">
+          <view class="page-section-title">DATE</view>
+          <picker name="date" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="greyinputarea-wrp flex row items-center">
+            <view>
+              {{date}}
+            </view>
+            <view>
+              <image class= "icon-sm ml items-center" src="/pages/createEvent/calendeer.png"></image>
+            </view>
+          </view>
+          </picker>
+        </view>
+
+        <view class="flex row pickerspace">
+        <view class ="flex column ">
+          <view class="page-section-title">START AT</view>
+          <picker name= "startTime" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="greyinputarea flex row items-center">
+              {{time}}
+              <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class ="flex column ml80">
+          <view class="page-section-title">END AT</view>
+          <picker name= "endTime" mode="time" value="{{endtime}}" start="09:01" end="21:01" bindchange="bindEndTimeChange">
+          <view class="greyinputarea flex row items-center">
+              {{endtime}}
+              <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
+          </view>
+          </picker>
+        </view>
+      </view>
+
+
+      <view class="flex column">
+        <view class="page-section-title">LOCATION</view>
+        <view class="flex backgroundgrey items-center">
+           {{location.name}}
+           <image class ="icon-sm ml" src="/pages/createEvent/location1.png" name="location" value="{{location}}"  bindtap="showLocation">Choose Location</image>
+        </view>
+        <textarea class="textarea-white mt20" placeholder="* Tell more details to help your guests find the place" name ="locationdes" auto-focus="true" style="height: 2.5em" />
+      </view>
+          
+      
 
     <!-- <map name="map" class="map" id="map" longitude="{{location.longitude}}" latitude="{{location.latitude}}" markers="{{markers}}" covers="{{covers}}"></map> -->
 
-
-    <view class="page-section-title">PHOTOS</view>
-    <button name="image" bindtap="addPhoto" class="button" type="file">+</button>
-
-    <view class="page-section-title">SEAT NUMBER</view>
-    <picker  name="capacity" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
-    <view class="picker">
-      当前选择：{{array[index]}}
+    <view class="flex row items-center mt30">
+      <view class="page-section-title">PHOTOS</view>
+      <button name="image" bindtap="addPhoto" class="photoupload" type="file">+</button>
     </view>
-  </picker>
 
+    <view class="flex row items-center mt30">
+      <view class="page-section-title">SEAT NUMBER</view>
+      <picker  name="capacity" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+      <view class="picker">
+        + ：{{array[index]}}
+      </view>
+    </picker>
+    </view>
   </view>
-    <view class="btn-area">
-     <button style="margin: 30rpx 0" type="primary" formType="submit" >Submit</button>
+    <view class="btn-area flex justify-center mr40">
+     <button style="margin: 30rpx 0" class="createbutton justify-center" formType="submit" >CREATE</button>
     </view>
 </form>
 </view>

@@ -1,4 +1,17 @@
 /* pages/eventdetails/eventdetails.wxss */
+.titleEvent {
+  font-size: 23px;
+  color: black;
+  font-weight: bolder;
+  
+
+}
+
+.headerTitle {
+  color: black;
+  font-weight: bold;
+
+}
 
 .icons {
   width: 15px;
@@ -7,6 +20,15 @@
   margin-left: 10px;
   margin-top: 30px;
 
+}
+
+.icons1 {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .gallery {
@@ -36,12 +58,21 @@
 
 .btn-flat {
   color: white;
+<<<<<<< HEAD
   padding: 8px, 24px;
   border-radius: 4px;
+=======
+  padding: 8px 24px;
+  border-radius: 8px;
+>>>>>>> 6c2c768002dc3b0acc2391f18a7821ff986fbe0a
   background: #E9B741;
   transition: background 0.3s ease;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 10px;
+  font-style: bolder;
+  color: black;
+  
 }
 
 .btn-flat:hover {
