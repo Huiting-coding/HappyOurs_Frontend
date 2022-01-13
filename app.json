@@ -9,9 +9,9 @@
     "pages/confirmation/confirmation"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F08302",
+    "navigationBarTitleText": "HappyHours!",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
