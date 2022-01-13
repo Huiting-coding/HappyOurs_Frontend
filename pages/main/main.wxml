@@ -14,24 +14,78 @@
       </view>
   </view>
 
-  <view class="flex justify-between mt40">
-    <text>Popular Event</text>
-  </view>
-
-  <view  class="flex upcomingEvent ml">
-      <view class="ma20" >
-        <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
-        <text>{{event.name}} Whiskey</text>
+  <view>
+    <view class="mt30 titleDesign">Popular Events</view>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-section-spacing">
+          <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view id="demo1" class="scroll-view-item_H demo-text-1">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view id="demo2"  class="scroll-view-item_H demo-text-2">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view id="demo3" class="scroll-view-item_H demo-text-3">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" >
+                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                  
+                </view>
+                <view class="ma20">
+                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
+                  <view class="flex justify-between">
+                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
       </view>
-      <view class="ma20">
-        <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-        <text>{{events.name}} Beer</text>
-      </view>
+    </view>
   </view>
 
   <view class="flex justify-between">
-    <text>Upcoming Event</text>
-    <text>SEE ALL</text>
+    <text class="titleDesign">Upcoming Event</text>
+    <text class="titleDesign">SEE ALL</text>
   </view>
 
   <view class="ma30">
@@ -41,10 +95,10 @@
         <view>
           <view>
             <view>
-              <text>Date</text>
+              <text>Drink</text>
             </view> 
             <view>
-              <text>Drink</text>
+              <text>Date</text>
             </view> 
             <view>
               <text>Description</text>
