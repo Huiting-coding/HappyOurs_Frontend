@@ -1,0 +1,44 @@
+var whiskey = "/pages/main/whiskey.png";
+var vodka = "/pages/main/vodka.png";
+var martini = "/pages/main/martini.png";
+var beer = "/pages/main/beer.png";
+var gin = "/pages/main/gin.png";
+var random = "/pages/main/cocktail-shaker.png";
+var word = "whiskey"
+
+var easy = function (i) {
+  return i;
+}
+
+var shifter = function (i) {
+  if (i == "whiskey") {
+    return whiskey;
+  } else if (i == "gin") {
+    return gin;
+  } else if (i == "random") {
+    return random;
+  } else if (i == "beer") {
+    return beer;
+  } else if (i == "martini") {
+    return martini;
+  } else if (i == "vodka") {
+    return vodka;
+  } else {
+    return word;
+  }
+};
+
+
+module.exports = {
+  beer: beer,
+  martini: martini,
+  whiskey: whiskey,
+  gin: gin,
+  random: random,
+  vodka: vodka,
+  word: word,
+  shifter: shifter,
+  easy: easy
+
+};
+

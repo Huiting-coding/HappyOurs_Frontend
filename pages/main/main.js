@@ -1,6 +1,13 @@
 // pages/main/main.js
 Page({
 
+  properties: {
+    placeholder: {
+      type: String,
+      value: '',
+    }
+  },
+
   bindTap() {
     wx.navigateTo({
       url: '../eventdetails/eventdetails'
@@ -11,6 +18,7 @@ Page({
    * Page initial data
    */
   data: {
+    msg: "gin",
 
   },
   upper(e) {
@@ -127,5 +135,31 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  methods: {
+    // 用户输入触发
+    handleInput: function(e) {
+      this.setData({
+        inputValue: e.detail.value
+      })
+    },
+    // 点击清空输入框icon
+    handleDeleteClick: function() {
+      this.setData({
+        inputValue: ''
+      })
+    },
+    // 点击取消触发
+    handleTextbtnClick() {
+      // 触发父组件中的方法
+      this.setData({
+        inputValue: ''
+      })
+    },
+    // 用户点击确定触发
+    handleConfirm() {
+      this.triggerEvent('handleSearch', this.data.inputValue)
+    }
   }
 })

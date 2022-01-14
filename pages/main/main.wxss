@@ -28,6 +28,7 @@
   margin: 20px;
 }
 
+
 .bodies {
   margin: 10px;
 }
@@ -122,11 +123,88 @@
 .scroll-view-item_H{
   display: inline-block;
   width: 100%;
-  height: 450rpx;
+  height: 620rpx;
 }
 
 .avatar {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+}
+
+.searchbar {
+  height: 88rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+}
+.content {
+  height: 88rpx;
+  padding: 0 18rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 16rpx;
+  border: 2rpx solid rgba(220,222,226,1);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.search-icon {
+  width: 34rpx;
+  height: 34rpx;
+  margin-bottom: -4rpx;
+}
+.input {
+  flex: 1;
+  margin: 0 20rpx;
+}
+.delete-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.text-btn {
+  margin-left: 24rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: rgba(21,96,220,1);
+}
+
+/* .breaker {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 160px; 
+  height: 1.2em; 
+} */
+
+.breaker1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+}
+
+.circleJoined {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    font-size: 10px;
+    color: black;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: #E9B741 2px solid;
+    font-weight: bold;
+}
+
+.joinedAlign {
+  margin-left: 4px;
+  margin-top: 4px;
+  color: black;
+  font-weight: bold;
 }
