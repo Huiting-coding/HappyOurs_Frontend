@@ -14,7 +14,7 @@
       <view class="textarea-wrp">
           <textarea name ="summary" auto-focus="true" style="height: 2.5em" />
       </view>  
-
+      
       <view class ="flex column">
           <view class="page-section-title">DATE</view>
           <picker name="date" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
@@ -68,6 +68,12 @@
     <view class="flex row items-center mt30">
       <view class="page-section-title">PHOTOS</view>
       <button name="image" bindtap="addPhoto" class="photoupload" type="file">+</button>
+    </view>
+
+    <view class="flex row">
+        <block wx:for="{{uploadedFiles}}" wx:for-item="uploadedFile" wx:key="*this" data-index="{{index}}">
+          <image class="photo" src="{{uploadedFile.tempFilePath}}"></image>
+        </block>> 
     </view>
 
     <view class="flex row items-center mt30">

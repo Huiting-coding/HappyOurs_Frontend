@@ -64,6 +64,7 @@ Page({
     const page = this
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
+// headers not being used - removed
       method: "GET",
       success(res) {
         const events = res.data.events;

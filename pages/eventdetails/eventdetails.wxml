@@ -14,7 +14,7 @@
 
   <view>
     <view class="ml20 titleEvent">
-      <text>{{event.name}} Happy Ours!</text>
+      <text>{{event.name}}Happy Ours!</text>
     </view>
 
     <view>
