@@ -22,7 +22,7 @@
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
             <view id="demo1" class="scroll-view-item_H demo-text-1">
               <view  class="flex upcomingEvent ml">
-                <view class="ma20" style="width: 150px; height: 200px; ;" >
+                <view class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10">{{event.name}} Whiskey</text>
@@ -37,12 +37,20 @@
                   </view>
                   
                 </view>
-                <view class="ma20">
+                <view class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
-                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
+                    <text class="mt10">{{event.name}} Beer</text>
+                    <image class="avatar" alt="avatar" src="{{tools.shifter(msg1)}}"></image>
                   </view>
+                  <view class="breaker1" style="color: black; font-weight: bold;">
+                    A night of drinking blue label johnny walker whiskey 
+                  </view>
+                  <view class="mt20 flex">
+                    <view class="circleJoined">+25</view>
+                    <text class="joinedAlign">Joined</text>
+                  </view>
+                  
                 </view>
               </view>
             </view>

@@ -18,7 +18,8 @@ Page({
    * Page initial data
    */
   data: {
-    msg: "gin",
+    msg: "whiskey",
+    msg1: "beer",
 
   },
   upper(e) {
