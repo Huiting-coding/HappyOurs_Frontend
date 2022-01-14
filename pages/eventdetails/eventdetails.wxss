@@ -1,0 +1,75 @@
+/* pages/eventdetails/eventdetails.wxss */
+.titleEvent {
+  font-size: 23px;
+  color: black;
+  font-weight: bolder;
+  
+
+}
+
+.headerTitle {
+  color: black;
+  font-weight: bold;
+
+}
+
+.icons {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+
+}
+
+.icons1 {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.gallery {
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.contain {
+  margin: 20px;
+}
+
+.mainImage {
+  margin-left: 10px;
+  border-radius: 10%;
+  margin-bottom: 15px;
+}
+
+.slideGallery {
+  width:100px;
+  height: 80px;
+  margin: 5px;
+}
+
+.location {
+  height: 100px;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background: #E9B741;
+  transition: background 0.3s ease;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-style: bolder;
+  color: black;
+}
+
+.btn-flat:hover {
+  background: #C36A2D;
+  color: white;
+}

@@ -1,1 +1,85 @@
 /* pages/createEvent/createEvent.wxss */
+.card-wrapper {
+
+justify-content: center;
+
+
+
+
+    
+}
+
+.page-section-title {
+color: #C36A2D;
+font-size: 36;
+font-weight: bold;
+margin: 10rpx;
+
+}
+
+.textarea-wrp{
+margin: 350 rpx;
+background-color: #f7f7f7;
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+width:600rpx;
+}
+
+.greyinputarea-wrp {
+margin: 350 rpx;
+background-color: #f7f7f7;
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+height: 2.5em;
+width: 600rpx;
+}
+.greyinputarea {
+margin: 350 rpx;
+background-color: #f7f7f7;
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+height: 2.5em;
+width: 240rpx;
+}
+
+
+.createbutton {
+background: #C36A2D;
+color:white;
+text-align: center;
+justify-content: center;
+align-items: center;
+border-radius: 25px;
+}
+.backgroundgrey{
+background-color: #f7f7f7; 
+border-radius: 4rpx;
+border: #F0F0F0 1px solid;
+width:600rpx;
+height: 2.5em;
+
+}
+
+
+.pickerspace {
+    width:600rpx;
+    justify-content: space-between;
+
+}
+
+.photoupload{
+width: 200rpx;
+height: 200rpx;
+color: #C36A2D;
+text-align: center;
+padding-top: 50rpx;
+font-size: 32px;
+}
+
+.textarea-white {
+ 
+    background-color:white;
+    /* border-radius: 4rpx; */
+    border: #F0F0F0 1px solid;
+    width:600rpx;
+}

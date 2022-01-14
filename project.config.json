@@ -1,12 +1,12 @@
 {
-    "description": "项目配置文件",
+    "description": "Project configuration file",
     "packOptions": {
         "ignore": []
     },
     "setting": {
         "urlCheck": false,
         "es6": true,
-        "enhance": false,
+        "enhance": true,
         "postcss": true,
         "preloadBackgroundData": false,
         "minified": true,
@@ -31,24 +31,28 @@
             "outputPath": ""
         },
         "enableEngineNative": false,
-        "useIsolateContext": false,
+        "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
+        "minifyWXML": true,
         "showES6CompileOption": false,
-        "useCompilerPlugins": false,
-        "minifyWXML": true
+        "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.21.2",
-    "appid": "wxdbd08340a98e1f04",
+    "libVersion": "2.21.3",
+    "appid": "wx7a2dbbc1b8353429",
     "projectname": "HappyOurs!",
     "debugOptions": {
         "hidedInDevtools": []
     },
     "scripts": {},
+    "staticServerOptions": {
+        "baseURL": "",
+        "servePath": ""
+    },
     "isGameTourist": false,
     "condition": {
         "search": {

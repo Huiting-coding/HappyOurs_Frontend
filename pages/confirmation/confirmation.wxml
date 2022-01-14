@@ -1,0 +1,11 @@
+<!--pages/confirmation/confirmation.wxml-->
+<!-- <text>pages/confirmation/confirmation.wxml</text> -->
+
+<view class='header'>
+  <text class='h1'> Confirmation</text>
+</view>
+
+<view class='container'>
+  <view class='h2'> Nearly there... </view>
+</view>
+
