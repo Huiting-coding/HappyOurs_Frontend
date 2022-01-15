@@ -58,33 +58,43 @@
            {{location.name}}
            <image class ="icon-sm ml" src="/pages/createEvent/location1.png" name="location" value="{{location}}"  bindtap="showLocation">Choose Location</image>
         </view>
-        <textarea class="textarea-white mt20" placeholder="* Tell more details to help your guests find the place" name ="locationdes" auto-focus="true" style="height: 2.5em" />
+        <textarea class="textarea-white mt20" placeholder="* Tell us more details to help your guests find the place" name ="locationdes" auto-focus="true" style="height: 2.5em" />
       </view>
           
       
 
     <!-- <map name="map" class="map" id="map" longitude="{{location.longitude}}" latitude="{{location.latitude}}" markers="{{markers}}" covers="{{covers}}"></map> -->
 
-    <view class="flex row items-center mt30">
-      <view class="page-section-title">PHOTOS</view>
-      <button name="image" bindtap="addPhoto" class="photoupload" type="file">+</button>
-    </view>
-
-    <view class="flex row">
+    <view class="flex column mt30">
+      <view class="page-section-title ">PHOTOS</view>
+      <view class="flex row justify-betweeen">
         <block wx:for="{{uploadedFiles}}" wx:for-item="uploadedFile" wx:key="*this" data-index="{{index}}">
           <image class="photo" src="{{uploadedFile.tempFilePath}}"></image>
-        </block>> 
+        </block>
+        <view name="image" bindtap="addPhoto" class="photoupload text-right" type="file">+</view>
+    </view>
+
+
+    
     </view>
 
     <view class="flex row items-center mt30">
       <view class="page-section-title">SEAT NUMBER</view>
-      <picker  name="capacity" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
-      <view class="picker">
-        + ：{{array[index]}}
-      </view>
-    </picker>
+      
+        <picker name="capacity" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+          <view class="flex row seatpicker item-center">
+          {{array[index]}}
+         
+          <image class= "icon-sm ml" src="/pages/createEvent/unfold_more.png"></image>
+          <!-- <view>
+         
+          </view> -->
+        </view>
+        </picker>
+     
     </view>
   </view>
+  
     <view class="btn-area flex justify-center mr40">
      <button style="margin: 30rpx 0" class="createbutton justify-center" formType="submit" >CREATE</button>
     </view>
