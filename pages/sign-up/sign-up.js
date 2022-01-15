@@ -21,25 +21,32 @@ Page({
   },
 
   bindSubmit: function (e) {
-    const page = this
-    const value =  e.detail.value;
-    console.log(value);
-    const phonenumber = value.phoneNumber
-    console.log(phonenumber);
-    const reservation = {
-      phonenumber: phonenumber
+    console.log('=====24===', e);
+    let page = this
+    let phoneNumber = e.detail.value.phoneNumber
+    let seat = e.detail.value.seats
+    let reservation = {
+      phonenumber: phoneNumber,
+      seat: seat
     }
-    // const seats = value.seats
-    // console.log(seats);
+    console.log('=====reservation====', reservation);
+
     page.setData(
       {
         modalHidden: false,
-        // seats: seats
-        // phoneNumber: phonenumber
       }
     );
 
-    console.log('form发生了submit事件，携带数据为：', value)
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
+      method: 'POST',
+      data: reservation,
+      success() {
+        wx.redirectTo({
+          url: '/pages/main/main',
+        });
+      }
+    });
     },
 
     formReset: function(e) {
@@ -52,7 +59,6 @@ Page({
     modalChange: function(e) {
       this.setData({
         modalHidden: true
-
       })
       console.log(e);
 
@@ -72,8 +78,7 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-    const page = this
+  onLoad: function () {
 
     wx.request({
       header: wx.getStorageSync('headers'),

@@ -11,17 +11,21 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (data) {
+    console.log(data);
     const page = this
+
     const headers = wx.getStorageSync('headers')
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `${getApp().globalData.baseUrl}/events/${user.id}`,
+      url: `${getApp().globalData.baseUrl}/events/${data.id}`,
       data: {
         userInfo: result.userInfo
       },
+
       method: 'GET',
       success(res) {
+        console.log("===res====", res);
         const event = res.data;
         console.log(event);
         page.setData (
@@ -37,6 +41,15 @@ Page({
       url: '../main/main'
     })
   },
+
+  bindTap(e) {
+    console.log(e);
+    let eventId = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../sign-up/sign-up?id=${eventId}`
+    })
+  },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered

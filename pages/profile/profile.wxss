@@ -51,10 +51,20 @@ height: 400rpx;
 /* width:350rpx; */
 object-fit: cover;
 }
+
 .swiper-item{
 /* height:1000rpx;
 width:350rpx; */
 border:1px solid #E9B741;
 background-color: white;
 /* margin: 10px; */
+}
+
+.eventFilter{
+background-color: #5E8B7E;
+opacity: 0.6;
+color:white;
+font-weight:bold;
+justify-content: center;
+height: 100rpx;
 }

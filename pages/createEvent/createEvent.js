@@ -40,7 +40,7 @@ Page({
     console.log(location);
     console.log('location')
     console.log(date)
-    console.log('date')
+    // let parseInt(startTime)
     let event ={
       name: name,
       summary: summary,
@@ -50,6 +50,7 @@ Page({
       latitude: location.latitude,
       longitude: location.longitude,
       capacity: capacity
+  
     }
     console.log('event',event);
     
@@ -120,6 +121,7 @@ Page({
         })
     },
     addPhoto() {
+        let page = this;
         wx.chooseMedia({
           count: 9,
           mediaType: ['image','video'],
@@ -127,11 +129,16 @@ Page({
           maxDuration: 30,
           camera: 'back',
           success(res) {
-            console.log(res.tempFiles.tempFilePath)
-            console.log(res.tempFiles.size)
+            console.log(res)
+            page.setData({ 
+              uploadedFiles: res.tempFiles
+              })
           }
-        })
-    },
+    })
+  },
+
+
+
     /**
      * 生命周期函数--监听页面加载
      */

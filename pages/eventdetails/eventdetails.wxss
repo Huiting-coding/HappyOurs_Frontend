@@ -67,7 +67,6 @@
   margin-bottom: 10px;
   font-style: bolder;
   color: black;
-  
 }
 
 .btn-flat:hover {

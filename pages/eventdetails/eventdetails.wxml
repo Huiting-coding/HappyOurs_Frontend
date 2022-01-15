@@ -20,17 +20,17 @@
     <view>
       <view>
         <image class="icons" src="/pages/eventdetails/location.png">icon</image>
-        <text class="headerTitle">{{event.location}} Huangpu, Shanghai</text>
+        <text class="headerTitle">{{event.location}} </text>
       </view>
 
       <view>
         <image class="icons" src="/pages/eventdetails/calendar.png"> icon</image>
-        <text class="headerTitle">{{event.begins_at}} December 23</text>
+        <text class="headerTitle">{{event.begins_at}} </text>
       </view>
 
       <view>
         <image class="icons" src="/pages/eventdetails/seat.png">icon</image>
-        <text class="headerTitle">{{event.capacity}} 23/25</text>
+        <text class="headerTitle">{{event.capacity}} </text>
       </view>
 
     </view>
@@ -55,7 +55,7 @@
   </view>
 
   <view>
-    <navigator class="btn btn-flat" href="#">Book now</navigator>
+    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat" href="#">Book now</view>
   </view>
 
 </view>
