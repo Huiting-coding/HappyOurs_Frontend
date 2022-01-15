@@ -3,7 +3,7 @@ const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
   showLocation: function(e) {
-    let page = this;
+    const page = this;
     wx.chooseLocation({
       location: {
       name:'',
@@ -28,6 +28,7 @@ Page({
 
   formSubmit: function(e) {
     console.log('e.detail', e.detail)
+    const page = this
     let name = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
@@ -51,8 +52,10 @@ Page({
       capacity: capacity
     }
     console.log('event',event);
-
+    
+    const headers = wx.getStorageSync('headers')
     wx.request({
+      header: wx.getStorageSync('headers'),
       url:`${getApp().globalData.baseUrl}/events`,
       method: 'POST',
       data: event,

@@ -27,12 +27,6 @@
                     "scene": null
                 },
                 {
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
                     "name": "pages/main/main",
                     "pathName": "pages/main/main",
                     "query": "",
@@ -47,6 +41,12 @@
                 {
                     "name": "",
                     "pathName": "pages/createEvent/createEvent",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/profile/profile",
                     "query": "",
                     "scene": null
                 },

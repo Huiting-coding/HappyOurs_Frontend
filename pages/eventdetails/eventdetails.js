@@ -13,16 +13,19 @@ Page({
    */
   onLoad: function () {
     const page = this
-
+    const headers = wx.getStorageSync('headers')
     wx.request({
-      url: `${getApp().globalData.baseUrl}/events/1`,
-      data: {},
+      header: wx.getStorageSync('headers'),
+      url: `${getApp().globalData.baseUrl}/events/${user.id}`,
+      data: {
+        userInfo: result.userInfo
+      },
       method: 'GET',
       success(res) {
         const event = res.data;
         console.log(event);
         page.setData (
-          event
+          event.currentUser
         );
         wx.hideToast();
       }
