@@ -20,6 +20,7 @@ Page({
     onShow: function () {
       const page = this
       wx.request({
+        header: wx.getStorageSync('headers'),
         url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
         success(res) {
           page.setData(res.data)
@@ -30,6 +31,7 @@ Page({
     onLoad: function (options) {
       let page = this;
       wx.request({
+        header: wx.getStorageSync('headers'),
         url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
         method:'GET',
         success(res){
@@ -44,6 +46,7 @@ Page({
     goToEventShow: function(options){
       let page =this;
       wx.request({
+        header: wx.getStorageSync('headers'),
         url: `${getApp().globalData.baseUrl}/user/${page.data.options.event.id}`,
         method:'GET',
         success(res) {

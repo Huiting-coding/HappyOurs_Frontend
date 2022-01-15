@@ -2,48 +2,33 @@
 const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
-  
   showLocation: function(e) {
-    let page = this;
+    const page = this;
     wx.chooseLocation({
       location: {
       name:'',
       address:'',
       latitude: 0,
       longitude:0},
-    success(res) {
-      console.log('hi',res)
-      let address = res.address;
-      let name = res.name; 
-      console.log('hihi',res.name)
-      let latitude = res.latitude;
-      let longitude = res.longitude;
-        page.setData(
-         { 
-           location: {
+      success(res) {
+        console.log('res-chooseLocation',res)
+        let address = res.address;
+        let name = res.name; 
+        console.log('res.name-chooseLocation',res.name)
+        let latitude = res.latitude;
+        let longitude = res.longitude;
+        page.setData({ 
+            location: {
             name:name, address:address, latitude:latitude, longitude:longitude
-          },
-        }
-        
-        );
-        // wx.request({
-        //   url: `http://localhost:3000/api/v1/events`,
-        //   method: 'POST',
-        //   data: location,
-        //   success() {
-        //     // redirect 
-        //     wx.redirectTo({
-        //       url: '/pages/index/index'
-        //     });
-        //   }
-        // })
-
-  }
-})
-},
+            },
+        });
+      }
+    })
+  },
 
   formSubmit: function(e) {
     console.log('e.detail', e.detail)
+    const page = this
     let name = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
@@ -53,7 +38,7 @@ Page({
     let location = this.data.location;
     let capacity = e.detail.value.capacity;
     console.log(location);
-    console.log('hi15')
+    console.log('location')
     console.log(date)
     // let parseInt(startTime)
     let event ={
@@ -62,21 +47,24 @@ Page({
       begins_at: date + '' + startTime,
       // duration: startTime.to -
       location: location.address,
+      latitude: location.latitude,
+      longitude: location.longitude,
       capacity: capacity
   
     }
-    console.log('hello',event);
-
+    console.log('event',event);
+    
+    const headers = wx.getStorageSync('headers')
     wx.request({
-      url:`http://localhost:3000/api/v1/events`,
+      header: wx.getStorageSync('headers'),
+      url:`${getApp().globalData.baseUrl}/events`,
       method: 'POST',
       data: event,
       success(res){
         console.log('res',res)
-        wx.redirectTo({
-          url:`/pages/maintest/main`
-          // eventdetails/eventdetails?id=${res.currentTarget.id}`
-        });
+        // wx.redirectTo({
+        //   url:`${getApp().globalData.baseUrl}/eventsdeails?id=${res.currentTarget.id}`
+        // });
       }
     });
 

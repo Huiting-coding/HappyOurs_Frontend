@@ -60,6 +60,19 @@ Page({
       this.setData({
         modalHidden: true
       })
+      console.log(e);
+
+      wx.request({
+        header: wx.getStorageSync('headers'),
+        url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
+        method: 'POST',
+        data: reservation,
+        success() {
+          wx.redirectTo({
+            url: '/pages/main/main',
+          });
+        }
+      });
     },
 
   /**
@@ -67,6 +80,20 @@ Page({
    */
   onLoad: function () {
 
+    wx.request({
+      header: wx.getStorageSync('headers'),
+      url: `${getApp().globalData.baseUrl}/events/1`,
+      data: {},
+      method: 'GET',
+      success(res) {
+        const event = res.data;
+        console.log(event);
+        page.setData (
+          event
+        );
+        wx.hideToast();
+      }
+    })
   },
 
   /**

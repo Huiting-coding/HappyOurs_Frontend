@@ -14,17 +14,23 @@ Page({
   onLoad: function (data) {
     console.log(data);
     const page = this
+
+    const headers = wx.getStorageSync('headers')
     wx.request({
+      header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events/${data.id}`,
-      data: {},
+      data: {
+        userInfo: result.userInfo
+      },
+
       method: 'GET',
       success(res) {
         console.log("===res====", res);
         const event = res.data;
-        console.log("===event====", event);
-        page.setData ({
-          event: event
-        });
+        console.log(event);
+        page.setData (
+          event.currentUser
+        );
         wx.hideToast();
       }
     })
