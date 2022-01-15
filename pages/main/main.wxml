@@ -15,7 +15,7 @@
   </view>
 
   <view>
-    <view class="mt30 titleDesign">Popular Events</view>
+    <view class="mt30 ml40 titleDesign">Popular Events</view>
     <view class="page-body">
       <view class="page-section">
         <view class="page-section-spacing">
@@ -25,10 +25,10 @@
                 <view class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
+                    <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Whiskey</text>
                     <image class="avatar" alt="avatar" src="{{tools.shifter(msg)}}"></image>
                   </view>
-                  <view class="breaker1" style="color: black; font-weight: bold;">
+                  <view class="breaker1" style="color: black; font-weight: normal;">
                     A night of drinking blue label johnny walker whiskey 
                   </view>
                   <view class="mt20 flex">
@@ -40,10 +40,10 @@
                 <view class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Beer</text>
+                    <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Beer</text>
                     <image class="avatar" alt="avatar" src="{{tools.shifter(msg1)}}"></image>
                   </view>
-                  <view class="breaker1" style="color: black; font-weight: bold;">
+                  <view class="breaker1" style="color: black; font-weight: normal;">
                     A night of drinking blue label johnny walker whiskey 
                   </view>
                   <view class="mt20 flex">
@@ -98,7 +98,7 @@
     </view>
   </view>
 
-  <view class="flex justify-between">
+  <view class="flex justify-between ma30">
     <text class="titleDesign">Upcoming Event</text>
     <text class="titleDesign">SEE ALL</text>
   </view>
@@ -106,23 +106,56 @@
   <view>
     <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 25px;">
+      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
             <view class="flex" style="position: relative; left: 35px;">
               <view>
+                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+              </view>
+              <view>
                 <text>Martini</text>
               </view>
+            </view> 
+
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+              <view>
+                <view>
+                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
+                </view> 
+                <view style="position: relative; text-align: bottom; top: 20px;">
+                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
+                  <text style="font-weight: normal;">12/23/1997</text>
+                </view>
+              </view>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </view>
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
+      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
+        <view>
+          <view>
+            <view class="flex" style="position: relative; left: 35px;">
               <view>
                 <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
               </view>
-            </view> 
-            <view style="border: black solid;">
               <view>
-                <text class="breaker1">A night of drinking blue label johnny walker whiskey </text>
-              </view> 
-              <view class="mt20" style="position: relative; left: 25px;">
-                <text>This Friday!</text>
+                <text>Martini</text>
+              </view>
+            </view> 
+
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+              <view>
+                <view>
+                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
+                </view> 
+                <view style="position: relative; text-align: bottom; top: 20px;">
+                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
+                  <text style="font-weight: normal;">12/23/1997</text>
+                </view>
               </view>
             </view>
           </view> 
@@ -131,41 +164,28 @@
     </view>
     <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view>
+      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
-            <view>
-              <text>Date</text>
+            <view class="flex" style="position: relative; left: 35px;">
+              <view>
+                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+              </view>
+              <view>
+                <text>Martini</text>
+              </view>
             </view> 
-            <view>
-              <text>Drink</text>
-            </view> 
-            <view>
-              <text>Description</text>
-            </view>
-            <view>
-              <Text>18+ Joined</Text>
-            </view>
-          </view> 
-        </view>
-      </view>
-    </view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view>
-        <view>
-          <view>
-            <view>
-              <text>Date</text>
-            </view> 
-            <view>
-              <text>Drink</text>
-            </view> 
-            <view>
-              <text>Description</text>
-            </view>
-            <view>
-              <Text>18+ Joined</Text>
+
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+              <view>
+                <view>
+                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
+                </view> 
+                <view style="position: relative; text-align: bottom; top: 20px;">
+                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
+                  <text style="font-weight: normal;">12/23/1997</text>
+                </view>
+              </view>
             </view>
           </view> 
         </view>
