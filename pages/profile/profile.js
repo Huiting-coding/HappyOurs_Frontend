@@ -8,6 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUseGetUserProfile: false,
+    hostOrNot: true,
     eventsForTest:
     [
         { event_name: "Gin Tasting", event_date: "2020-10-12", start_time:"7:00PM", location:"Jing'an", images_url:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},

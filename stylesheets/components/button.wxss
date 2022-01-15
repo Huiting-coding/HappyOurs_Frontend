@@ -35,7 +35,7 @@
   text-transform: uppercase;
   border: 2rpx solid var(--pri);
   color: var(--pri);
-  background-color: #FFF;
+  background-color: #;
   box-sizing: border-box;
 }
 
