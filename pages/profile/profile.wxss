@@ -50,6 +50,7 @@ padding:0rpx 120rpx 30rpx 120rpx;
 height: 400rpx;
 /* width:350rpx; */
 object-fit: cover;
+/* position:relative; */
 }
 
 .swiper-item{
@@ -59,12 +60,20 @@ border:1px solid #E9B741;
 background-color: white;
 /* margin: 10px; */
 }
+.containerforposition{
+position: relative;
+}
 
 .eventFilter{
 background-color: #5E8B7E;
-opacity: 0.6;
+opacity: 0.8;
 color:white;
+font-size: 18px;
 font-weight:bold;
 justify-content: center;
-height: 100rpx;
+height: 120rpx;
+width: 640rpx;
+position:absolute;
+bottom: 10rpx;
+align-items: center;
 }
