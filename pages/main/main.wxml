@@ -22,7 +22,7 @@
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
             <view id="demo1" class="scroll-view-item_H demo-text-1">
               <view  class="flex upcomingEvent ml">
-                <view class="ma20" style="width: 150px; height: 200px;" >
+                <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Whiskey</text>
@@ -37,7 +37,8 @@
                   </view>
                   
                 </view>
-                <view class="ma20" style="width: 150px; height: 200px;" >
+
+                <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Beer</text>
@@ -98,7 +99,7 @@
     </view>
   </view>
 
-  <view class="flex justify-between ma30">
+  <view class="flex justify-between ma30 mb60">
     <text class="titleDesign">Upcoming Event</text>
     <text class="titleDesign">SEE ALL</text>
   </view>
