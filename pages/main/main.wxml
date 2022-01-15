@@ -103,29 +103,33 @@
     <text class="titleDesign">SEE ALL</text>
   </view>
 
-  <view class="my30" wx:for="{{events}}" wx:key="unique">
-    <view data-id="{{item.id}}" bindtap="bindViewTap" class="ma10 popularBackground flex">
+  <view>
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view class="card-product">
+      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 25px;">
         <view>
           <view>
-            <view>
-              <text>Drink</text>
+            <view class="flex" style="position: relative; left: 35px;">
+              <view>
+                <text>Martini</text>
+              </view>
+              <view>
+                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+              </view>
             </view> 
-            <view>
-              <text>Date</text>
-            </view> 
-            <view>
-              <text>Description</text>
-            </view>
-            <view>
-              <Text>18+ Joined</Text>
+            <view style="border: black solid;">
+              <view>
+                <text class="breaker1">A night of drinking blue label johnny walker whiskey </text>
+              </view> 
+              <view class="mt20" style="position: relative; left: 25px;">
+                <text>This Friday!</text>
+              </view>
             </view>
           </view> 
         </view>
       </view>
     </view>
-    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view>
         <view>
@@ -166,7 +170,7 @@
           </view> 
         </view>
       </view>
-    </view> -->
+    </view>
   </view>
 
 </view>

@@ -1,7 +1,5 @@
 // pages/main/main.js
 Page({
-<<<<<<< HEAD
-=======
 
   properties: {
     placeholder: {
@@ -15,7 +13,6 @@ Page({
       url: '../eventdetails/eventdetails'
     })
   },
->>>>>>> 579abca2ad7f8a5c4939fa24dce181666df7ecd2
  
   /**
    * Page initial data
@@ -23,7 +20,7 @@ Page({
   data: {
     msg: "whiskey",
     msg1: "beer",
-
+    msg2: "martini",
   },
   upper(e) {
     console.log(e)

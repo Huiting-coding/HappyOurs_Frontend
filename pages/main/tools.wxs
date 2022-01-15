@@ -5,6 +5,8 @@ var beer = "/pages/main/beer.png";
 var gin = "/pages/main/gin.png";
 var random = "/pages/main/cocktail-shaker.png";
 var word = "whiskey"
+var cauldron = "/pages/main/cauldron (1).png"
+var wine = "/pages/main/wine-bottle.png"
 
 var easy = function (i) {
   return i;
@@ -23,8 +25,10 @@ var shifter = function (i) {
     return martini;
   } else if (i == "vodka") {
     return vodka;
+  } else if (i == "wine") {
+    return wine;
   } else {
-    return word;
+    return cauldron;
   }
 };
 
@@ -38,7 +42,8 @@ module.exports = {
   vodka: vodka,
   word: word,
   shifter: shifter,
-  easy: easy
-
+  easy: easy,
+  cauldron: cauldron,
+  wine: wine
 };
 
