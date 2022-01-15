@@ -27,14 +27,8 @@
                     "scene": null
                 },
                 {
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/maintest/main",
-                    "pathName": "pages/maintest/main",
+                    "name": "pages/main/main",
+                    "pathName": "pages/main/main",
                     "query": "",
                     "scene": null
                 },
@@ -52,7 +46,7 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/maintest/main",
+                    "pathName": "pages/profile/profile",
                     "query": "",
                     "scene": null
                 },

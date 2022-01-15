@@ -10,7 +10,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res);
+        console.log("---LOGIN RESPONSE---", res);
         wx.request({
           url: `${getApp().globalData.url}/login`,
           method: 'POST',
@@ -18,9 +18,13 @@ App({
           success: (res)=> {
             console.log(res)
             const user = res.data.currentUser
-            getApp().globalData.user = user
+            // getApp().globalData.user = user
             wx.setStorageSync('user', user)
+            wx.setStorageSync('headers', res.data.headers)
           }
+          // fail(e){
+          //   console.log(e)
+          // }
         })
       }
     })
