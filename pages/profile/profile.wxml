@@ -78,14 +78,15 @@
                 <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
                 <swiper-item class="swiper-item flex column ma text-left" style="width:540rpx;" >
                     <!-- <view > -->
-                    
-                        <image class= "eventimage" src="{{event.images_url}}"></image>
-                        <block wx:if="{{hostOrNot}}">
-                            <view class="eventFilter flex row justify betweeen">
-                                <text>You will be hosting this event</text>
-                                <image class= "icon-sm" src="/pages/profile/edit.png" ></image>
-                            </view>
-                        </block>
+                        <view class= "containerforposition">
+                            <image class= "eventimage" src="{{event.images_url}}"></image>
+                            <block wx:if="{{hostOrNot}}">
+                                <view class="eventFilter flex row justify betweeen">
+                                    <text>You will be hosting this event</text>
+                                    <image class= "icon-sm" src="/pages/profile/edit.png" ></image>
+                                </view>
+                            </block>
+                        </view>
                         <view class="eventinfo flex column">
                             <text class="semibold redtext f36 my20" >{{event.event_name}}</text>
                             <view class="flex row justify-between text-left orange1">
