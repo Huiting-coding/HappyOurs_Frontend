@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 
-<!-- <wxs src="/pages/main/tools.wxs" module="tools"></wxs> -->
+<wxs src="/pages/main/tools.wxs" module="tools"></wxs>
 <view class="bodies">
   <view>
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
@@ -27,7 +27,7 @@
                   <image class="upcomingImage" src="{{event.event_image}}"></image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
-                    <image class="avatar" alt="avatar" src="{{tools.shifter(msg)}}"></image>
+                    <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}"></image>
                   </view>
                   <view class="breaker1" style="color: black; font-weight: normal;">
                    {{event.name}}
@@ -111,16 +111,14 @@
   </view>
 
   <view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <block wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
-
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
             <view class="flex" style="position: relative; left: 35px;">
               <view>
-                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+                <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
               </view>
               <view>
                 <text>{{event.drink}}</text>
@@ -141,7 +139,6 @@
           </view> 
         </view>
       </view>
-    </block>
     </view>
   </view>
 

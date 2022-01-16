@@ -25,7 +25,7 @@
 
   <view>
     <view class="ml10 titleEvent">
-      <text>{{event.name}}Happy Ours!</text>
+      <text>{{event.name}}</text>
     </view>
 
     <view>
@@ -46,7 +46,7 @@
 
       <view>
         <image class="icons" src="/pages/eventdetails/hourglass (1).png">icon</image>
-        <text class="headerTitle">{{event.capacity}} </text>
+        <text class="headerTitle">{{event.duration/60}} hours</text>
       </view>
 
     </view>
