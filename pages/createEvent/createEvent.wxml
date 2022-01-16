@@ -5,6 +5,20 @@
 
     <view class="page-section">
 
+      <view class="page-section-title">DRINK</view>
+      <view class="textarea-wrp">
+        <picker name="capacity" bindchange="bindPickerChange" value="{{drink[index]}}" range="{{drink}}">
+          <view class="flex row seatpicker item-center">
+          {{drink[index]}}
+         
+          <image class= "icon-sm ml" src="/pages/createEvent/unfold_more.png"></image>
+          <!-- <view>
+         
+          </view> -->
+        </view>
+        </picker>
+      </view>
+
       <view class="page-section-title">TITLE</view>
       <view class="textarea-wrp">
         <textarea name="title" bindblur="bindTextAreaBlur" style="height: 2.5em" />
