@@ -21,6 +21,7 @@ Page({
     msg: "whiskey",
     msg1: "beer",
     msg2: "martini",
+    events:[],
   },
   upper(e) {
     console.log(e)
