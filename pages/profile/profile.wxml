@@ -74,7 +74,7 @@
         <view class="pt20 card3 px50 text-right">
             <text class="f40 semibold  redtext ">Your Next Happy Hours</text>
             <view class="swiper pt20">
-            <swiper snap-to-edge="false" display-multiple-items="1" style="height:500rpx;" previous-margin="0rpx" next-margin="0rpx" >
+            <swiper snap-to-edge="false" display-multiple-items="1" style="height:640rpx;" previous-margin="0rpx" next-margin="0rpx" >
                 <block wx:for="{{eventsForTest}}" wx:for-item="event" wx:key="*this" data-index="{{index}}" bindtap="goToEventShow">
                 <swiper-item class="swiper-item flex column ma text-left" style="width:540rpx;" >
                     <!-- <view > -->
@@ -86,6 +86,7 @@
                                     <image class= "icon-sm" src="/pages/profile/edit.png" ></image>
                                 </view>
                             </block>
+                            
                         </view>
                         <view class="eventinfo flex column">
                             <text class="semibold redtext f36 my20" >{{event.event_name}}</text>

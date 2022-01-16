@@ -90,8 +90,19 @@ wx.navigateTo({
               userInfo: res.userInfo,
               hasUserInfo: true
             })
+            console.log('res:',res);
+            console.log('userInfo:',userInfo);
           }
         })
+      },
+
+      checkingHostOrNot: function () {
+        let currentUser = wx.getStorageSync('user')
+        if (event.host_id == user.id) {
+          this.setData({
+            hostOrNot: true
+          })
+        }
       },
 
 
