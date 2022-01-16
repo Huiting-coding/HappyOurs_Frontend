@@ -79,10 +79,10 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function () {
-
+    const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `${getApp().globalData.baseUrl}/events/1`,
+      url: `${getApp().globalData.baseUrl}/events/${data.id}`,
       data: {},
       method: 'GET',
       success(res) {
