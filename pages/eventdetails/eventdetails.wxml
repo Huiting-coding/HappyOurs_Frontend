@@ -13,7 +13,7 @@
   </view>
 
   <view>
-    <view class="ml20 titleEvent">
+    <view class="ml10 titleEvent">
       <text>{{event.name}}Happy Ours!</text>
     </view>
 
@@ -29,16 +29,27 @@
       </view>
 
       <view>
-        <image class="icons" src="/pages/eventdetails/seat.png">icon</image>
+        <image class="icons" src="/pages/eventdetails/office-chair.png">icon</image>
+        <text class="headerTitle">{{event.capacity}} </text>
+      </view>
+
+      <view>
+        <image class="icons" src="/pages/eventdetails/hourglass (1).png">icon</image>
         <text class="headerTitle">{{event.capacity}} </text>
       </view>
 
     </view>
   </view>
   
-  <text>{{event.summary}}</text>
-
   <view class="gallery">
+    <text class="headerTitle">Description</text>
+    <view>
+      <text>{{event.summary}} hello</text>
+    </view>
+  </view>
+
+
+  <view class="Description">
     <text class="headerTitle">Gallery</text>
     <view>
       <image class="slideGallery" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg"></image>
