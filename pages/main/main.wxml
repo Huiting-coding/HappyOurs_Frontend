@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 
-<wxs src="/pages/main/tools.wxs" module="tools"></wxs>
+<!-- <wxs src="/pages/main/tools.wxs" module="tools"></wxs> -->
 <view class="bodies">
   <view >
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">

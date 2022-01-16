@@ -21,14 +21,9 @@ Page({
   },
 
   bindSubmit: function (e) {
-    console.log('=====24===', e);
+    console.log('=====24===', e.detail.value);
     let page = this
-    let phoneNumber = e.detail.value.phoneNumber
-    let seat = e.detail.value.seats
-    let reservation = {
-      phonenumber: phoneNumber,
-      seat: seat
-    }
+    let reservation = e.detail.value
     console.log('=====reservation====', reservation);
 
     page.setData(
@@ -39,11 +34,11 @@ Page({
 
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
+      url: `${getApp().globalData.baseUrl}/events/${page.data.event.id}/reservations`,
       method: 'POST',
       data: reservation,
       success() {
-        wx.redirectTo({
+        wx.switchTab({
           url: '/pages/main/main',
         });
       }
@@ -79,18 +74,17 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (options) {
+    console.log("inside onLoad")
     const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
-      url: `${getApp().globalData.baseUrl}/events/${data.id}`,
-      data: {},
-      method: 'GET',
+      url: `${getApp().globalData.baseUrl}/events/${options.id}`,
       success(res) {
         const event = res.data;
-        console.log(event);
+        console.log("this is event", event);
         page.setData (
-          event
+    {event}
         );
         wx.hideToast();
       }
