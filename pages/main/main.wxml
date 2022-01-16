@@ -20,10 +20,10 @@
       <view class="page-section">
         <view class="page-section-spacing">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
+            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
               <view  class="flex upcomingEvent ml">
                 <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
-                  <image class="upcomingImage" src="{{event.event_image}}"></image>
+                  <image class="upcomingImage" src="{{event.event_image_urls[0]}}"></image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
                     <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}">gin</image>
@@ -39,62 +39,6 @@
               </view>
             </view>
           </scroll-view>
-
-                <!-- <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
-                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-                  <view class="flex justify-between">
-                    <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Beer</text>
-                    <image class="avatar" alt="avatar" src="{{tools.shifter(msg1)}}"></image>
-                  </view>
-                  <view class="breaker1" style="color: black; font-weight: normal;">
-                    A night of drinking blue label johnny walker whiskey 
-                  </view>
-                  <view class="mt20 flex">
-                    <view class="circleJoined">+25</view>
-                    <text class="joinedAlign">Joined</text>
-                  </view>
-                   -->
-                <!-- </view> -->
-      
-            <!-- <view id="demo2"  class="scroll-view-item_H demo-text-2">
-              <view  class="flex upcomingEvent ml">
-                <view class="ma20" >
-                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
-                  <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
-                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
-                  </view> -->
-                  
-                <!-- </view>
-                <view class="ma20">
-                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-                  <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
-                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
-                  </view>
-                </view>
-              </view>
-            </view> -->
-            <!-- <view id="demo3" class="scroll-view-item_H demo-text-3">
-              <view  class="flex upcomingEvent ml">
-                <view class="ma20" >
-                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
-                  <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
-                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
-                  </view>
-                  
-                </view> -->
-                <!-- <view class="ma20">
-                  <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
-                  <view class="flex justify-between">
-                    <text class="mt10">{{event.name}} Whiskey</text>
-                    <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
-                  </view>
-                </view>
-              </view>
-            </view> -->
-        
         </view>
       </view>
     </view>
@@ -103,14 +47,11 @@
   <view class="flex justify-between ma30 mb60">
     <text class="titleDesign">Upcoming Event</text>
 
-
-    <!-- <text class="titleDesign">SEE ALL</text> -->
-
   </view>
 
   <view>
     <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
-      <image src="{{event.event_image}}" class="popularImage"></image>
+      <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
