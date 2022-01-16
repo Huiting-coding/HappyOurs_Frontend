@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 
-<!-- <wxs src="/pages/main/tools.wxs" module="tools"></wxs> -->
+<wxs src="/pages/main/tools.wxs" module="tools"></wxs>
 <view class="bodies">
   <view>
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
@@ -20,14 +20,13 @@
       <view class="page-section">
         <view class="page-section-spacing">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-          <block wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
-            <view id="demo1" class="scroll-view-item_H demo-text-1">
+            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
               <view  class="flex upcomingEvent ml">
                 <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="{{event.event_image}}"></image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
-                    <image class="avatar" alt="avatar" src="{{tools.shifter(msg)}}"></image>
+                    <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}">gin</image>
                   </view>
                   <view class="breaker1" style="color: black; font-weight: normal;">
                    {{event.name}}
@@ -39,7 +38,6 @@
                 </view>
               </view>
             </view>
-          </block>
           </scroll-view>
 
                 <!-- <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
@@ -111,9 +109,8 @@
   </view>
 
   <view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <block wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
-
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
+      <block >
       <image src="{{event.event_image}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
