@@ -84,10 +84,13 @@ Page({
       url: `${getApp().globalData.baseUrl}/events`, 
       method: "GET",
       success(res) {
-        const events = res.data.events;
-        console.log(events);
+        const upcoming_events = res.data.upcoming_events;
+        const popular_events = res.data.popular_events;
+
+        // console.log(events);
         page.setData ({
-          events: events
+          upcoming_events: upcoming_events,
+          popular_events: popular_events
         })
       }
     })

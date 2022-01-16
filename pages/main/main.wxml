@@ -20,7 +20,7 @@
       <view class="page-section">
         <view class="page-section-spacing">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
+            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
               <view  class="flex upcomingEvent ml">
                 <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="{{event.event_image}}"></image>
@@ -109,15 +109,14 @@
   </view>
 
   <view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
-      <block >
+    <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
             <view class="flex" style="position: relative; left: 35px;">
               <view>
-                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+                <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
               </view>
               <view>
                 <text>{{event.drink}}</text>
@@ -138,69 +137,7 @@
           </view> 
         </view>
       </view>
-    </block>
     </view>
   </view>
-
-    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
-        <view>
-          <view>
-            <view class="flex" style="position: relative; left: 35px;">
-              <view>
-                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
-              </view>
-              <view>
-                <text>Martini</text>
-              </view>
-            </view> 
-
-            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
-              <view>
-                <view>
-                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
-                </view> 
-                <view style="position: relative; text-align: bottom; top: 20px;">
-                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                  <text style="font-weight: normal;">12/23/1997</text>
-                </view>
-              </view>
-            </view>
-          </view> 
-        </view>
-      </view>
-    </view> -->
-    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
-        <view>
-          <view>
-            <view class="flex" style="position: relative; left: 35px;">
-              <view>
-                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
-              </view>
-              <view>
-                <text>Martini</text>
-              </view>
-            </view> 
-
-            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;" wx:for="{{events}}" wx:key="unique">
-              <view>
-                <view>
-                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
-                </view> 
-                <view style="position: relative; text-align: bottom; top: 20px;">
-                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                  <text style="font-weight: normal;">12/23/1997</text>
-                </view>
-              </view>
-            </view>
-          </view> 
-        </view>
-      </view>
-    </view>
-  </view> -->
-
 </view>
 
