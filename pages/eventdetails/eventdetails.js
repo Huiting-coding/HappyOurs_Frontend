@@ -50,23 +50,20 @@ Page({
   onLoad: function (data) {
     console.log(data);
     const page = this
+    this.setData({ id: data.id })
 
     wx.request({
       header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events/${data.id}`,
-      data: {
-        userInfo: result.userInfo
-      },
+      // data: {
+      //   userInfo: result.userInfo
+      // },
 
       method: 'GET',
       success(res) {
         console.log("===res====", res);
-        const event = res.data;
-        console.log(event);
-        page.setData (
-          event.currentUser
-        );
-        wx.hideToast();
+        page.setData({ name: res.data.name })
+
       }
     })
   },

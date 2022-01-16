@@ -35,7 +35,7 @@
                 {
                     "name": "pages/eventdetails/eventdetails",
                     "pathName": "pages/eventdetails/eventdetails",
-                    "query": "",
+                    "query": "id=23",
                     "scene": null
                 },
                 {
