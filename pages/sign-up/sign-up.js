@@ -38,6 +38,7 @@ Page({
     );
 
     wx.request({
+      header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
       method: 'POST',
       data: reservation,

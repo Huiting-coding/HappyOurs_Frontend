@@ -55,7 +55,6 @@ Page({
     }
     console.log('event',event);
     
-    const headers = wx.getStorageSync('headers')
     wx.request({
       header: wx.getStorageSync('headers'),
       url:`${getApp().globalData.baseUrl}/events`,
