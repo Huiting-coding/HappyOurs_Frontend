@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 
-<wxs src="/pages/main/tools.wxs" module="tools"></wxs>
+<!-- <wxs src="/pages/main/tools.wxs" module="tools"></wxs> -->
 <view class="bodies">
   <view>
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
@@ -104,7 +104,10 @@
 
   <view class="flex justify-between ma30 mb60">
     <text class="titleDesign">Upcoming Event</text>
-    <text class="titleDesign" bindtap="-----">SEE ALL</text>
+
+
+    <!-- <text class="titleDesign">SEE ALL</text> -->
+
   </view>
 
   <view>
@@ -185,7 +188,7 @@
               </view>
             </view> 
 
-            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;" wx:for="{{events}}" wx:key="unique">
               <view>
                 <view>
                   <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
