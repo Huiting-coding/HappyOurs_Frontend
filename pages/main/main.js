@@ -10,7 +10,7 @@ Page({
 
   bindTap() {
     wx.navigateTo({
-      url: '../eventdetails/eventdetails'
+      url:  `../eventdetails/eventdetails?id=${id}`
     })
   },
  
@@ -66,11 +66,11 @@ Page({
     })
   },
 
-  bindTap() {
-    wx.navigateTo({
-      url: '../sign-up/sign-up'
-    })
-  },
+  // bindTap() {
+  //   wx.navigateTo({
+  //     url: '../sign-up/sign-up'
+  //   })
+  // },
 
   /**
    * Lifecycle function--Called when page load
