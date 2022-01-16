@@ -92,7 +92,7 @@ Page({
      */
     data: {
       array:[ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
-      drink: [ "wine", "whiskey", "martini", "beer", "vodka", "cauldron", "gin", "new drink", "other"]
+      drink: ["wine", "whiskey", "martini", "beer", "vodka", "cauldron", "gin", "coffee", "tea", "mixed", "other"]
     },
 
     bindDateChange: function (e) {

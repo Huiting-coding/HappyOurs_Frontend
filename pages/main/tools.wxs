@@ -3,10 +3,13 @@ var vodka = "/pages/main/vodka.png";
 var martini = "/pages/main/martini.png";
 var beer = "/pages/main/beer.png";
 var gin = "/pages/main/gin.png";
-var random = "/pages/main/cocktail-shaker.png";
+var mixed = "/pages/main/cocktail-shaker.png";
 var word = "whiskey"
 var cauldron = "/pages/main/cauldron (1).png"
 var wine = "/pages/main/wine-bottle.png"
+var other = "/pages/main/cauldron (1).png"
+var coffee = "/pages/main/coffee-cup.png"
+var tea = "/pages/main/green-tea.png"
 
 var easy = function (i) {
   return i;
@@ -17,8 +20,8 @@ var shifter = function (i) {
     return whiskey;
   } else if (i == "gin") {
     return gin;
-  } else if (i == "random") {
-    return random;
+  } else if (i == "mixed") {
+    return mixed;
   } else if (i == "beer") {
     return beer;
   } else if (i == "martini") {
@@ -27,6 +30,12 @@ var shifter = function (i) {
     return vodka;
   } else if (i == "wine") {
     return wine;
+  } else if (i == "other") {
+    return other;
+  } else if (i == "coffee") {
+    return coffee;
+  } else if (i == "tea") {
+    return tea;
   } else {
     return cauldron;
   }
@@ -38,12 +47,15 @@ module.exports = {
   martini: martini,
   whiskey: whiskey,
   gin: gin,
-  random: random,
+  mixed: mixed,
   vodka: vodka,
   word: word,
   shifter: shifter,
   easy: easy,
   cauldron: cauldron,
-  wine: wine
+  wine: wine,
+  other: other,
+  coffee: coffee,
+  tea: tea
 };
 
