@@ -45,6 +45,7 @@ color: #C36A2D;
 
 .eventinfo {
 padding:0rpx 120rpx 30rpx 120rpx;
+height: 400rpx;
 }
 .eventimage{
 height: 400rpx;
@@ -56,7 +57,7 @@ object-fit: cover;
 .swiper-item{
 /* height:1000rpx;
 width:350rpx; */
-border:1px solid #E9B741;
+border:2px solid #E9B741;
 background-color: white;
 /* margin: 10px; */
 }
