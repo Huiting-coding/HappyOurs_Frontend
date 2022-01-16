@@ -50,7 +50,8 @@ Page({
       location: location.address,
       latitude: location.latitude,
       longitude: location.longitude,
-      capacity: capacity
+      capacity: capacity,
+      event_type: 1
   
     }
     console.log('event',event);
@@ -62,9 +63,9 @@ Page({
       data: event,
       success(res){
         console.log('res',res)
-        // wx.redirectTo({
-        //   url:`${getApp().globalData.baseUrl}/eventsdeails?id=${res.currentTarget.id}`
-        // });
+        wx.redirectTo({
+          url: `/pages/eventdetails/eventdetails?id=${res.data.event_id}`
+        });
       }
     });
 
