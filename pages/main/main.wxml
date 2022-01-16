@@ -2,7 +2,7 @@
 
 <!-- <wxs src="/pages/main/tools.wxs" module="tools"></wxs> -->
 <view class="bodies">
-  <view >
+  <view>
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
     </image>
   </view>
@@ -20,25 +20,29 @@
       <view class="page-section">
         <view class="page-section-spacing">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <block wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
             <view id="demo1" class="scroll-view-item_H demo-text-1">
               <view  class="flex upcomingEvent ml">
                 <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
-                  <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
+                  <image class="upcomingImage" src="{{event.event_image}}"></image>
                   <view class="flex justify-between">
-                    <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Whiskey</text>
+                    <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
                     <image class="avatar" alt="avatar" src="{{tools.shifter(msg)}}"></image>
                   </view>
                   <view class="breaker1" style="color: black; font-weight: normal;">
-                    A night of drinking blue label johnny walker whiskey 
+                   {{event.name}}
                   </view>
                   <view class="mt20 flex">
-                    <view class="circleJoined">+25</view>
+                    <view class="circleJoined">{{event.seat_confirmed}}</view>
                     <text class="joinedAlign">Joined</text>
-                  </view>
-                  
+                  </view> 
                 </view>
+              </view>
+            </view>
+          </block>
+          </scroll-view>
 
-                <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
+                <!-- <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.name}} Beer</text>
@@ -51,20 +55,19 @@
                     <view class="circleJoined">+25</view>
                     <text class="joinedAlign">Joined</text>
                   </view>
-                  
-                </view>
-              </view>
-            </view>
-            <view id="demo2"  class="scroll-view-item_H demo-text-2">
+                   -->
+                <!-- </view> -->
+      
+            <!-- <view id="demo2"  class="scroll-view-item_H demo-text-2">
               <view  class="flex upcomingEvent ml">
                 <view class="ma20" >
                   <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10">{{event.name}} Whiskey</text>
                     <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
-                  </view>
+                  </view> -->
                   
-                </view>
+                <!-- </view>
                 <view class="ma20">
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
@@ -73,8 +76,8 @@
                   </view>
                 </view>
               </view>
-            </view>
-            <view id="demo3" class="scroll-view-item_H demo-text-3">
+            </view> -->
+            <!-- <view id="demo3" class="scroll-view-item_H demo-text-3">
               <view  class="flex upcomingEvent ml">
                 <view class="ma20" >
                   <image class="upcomingImage" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg">Whiskey</image>
@@ -83,8 +86,8 @@
                     <image class="avatar" alt="avatar" src="/pages/main/226055.png"></image>
                   </view>
                   
-                </view>
-                <view class="ma20">
+                </view> -->
+                <!-- <view class="ma20">
                   <image class="upcomingImage" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg">Whiskey</image>
                   <view class="flex justify-between">
                     <text class="mt10">{{event.name}} Whiskey</text>
@@ -92,8 +95,8 @@
                   </view>
                 </view>
               </view>
-            </view>
-          </scroll-view>
+            </view> -->
+        
         </view>
       </view>
     </view>
@@ -101,11 +104,48 @@
 
   <view class="flex justify-between ma30 mb60">
     <text class="titleDesign">Upcoming Event</text>
+
+
     <!-- <text class="titleDesign">SEE ALL</text> -->
+
   </view>
 
   <view>
     <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+      <block wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-index="{{index}}">
+
+      <image src="{{event.event_image}}" class="popularImage"></image>
+      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
+        <view>
+          <view>
+            <view class="flex" style="position: relative; left: 35px;">
+              <view>
+                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+              </view>
+              <view>
+                <text>{{event.drink}}</text>
+              </view>
+            </view> 
+
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+              <view>
+                <view>
+                  <text class="breaker1" style="position: relative; top: 10px;">{{event.name}}</text>
+                </view> 
+                <view style="position: relative; text-align: bottom; top: 20px;">
+                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
+                  <text style="font-weight: normal;">{{event.event_date}}</text>
+                </view>
+              </view>
+            </view>
+          </view> 
+        </view>
+      </view>
+    </block>
+    </view>
+  </view>
+
+    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
@@ -133,37 +173,8 @@
           </view> 
         </view>
       </view>
-    </view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
-      <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
-      <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
-        <view>
-          <view>
-            <view class="flex" style="position: relative; left: 35px;">
-              <view>
-                <image src="{{tools.shifter(msg2)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
-              </view>
-              <view>
-                <text>Martini</text>
-              </view>
-            </view> 
-
-            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
-              <view>
-                <view>
-                  <text class="breaker1" style="position: relative; top: 10px;">The Whiskey Night</text>
-                </view> 
-                <view style="position: relative; text-align: bottom; top: 20px;">
-                  <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                  <text style="font-weight: normal;">12/23/1997</text>
-                </view>
-              </view>
-            </view>
-          </view> 
-        </view>
-      </view>
-    </view>
-    <view bindtap="bindViewTap" class="ma10 popularBackground flex">
+    </view> -->
+    <!-- <view bindtap="bindViewTap" class="ma10 popularBackground flex">
       <image src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg" class="popularImage">Wine</image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
@@ -192,7 +203,7 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 
 </view>
 
