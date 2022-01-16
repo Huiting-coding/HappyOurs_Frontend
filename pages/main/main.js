@@ -8,9 +8,10 @@ Page({
     }
   },
 
-  bindTap() {
+  bindTap(e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../eventdetails/eventdetails'
+      url:  `../eventdetails/eventdetails?id=${id}`
     })
   },
  
@@ -21,6 +22,7 @@ Page({
     msg: "whiskey",
     msg1: "beer",
     msg2: "martini",
+    events:[],
   },
   upper(e) {
     console.log(e)
@@ -66,11 +68,11 @@ Page({
     })
   },
 
-  bindTap() {
-    wx.navigateTo({
-      url: '../sign-up/sign-up'
-    })
-  },
+  // bindTap() {
+  //   wx.navigateTo({
+  //     url: '../sign-up/sign-up'
+  //   })
+  // },
 
   /**
    * Lifecycle function--Called when page load

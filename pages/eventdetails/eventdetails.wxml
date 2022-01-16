@@ -8,12 +8,23 @@
       <image class="icons1" src="/pages/eventdetails/save-instagram.png"></image>
     </view>
 
-    <image class="mainImage" src="/pages/eventdetails/edward-howell-55bQ7g3ZlQU-unsplash.jpg">
-    </image>
+    <!-- <image class="mainImage" src="/pages/eventdetails/edward-howell-55bQ7g3ZlQU-unsplash.jpg"></image> -->
+
+      <swiper class="mb50" style="height: 300px;"
+      indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}"><image class="mainImage" style="width: 150; height: 300px;" src="/pages/eventdetails/edward-howell-55bQ7g3ZlQU-unsplash.jpg"></image></view>
+        </swiper-item>
+      </block>
+      </swiper>
+
+
   </view>
 
   <view>
-    <view class="ml20 titleEvent">
+    <view class="ml10 titleEvent">
       <text>{{event.name}}Happy Ours!</text>
     </view>
 
@@ -29,27 +40,30 @@
       </view>
 
       <view>
-        <image class="icons" src="/pages/eventdetails/seat.png">icon</image>
+        <image class="icons" src="/pages/eventdetails/office-chair.png">icon</image>
+        <text class="headerTitle">{{event.capacity}} </text>
+      </view>
+
+      <view>
+        <image class="icons" src="/pages/eventdetails/hourglass (1).png">icon</image>
         <text class="headerTitle">{{event.capacity}} </text>
       </view>
 
     </view>
   </view>
   
-  <text>{{event.summary}}</text>
-
   <view class="gallery">
-    <text class="headerTitle">Gallery</text>
-    <view>
-      <image class="slideGallery" src="/pages/eventdetails/julia-nastogadka-AMwYylKQsUc-unsplash.jpg"></image>
-      <image class="slideGallery" src="/pages/eventdetails/brian-jones-YBlcnXfv9OM-unsplash.jpg"></image>
-      <image class="slideGallery" src="/pages/eventdetails/sergio-alves-santos-OxKFC5u0980-unsplash.jpg"></image>
+    <text class="headerTitle">Description</text>
+    <view class="mt10 ml15">
+      <text style="color: black;">{{event.summary}} hello skjfkjsj wiofnkwe  ewjfnejwn e w eijfiejw woefoejwopfjwe fjioef iwef jefjoi we i jef</text>
     </view>
   </view>
 
+
+
   <view >
     <text class="headerTitle">Map</text>
-    <view>
+    <view class="mt10">
       <image class="location" src="/pages/eventdetails/Screenshot 2022-01-06 at 21.18.19.png">Location</image>
     </view>
   </view>
