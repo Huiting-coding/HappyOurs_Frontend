@@ -1,4 +1,8 @@
 /* pages/profile/profile.wxss */
+.yellowBackground{
+    background-color:#FEFCF1;
+}
+
 .card1{
     font-weight: bold;
     background-color:#C36A2D; 
