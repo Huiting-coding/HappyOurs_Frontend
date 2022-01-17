@@ -98,7 +98,7 @@ wx.navigateTo({
 
       checkingHostOrNot: function () {
         let currentUser = wx.getStorageSync('user')
-        if (event.host_id == user.id) {
+        if (event.user_id == user.id) {
           this.setData({
             hostOrNot: true
           })

@@ -1,5 +1,5 @@
 <!--pages/profile/profile.wxml-->
-<view>
+<view class="yellowBackground">
     <block wx:if="{{!hasUserInfo}}">
       <!-- <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> LOGIN </view> -->
       <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class= "card1 pt20 pb20">
