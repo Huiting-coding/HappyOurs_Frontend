@@ -1,7 +1,4 @@
 // app.js
-import event from './utils/event.js';
-wx.event = event
-
 App({
   onLaunch() {
     // 展示本地存储能力
