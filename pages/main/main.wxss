@@ -127,7 +127,7 @@
 }
 .scroll-view-item_H{
   display: inline-block;
-  width: 100%;
+  width: 50%;
   height: 620rpx;
 }
 
