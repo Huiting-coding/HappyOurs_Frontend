@@ -1,4 +1,6 @@
-// pages/eventdetails/eventdetails.js
+const app = getApp()
+const img = '/pages/main/pngaaa.com-1812898.png'
+
 Page({
 
   /**
@@ -14,8 +16,8 @@ Page({
     duration: 500,
     previousMargin: 0,
     nextMargin: 0,
-    latitude: 23.099994,
-    longitude: 113.324520,
+    latitude: 31.236655582720132,
+    longitude: 121.50385379791261,
 
   },
 
@@ -209,24 +211,15 @@ Page({
 
     const positions = [
       {
-        latitude: 23.099994,
-        longitude: 113.324520,
-      }, {
-        latitude: 23.099994,
-        longitude: 113.322520,
-      }, {
-        latitude: 23.099994,
-        longitude: 113.326520,
-      }, {
-        latitude: 23.096994,
-        longitude: 113.329520,
+        latitude: 31.236655582720132,
+        longitude: 121.50385379791261,
       }
     ]
     const markers = []
     positions.forEach((p, i) => {
       const newMarker = Object.assign(marker, p)
-      newMarker.id = i + 1
-      newMarker.label.content = `label ${i + 1}`
+      // newMarker.id = i + 1
+      newMarker.label.content = `Happy Hours!`
       markers.push(newMarker)
 
       this.mapCtx.addMarkers({
