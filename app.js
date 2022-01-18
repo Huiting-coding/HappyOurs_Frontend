@@ -1,4 +1,7 @@
 // app.js
+import event from './utils/event.js';
+wx.event = event
+
 App({
   onLaunch() {
     // 展示本地存储能力
@@ -22,6 +25,7 @@ App({
             // getApp().globalData.user = user
             wx.setStorageSync('user', user)
             wx.setStorageSync('headers', res.data.headers)
+            wx.event.emit('headersready')
           },
           fail(e){
             console.log(e)
@@ -33,6 +37,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl: "http://localhost:3000/api/v1"
+    // baseUrl: "http://localhost:3000/api/v1"
+    baseUrl: "https://happyours.shanghaiwogeng.com/api/v1"
   }
 })
