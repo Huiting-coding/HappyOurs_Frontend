@@ -79,6 +79,18 @@ Page({
    */
   onLoad: function (options) {
     const page = this
+    console.log('headers:', wx.getStorageSync('headers'));
+    const headers = wx.getStorageSync('headers')
+    if (headers){
+      this.getEvents()
+    }
+    else {
+      wx.event.on('headersready', this, this.getEvents)
+    }
+  },
+
+  getEvents: function(){
+    const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events`, 
@@ -86,7 +98,7 @@ Page({
       success(res) {
         const upcoming_events = res.data.upcoming_events;
         const popular_events = res.data.popular_events;
-
+  
         // console.log(events);
         page.setData ({
           upcoming_events: upcoming_events,
@@ -94,7 +106,6 @@ Page({
         })
       }
     })
-
   },
 
   /**
