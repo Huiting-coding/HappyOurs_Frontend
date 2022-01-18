@@ -64,15 +64,7 @@
   <view>
     <text class="headerTitle">Map</text>
     <view class="mt10">
-      <map 
-  id="mapId"
-  class="map"
-  latitude="{{latitude}}"
-  longitude="{{longitude}}"
-  bindmarkertap="onMarkerTap"
-  bindcallouttap="onCalloutTap"
-  bindlabeltap="onLabelTap"
-></map>
+      <map id="mapId" class="map" latitude="{{latitude}}" longitude="{{longitude}}" bindmarkertap="onMarkerTap" bindcallouttap="onCalloutTap" bindlabeltap="onLabelTap" bindtap="addMarkers"></map>
     </view>
   </view>
 
