@@ -1,5 +1,3 @@
-<!--pages/sign-up/sign-up.wxml-->
-<!-- <text>pages/sign-up/sign-up.wxml</text> -->
 <view class="page">
 <view class='header'>
   <text class='h1'> Booking Your Happy Hours </text>
@@ -12,16 +10,6 @@
 </view>
 
 <form catchsubmit="bindSubmit" catchreset="formReset">
-  <!-- <view class="page-section">
-    <view class="page-section-title">Date</view>
-      <view class="weui-cells weui-cells_after-title">
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="Date" placeholder= "yy-mm-dd"/>
-          </view>
-        </view>
-     </view>
-  </view> -->
   <view class="page-section">
       <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
       <picker name="seat" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
@@ -49,13 +37,13 @@
     <!-- <button formType="reset">Reset</button> -->
   </view>
 
-  <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+  <!-- <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
     <view> Your reservation is as below: </view>
     <view> Happy Event:{{event.name}} </view>
     <view> Happy Date:{{event.begins_at}} </view>
     <view> Number of seats:{{array[index]}} </view>
     <view> Phone Number：{{phoneNumber}} </view>
-  </modal>
+  </modal> -->
 </form>
 </view>
 

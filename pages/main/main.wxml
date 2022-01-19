@@ -6,13 +6,6 @@
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
     </image>
   </view>
-  <view class="searchbox">
-      <view class='search'>
-          <view class="search-bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
-              <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='Looking for a drink...' />
-          </view>
-      </view>
-  </view>
 
   <view>
     <view class="mt30 ml40 titleDesign">Popular Events</view>
@@ -20,9 +13,9 @@
       <view class="page-section">
         <view class="page-section-spacing">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
+            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
               <view  class="flex upcomingEvent ml">
-                <view bindtap="bindViewTap" class="ma20" style="width: 150px; height: 200px;" >
+                <view class="ma20" style="width: 150px; height: 200px;" >
                   <image class="upcomingImage" src="{{event.event_image_urls[0]}}"></image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
@@ -45,7 +38,7 @@
   </view>
 
   <view class="flex justify-between ma30 mb60">
-    <text class="titleDesign">Upcoming Event</text>
+    <text class="titleDesign">Upcoming Events</text>
 
   </view>
 
