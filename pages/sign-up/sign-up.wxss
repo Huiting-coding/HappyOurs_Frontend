@@ -18,6 +18,14 @@ text-align: center;
   padding: 0 30px;
 }
 .btn-area button{
-  margin-top: 20rpx;
+  margin-top: 200rpx;
   margin-bottom: 20rpx;
+  background: #E9B741;
+  transition: background 0.3s ease;
+  font-style: bolder;
+}
+
+.btn-area button:hover {
+  background: #C36A2D;
+  color: white;
 }
