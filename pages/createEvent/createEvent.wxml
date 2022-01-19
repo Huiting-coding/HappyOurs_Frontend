@@ -6,12 +6,12 @@
     <view class="page-section">
 
       <view class="page-section-title">DRINK</view>
-      <view class="textarea-wrp">
-        <picker name="drinkType" bindchange="bindPickerChange" value="{{drink[index]}}" range="{{drink}}">
-          <view class="flex row seatpicker item-center">
+      <view class="items-center">
+        <picker name="drinkType" class="greyinputarea-wrp" bindchange="bindPickerChange" value="{{drink[index]}}" range="{{drink}}">
+          <view class="flex row items-center">
+          <image class= "icon-sm ml items-center" src="/pages/createEvent/unfold_more.png"></image>
           {{drink[index]}}
          
-          <image class= "icon-sm ml" src="/pages/createEvent/unfold_more.png"></image>
           <!-- <view>
          
           </view> -->
@@ -34,11 +34,12 @@
           <picker name="date" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
           <view class="greyinputarea-wrp flex row items-center">
             <view>
-              {{date}}
-            </view>
-            <view>
               <image class= "icon-sm ml items-center" src="/pages/createEvent/calendeer.png"></image>
             </view>
+            <view>
+              {{date}}
+            </view>
+          
           </view>
           </picker>
         </view>
@@ -48,8 +49,9 @@
           <view class="page-section-title">START AT</view>
           <picker name= "startTime" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
             <view class="greyinputarea flex row items-center">
-              {{time}}
               <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
+              {{time}}
+             
             </view>
           </picker>
         </view>
@@ -58,8 +60,9 @@
           <view class="page-section-title">END AT</view>
           <picker name= "endTime" mode="time" value="{{endtime}}" start="09:01" end="21:01" bindchange="bindEndTimeChange">
           <view class="greyinputarea flex row items-center">
-              {{endtime}}
               <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
+              {{endtime}}
+            
           </view>
           </picker>
         </view>
@@ -69,8 +72,8 @@
       <view class="flex column">
         <view class="page-section-title">LOCATION</view>
         <view class="flex backgroundgrey items-center">
+          <image class ="icon-sm ml" src="/pages/createEvent/location1.png" name="location" value="{{location}}"  bindtap="showLocation">Choose Location</image>
            {{location.name}}
-           <image class ="icon-sm ml" src="/pages/createEvent/location1.png" name="location" value="{{location}}"  bindtap="showLocation">Choose Location</image>
         </view>
         <textarea class="textarea-white mt20" placeholder="* Tell us more details to help your guests find the place" name ="locationdes" auto-focus="true" style="height: 2.5em" />
       </view>
@@ -82,10 +85,10 @@
     <view class="flex column mt30">
       <view class="page-section-title ">PHOTOS</view>
       <view class="flex row justify-betweeen">
+        <view name="image" bindtap="addPhoto" class="photoupload text-right" type="file">+</view>
         <block wx:for="{{uploadedFiles}}" wx:for-item="uploadedFile" wx:key="*this" data-index="{{index}}">
           <image class="photo" src="{{uploadedFile.tempFilePath}}"></image>
         </block>
-        <view name="image" bindtap="addPhoto" class="photoupload text-right" type="file">+</view>
     </view>
 
 
