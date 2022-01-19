@@ -52,12 +52,6 @@
   },
   "isGameTourist": false,
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -74,6 +68,11 @@
           "name": "sign up",
           "pathName": "pages/sign-up/sign-up",
           "query": "id=3",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
           "scene": null
         }
       ]

@@ -1,4 +1,9 @@
 <!--pages/createEvent/createEvent.wxml-->
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
+
 <view class="card-wrapper ml40">
   <text class='f48'> Create Your Happy Hours </text>
   <form catchsubmit="formSubmit" catchreset="formReset">

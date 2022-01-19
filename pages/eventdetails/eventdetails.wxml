@@ -1,7 +1,13 @@
 
 <!--pages/eventdetails/eventdetails.wxml-->
 <!-- <text>pages/eventdetails/eventdetails.wxml</text> -->
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
+
 <view class="contain">
+
   <view> 
     <!-- <view class="flex justify-between">
       <image class= "icons1" bindtap="bindViewTap" src="/pages/eventdetails/back.png"></image>

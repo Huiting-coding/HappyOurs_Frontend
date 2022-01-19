@@ -1,6 +1,10 @@
 <!--pages/confirmation/confirmation.wxml-->
 <!-- <text>pages/confirmation/confirmation.wxml</text> -->
 
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
 
 <view class='container'>
   <view class='h2'> Congratulation </view>
