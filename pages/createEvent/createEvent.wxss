@@ -80,8 +80,8 @@ border: 1px solid #C36A2D;
     width:600rpx;
 }
 .photo {
-    width: 120rpx;
-    height: 120rpx;
+    width: 280rpx;
+    height: 150rpx;
     padding:10rpx;
     object-fit: cover;
 
@@ -95,3 +95,13 @@ width: 200rpx;
 text-align: center;
 align-items: center;
 }
+
+.drinkpicker{
+    background-color: #f7f7f7;
+    border-radius: 4rpx;
+    border: #F0F0F0 1px solid;
+    height: 2.5em;
+    width: 400rpx;
+    text-align: center;
+    align-items: center;
+    }

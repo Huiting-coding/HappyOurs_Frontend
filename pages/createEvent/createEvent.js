@@ -40,6 +40,9 @@ Page({
     let location = this.data.location;
     let capacity = e.detail.value.capacity;
     let drinkType = e.detail.value.drinkType;
+    const upImgs = this.upImgs;
+    const uploadedFiles = this.data.uploadedFiles[0].tempFilePath;
+    console.log(upImgs);
     console.log(location);
     console.log('location')
     console.log(date)
@@ -73,15 +76,34 @@ Page({
       data: event,
       success(res){
         console.log('res',res)
+        const eventId = res.data.id
+        wx.uploadFile({
+          url: `${app.globalData.baseUrl}/events/${eventId}/new_images`,
+          filePath: uploadedFiles,
+          name: 'eventsPhoto',
+          success(res) {
+            console.log("photoupload",res)
+        
+          }, fail(e){ 
+            console.log(e)
+          }
+        })
+        console.log("end")
         wx.redirectTo({
-          url: `../eventdetails/eventdetails?id=${res.data.id}`
+          url: `../eventdetails/eventdetails?id=${eventId}`
         });
       }
     });
-
-
   },
 
+        // wx.switchTab({
+          // url: '/pages/profile-page/profile-page'
+          // url: '/pages/category-modelling/category-modelling'
+        // });
+  
+
+        
+ 
 
 
 
@@ -135,20 +157,35 @@ Page({
     addPhoto() {
         let page = this;
         wx.chooseMedia({
-          count: 9,
+          count: 1,
           mediaType: ['image','video'],
           sourceType: ['album', 'camera'],
           maxDuration: 30,
           camera: 'back',
           success(res) {
-            console.log(res)
+            console.log('res,choose media',res)
             page.setData({ 
-              uploadedFiles: res.tempFiles
+             uploadedFiles: res.tempFiles
               })
           }
     })
   },
-
+  //上传服务器
+  upImgs(imgurl, id) {
+    console.log("update Status")
+    wx.uploadFile({
+      url: `${app.globalData.baseUrl}/events/${id}/new_images`,
+      filePath: imgurl,
+      name: 'eventsPhoto',
+      success(res) {
+        console.log(res.data)
+        // wx.showToast({
+        //   title: 'uploaded',
+        //   icon: 'success'
+        // })
+      }
+    })
+  },
 
 
     /**
