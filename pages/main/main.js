@@ -9,9 +9,10 @@ Page({
   },
 
   bindTap(e) {
+    console.log(e);
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url:  `../eventdetails/eventdetails?id=${id}`
+      url: `../eventdetails/eventdetails?id=${id}`
     })
   },
  
@@ -85,7 +86,7 @@ Page({
       this.getEvents()
     }
     else {
-      wx.event.on('headersready', this, this.getEvents)
+      // wx.event.on('headersready', this, this.getEvents)
     }
   },
 

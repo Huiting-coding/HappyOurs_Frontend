@@ -1,4 +1,5 @@
 // pages/createEvent/createEvent.js
+const app = getApp()
 const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
@@ -29,7 +30,7 @@ Page({
   formSubmit: function(e) {
     console.log('e.detail', e.detail)
     const page = this
-    let drink = e.detail.value.drink;
+    // let drink = e.detail.value.drink;
     let name = e.detail.value.title;
     let summary = e.detail.value.summary;
     let date = e.detail.value.date;
@@ -38,23 +39,33 @@ Page({
     // let begins_at 
     let location = this.data.location;
     let capacity = e.detail.value.capacity;
+    let drinkType = e.detail.value.drinkType;
     console.log(location);
     console.log('location')
     console.log(date)
     // let parseInt(startTime)
-    let event ={
+    let event = {
       name: name,
       summary: summary,
-      begins_at: date + '' + startTime,
+      // begins_at: date + '' + startTime,
       // duration: startTime.to -
       location: location.address,
       latitude: location.latitude,
       longitude: location.longitude,
-      capacity: capacity
-  
+      capacity: capacity,
+      drink_type: drinkType,
+      date: date,
+      startTime: startTime,
+      endTime: endTime
     }
     console.log('event',event);
     
+    const userId = app.globalData.user.id
+    event = {
+      ...event,
+      userId
+    }
+
     wx.request({
       header: wx.getStorageSync('headers'),
       url:`${getApp().globalData.baseUrl}/events`,
@@ -62,9 +73,9 @@ Page({
       data: event,
       success(res){
         console.log('res',res)
-        // wx.redirectTo({
-        //   url:`${getApp().globalData.baseUrl}/eventsdeails?id=${res.currentTarget.id}`
-        // });
+        wx.redirectTo({
+          url: `../eventdetails/eventdetails?id=${res.data.id}`
+        });
       }
     });
 

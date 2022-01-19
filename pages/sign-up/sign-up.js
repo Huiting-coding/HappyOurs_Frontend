@@ -1,4 +1,6 @@
 // pages/sign-up/sign-up.js
+const app = getApp()
+
 Page({
 
   /**
@@ -26,20 +28,19 @@ Page({
     let reservation = e.detail.value
     console.log('=====reservation====', reservation);
 
-    page.setData(
-      {
-        modalHidden: false,
-      }
-    );
-
+    const userId = app.globalData.user.id
+    reservation = {
+      ...reservation,
+      userId
+    }
     wx.request({
       header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events/${page.data.event.id}/reservations`,
       method: 'POST',
       data: reservation,
       success() {
-        wx.switchTab({
-          url: '/pages/main/main',
+        wx.redirectTo({
+          url: '/pages/confirmation/confirmation',
         });
       }
     });
@@ -52,24 +53,24 @@ Page({
       })
     },
 
-    modalChange: function(e) {
-      this.setData({
-        modalHidden: true
-      })
-      console.log(e);
+    // modalChange: function(e) {
+    //   // this.setData({
+    //   //   modalHidden: true
+    //   // })
+    //   console.log(e);
 
-      wx.request({
-        header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
-        method: 'POST',
-        data: reservation,
-        success() {
-          wx.redirectTo({
-            url: '/pages/main/main',
-          });
-        }
-      });
-    },
+    //   wx.request({
+    //     header: wx.getStorageSync('headers'),
+    //     url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
+    //     method: 'POST',
+    //     data: reservation,
+    //     success() {
+    //       wx.redirectTo({
+    //         url: '../confirmation/confirmation',
+    //       });
+    //     }
+    //   });
+    // },
 
   /**
    * Lifecycle function--Called when page load
@@ -84,7 +85,7 @@ Page({
         const event = res.data;
         console.log("this is event", event);
         page.setData (
-    {event}
+          {event}
         );
         wx.hideToast();
       }
