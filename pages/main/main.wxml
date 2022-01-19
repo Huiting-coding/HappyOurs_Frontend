@@ -26,7 +26,7 @@
                   <image class="upcomingImage" src="{{event.event_image_urls[0]}}"></image>
                   <view class="flex justify-between">
                     <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
-                    <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}">gin</image>
+                    <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}"></image>
                   </view>
                   <view class="breaker1" style="color: black; font-weight: normal;">
                    {{event.name}}

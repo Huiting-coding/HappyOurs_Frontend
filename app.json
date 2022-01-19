@@ -14,8 +14,9 @@
     "selectedColor": "#000000",
     "backgroundColor": "#E9B741",
     "list": [{
-      "pagePath": "pages/main/main",
-      "text": "Index"
+      "pagePath": "pages/maintest/main",
+      "iconPath": "images/near_store.png",
+      "text": "Explore"
     }, {
       "pagePath": "pages/createEvent/createEvent",
       "text": "Create your HappyHour!"
