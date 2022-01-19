@@ -6,7 +6,8 @@
     "pages/profile/profile",
     "pages/logs/logs", 
     "pages/sign-up/sign-up",
-    "pages/confirmation/confirmation"
+    "pages/confirmation/confirmation",
+    "pages/search/search"
   ],
 
   "tabBar": {
@@ -14,15 +15,17 @@
     "selectedColor": "#000000",
     "backgroundColor": "#E9B741",
     "list": [{
-      "pagePath": "pages/maintest/main",
-      "iconPath": "images/near_store.png",
-      "text": "Explore"
+      "pagePath": "pages/main/main",
+      "text": "Discover"
+    }, {
+      "pagePath": "pages/search/search",
+      "text": "Search"
     }, {
       "pagePath": "pages/createEvent/createEvent",
-      "text": "Create your HappyHour!"
+      "text": "Create"
     }, {
       "pagePath": "pages/profile/profile",
-      "text": "My Profile"
+      "text": "Profile"
     }]
   },
 

@@ -3,10 +3,10 @@
 <!-- <text>pages/eventdetails/eventdetails.wxml</text> -->
 <view class="contain">
   <view> 
-    <view class="flex justify-between">
+    <!-- <view class="flex justify-between">
       <image class= "icons1" bindtap="bindViewTap" src="/pages/eventdetails/back.png"></image>
       <image class="icons1" src="/pages/eventdetails/save-instagram.png"></image>
-    </view>
+    </view> -->
 
     <!-- <image class="mainImage" src="/pages/eventdetails/edward-howell-55bQ7g3ZlQU-unsplash.jpg"></image> -->
 

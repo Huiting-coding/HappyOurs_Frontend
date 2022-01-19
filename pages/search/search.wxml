@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+
+<view class="searchbox">
+  <view class='search'>
+      <view class="search-bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+          <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='Looking for a drink...' />
+      </view>
+  </view>
+</view>
