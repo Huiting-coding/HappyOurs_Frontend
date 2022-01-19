@@ -8,7 +8,8 @@ Page({
     }
   },
 
-  bindTap() {
+  bindTap(e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
       url:  `../eventdetails/eventdetails?id=${id}`
     })
@@ -78,19 +79,33 @@ Page({
    */
   onLoad: function (options) {
     const page = this
+    console.log('headers:', wx.getStorageSync('headers'));
+    const headers = wx.getStorageSync('headers')
+    if (headers){
+      this.getEvents()
+    }
+    else {
+      wx.event.on('headersready', this, this.getEvents)
+    }
+  },
+
+  getEvents: function(){
+    const page = this
     wx.request({
       header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events`, 
       method: "GET",
       success(res) {
-        const events = res.data.events;
-        console.log(events);
+        const upcoming_events = res.data.upcoming_events;
+        const popular_events = res.data.popular_events;
+  
+        // console.log(events);
         page.setData ({
-          events: events
+          upcoming_events: upcoming_events,
+          popular_events: popular_events
         })
       }
     })
-
   },
 
   /**
