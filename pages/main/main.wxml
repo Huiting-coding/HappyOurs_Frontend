@@ -1,7 +1,7 @@
 <!--pages/main/main.wxml-->
 
 <wxs src="/pages/main/tools.wxs" module="tools"></wxs>
-<view class="bodies">
+<view class="bodies card-wrapper items-center">
   <view>
     <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
     </image>
@@ -37,12 +37,13 @@
     </view>
   </view>
 
-  <view class="flex justify-between ma30 mb60">
+
+  <view class="mt30 ml30 mr30">
     <text class="titleDesign">Upcoming Events</text>
-
   </view>
+  <view class="container">
 
-  <view>
+
     <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
