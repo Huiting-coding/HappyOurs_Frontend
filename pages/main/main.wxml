@@ -38,11 +38,11 @@
   </view>
 
 
-  <view class="mt30 ml30 mr30">
+  <view class="mt30 ml30 mr30 mb40">
     <text class="titleDesign">Upcoming Events</text>
   </view>
-  <view class="container">
 
+  <view class="containerEvents">
 
     <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
