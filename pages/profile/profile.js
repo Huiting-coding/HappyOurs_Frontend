@@ -35,31 +35,28 @@ Page({
           canIUseGetUserProfile: true
         })
       };
-      let page = this;
-    //   wx.getStorage({
-    //     key: "user",
-    //     success: (res) => {
-    //       console.log("getstorage",res)
-    //       const id = res.data.id;
-    //       const nickname =res.data.nickname
-    //       page.setData({
-    //         id: id,
-    //         nickname: nickname
-    //       })
-    //     }
-    // });
+        // const page = this
+        console.log('headers:', wx.getStorageSync('headers'));
+        const headers = wx.getStorageSync('headers')
+        console.log('heeadere',headers)
+        if (headers){
+          this.getUser()
+        }
+      },
+    getUser: function(options){
+      console.log('options',options)
 
-    const id = app.globalData.user.id
-    user = {
-      ...user,
-      id
-    }
-
-    wx.request({
-      header: wx.getStorageSync('headers'),
-      url: `${getApp().globalData.baseUrl}/users/${id}`,
-      method: 'GET',
-      success(res) {
+      const page = this
+      // const id= app.globalData.user.id
+      const user = wx.getStorageSync('user')
+      const id = user.id
+      // console.log('user',user)
+      console.log("id",id)
+      wx.request({
+        header: wx.getStorageSync('headers'),
+        url: `${getApp().globalData.baseUrl}/users/${id}`,
+        method: "GET",
+        success(res) {
           console.log("get user by id",res)
           page.setData({
         eventsAsHost: res.data.events_as_Host,
@@ -67,7 +64,22 @@ Page({
         user: res.data.user
           })
         }
-  });  
+      })
+    },
+
+  //   wx.request({
+  //     header: wx.getStorageSync('headers'),
+  //     url: `${getApp().globalData.baseUrl}/users/${id}`,
+  //     method: 'GET',
+  //     success(res) {
+  //         console.log("get user by id",res)
+  //         page.setData({
+  //       eventsAsHost: res.data.events_as_Host,
+  //       eventsAsGoer: res.data.events_as_goer,
+  //       user: res.data.user
+  //         })
+  //       }
+  // });  
 
     //如何通过reeservation.event_id 取到events
       // let id = this.data.id;
@@ -76,16 +88,16 @@ Page({
       //user.reservations ---->array reeservation.event_id
       //find event by event id
 
-      wx.request({
-        url: `${getApp().globalData.baseUrl}/events/${eventId}/reservations`,
-        method: 'GET',
-        success(res) {
-            console.log(res.data)
-            page.setData({reservations: res.data.reservations})
-          }
-    });  
+    //   wx.request({
+    //     url: `${getApp().globalData.baseUrl}/events/${eventId}/reservations`,
+    //     method: 'GET',
+    //     success(res) {
+    //         console.log(res.data)
+    //         page.setData({reservations: res.data.reservations})
+    //       }
+    // });  
 
-    },
+    // },
 
       // checkingHostOrNot: function(e) {
       //   console.log('checking host or not',e)
@@ -145,9 +157,14 @@ wx.navigateTo({
         wx.getUserProfile({
           desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
           success: (res) => {
+            const userInfo = res.userInfo
             this.setData({
-              userInfo: res.userInfo,
-              hasUserInfo: true
+              // userInfo: res.userInfo,
+              hasUserInfo: true,
+              userInfo:{
+                nickName: userInfo.nickName,
+                avatarUrl: userInfo.avatarUrl
+              }
             })
             console.log('res:',res);
             console.log('userInfo:',userInfo);
