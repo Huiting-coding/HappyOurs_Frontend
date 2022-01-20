@@ -1,11 +1,11 @@
 <!--pages/profile/profile.wxml-->
-<view class="logo-container">
-    <image class="logo" src="/photos/yellowlogo.png">
-    </image>
- </view>
 
-<view class="yellowBackground">
-    <block wx:if="{{!hasUserInfo}}">
+<view class="yellowBackground h100">
+  <block class="yellowBackground h100" wx:if="{{!hasUserInfo}}">
+    <view class="logo-container">
+        <image class="logo" src="/photos/yellowlogo.png">
+        </image>
+     </view>
       <!-- <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> LOGIN </view> -->
       <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class= "card1 pt20 pb20">
         <view class=" flex column px80 items-center">
@@ -39,7 +39,7 @@
 
     <image class= "card2" src="/pages/profile/Slice 2.png"></image>
     
-    <view class="background"></view>
+    <view class="background h100"></view>
         
     </block>
     <block wx:else>
@@ -115,7 +115,7 @@
         </view>
 
         <view class="card3 py40 px20 flex row justify-between">
-            <view class="flex row black" bindtap="goToCreate">
+            <!-- <view class="flex row black" bindtap="goToCreate">
                 <image class= "icon-ms" src="/pages/profile/Group 1838.png"></image>
                 <text>Host New Event</text>
             </view>
@@ -123,7 +123,7 @@
                 <text >Find More Events</text>
                 <image class= "icon-ms" src="/pages/profile/Group 1838.png"></image>
              
-            </view>
+            </view> -->
         </view> 
 
 </block>

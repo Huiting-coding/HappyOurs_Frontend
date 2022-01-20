@@ -1,6 +1,12 @@
 /* pages/profile/profile.wxss */
 .yellowBackground{
     background-color:#FEFCF1;
+    min-height: 100vh;
+    background-size: 100% 100%;
+}
+
+.background {
+    background-color:#FEFCF1;
 }
 
 .card1{
