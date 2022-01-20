@@ -2,8 +2,7 @@
 <!--pages/eventdetails/eventdetails.wxml-->
 <!-- <text>pages/eventdetails/eventdetails.wxml</text> -->
 <view class="logo-container">
-  <image class="logo" src="/photos/yellowlogo.png">
-  </image>
+  <image class="logo" src="/photos/yellowlogo.png" bindtap="backMain"></image>
 </view>
 
 <view class="contain">

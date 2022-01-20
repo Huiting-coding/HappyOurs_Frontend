@@ -63,6 +63,12 @@ Page({
       })
     },
 
+    backMain:function () {
+      wx.switchTab({
+        url: '../main/main',
+      })
+    },
+
     // goToEventShow: function(options){
     //   let page =this;
     //   wx.request({

@@ -8,6 +8,12 @@ Page({
 
   },
 
+  backMain:function () {
+    wx.switchTab({
+      url: '../main/main',
+    })
+  },
+  
   /**
    * Lifecycle function--Called when page load
    */

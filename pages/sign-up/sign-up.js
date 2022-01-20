@@ -21,6 +21,12 @@ Page({
       index: e.detail.value
     })
   },
+  
+  backMain:function () {
+    wx.switchTab({
+      url: '../main/main',
+    })
+  },
 
   bindSubmit: function (e) {
     console.log('=====24===', e.detail.value);

@@ -2,7 +2,7 @@
 <!-- <text>pages/confirmation/confirmation.wxml</text> -->
 
 <view class="logo-container">
-  <image class="logo" src="/photos/yellowlogo.png">
+  <image class="logo" src="/photos/yellowlogo.png" bindtap="backMain">
   </image>
 </view>
 
