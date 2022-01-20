@@ -83,7 +83,7 @@ border: 1px solid #C36A2D;
     width: 280rpx;
     height: 150rpx;
     padding:10rpx;
-    object-fit: cover;
+    object-fit: fit;
 
 }
 .seatpicker{
