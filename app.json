@@ -6,7 +6,6 @@
     "pages/profile/profile",
     "pages/logs/logs", 
     "pages/sign-up/sign-up",
-    "pages/confirmation/confirmation",
     "pages/search/search"
   ],
 

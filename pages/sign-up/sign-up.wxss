@@ -19,9 +19,6 @@ text-align: center;
   background-color: #eedfbb;
 }
 
-.page-section {
-}
-
 .page-section-title {
   padding-right: 20rpx;
 }
