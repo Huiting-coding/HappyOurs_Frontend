@@ -8,11 +8,41 @@ Page({
 
   },
 
+  goSearch: function (e) {
+    console.log(e);
+    const value = e.detail.value;
+    console.log(value);
+    const page = this;
+    wx.request({
+      // header: wx.getStorageSync('headers'),
+      url: `${getApp().globalData.baseUrl}/events/search?query=${value}`, 
+      method: "GET",
+      success(res) {
+        console.log(res);
+        const events = res.data.events;
+        page.setData ({
+          events: events
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+  //   const page = this
+  //   console.log('headers:', wx.getStorageSync('headers'));
+  //   const headers = wx.getStorageSync('headers')
+  //   if (headers){
+  //     this.getEvents()
+  //   }
+  //   else {
+  //     // wx.event.on('headersready', this, this.getEvents)
+  //   }
+  // },
+  // getEvents: function(){
+    
   },
 
   /**

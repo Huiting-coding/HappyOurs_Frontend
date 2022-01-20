@@ -1,10 +1,48 @@
 <!--pages/search/search.wxml-->
 <!-- <text>pages/search/search.wxml</text> -->
 
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
+
 <view class="searchbox">
   <view class='search'>
       <view class="search-bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
-          <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='Looking for a drink...' />
+          <input class="searchInput" type="search" confirm-type="search" bindconfirm="goSearch" placeholder='Looking for a drink...'  />
+          <image class= "icon-sm ml items-center" src="/photos/search.png" bindTap="search"></image>
       </view>
+  </view>
+</view>
+
+<view class="container">
+  <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
+    <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
+    <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
+      <view>
+        <view>
+          <view class="flex" style="position: relative; left: 35px;">
+            <view>
+              <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
+            </view>
+            <view>
+              <text>{{event.drink}}</text>
+            </view>
+          </view> 
+
+          <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+            <view>
+              <view>
+                <text class="breaker1" style="position: relative; top: 10px;">{{event.name}}</text>
+              </view> 
+              <view style="position: relative; text-align: bottom; top: 20px;">
+                <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
+                <text style="font-weight: normal;">{{event.event_date}}</text>
+              </view>
+            </view>
+          </view>
+        </view> 
+      </view>
+    </view>
   </view>
 </view>

@@ -12,28 +12,33 @@
 
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "#000000",
-    "backgroundColor": "#E9B741",
+    "selectedColor": "#C36A2D",
+    "backgroundColor": "#ffffff",
     "list": [{
       "pagePath": "pages/main/main",
-      "text": "Discover"
+      "text": "Discover",
+      "iconPath": "photos/house.png",
+      "selectedIconPath": "photos/house.png"
     }, {
       "pagePath": "pages/search/search",
-      "text": "Search"
+      "text": "Search",
+      "iconPath": "photos/search.png",
+      "selectedIconPath": "photos/search.png"
     }, {
       "pagePath": "pages/createEvent/createEvent",
-      "text": "Create"
+      "text": "Create",
+      "iconPath": "photos/plus.png",
+      "selectedIconPath": "photos/plus.png"
     }, {
       "pagePath": "pages/profile/profile",
-      "text": "Profile"
+      "text": "Profile",
+      "iconPath": "photos/user (2).png",
+      "selectedIconPath": "photos/user (2).png"
     }]
   },
 
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#F08302",
-    "navigationBarTitleText": "HappyHours!",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
