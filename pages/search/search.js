@@ -27,6 +27,15 @@ Page({
     })
   },
 
+  bindViewTap(e) {
+    console.log(e);
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../eventdetails/eventdetails?id=${id}`
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */

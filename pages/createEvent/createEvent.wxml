@@ -102,20 +102,14 @@
 
     <view class="flex row items-center mt30">
       <view class="page-section-title">SEAT NUMBER</view>
-      
         <picker name="capacity" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
           <view class="flex row seatpicker item-center">
-          {{array[index]}}
-         
-          <image class= "icon-sm ml" src="/pages/createEvent/unfold_more.png"></image>
-          <!-- <view>
-         
-          </view> -->
-        </view>
+            {{array[index]}}
+            <image class= "icon-sm ml" src="/pages/createEvent/unfold_more.png"></image>
+          </view>
         </picker>
-     
+     </view>
     </view>
-  </view>
   
     <view class="btn-area flex justify-center mr40">
      <button style="margin: 30rpx 0" class="createbutton justify-center" formType="submit" >CREATE</button>

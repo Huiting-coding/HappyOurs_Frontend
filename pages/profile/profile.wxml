@@ -1,8 +1,4 @@
 <!--pages/profile/profile.wxml-->
-<view class="logo-container">
-    <image class="logo" src="/photos/yellowlogo.png" bindtap="backMain">
-    </image>
- </view>
 
 <view class="yellowBackground h100">
   <block class="yellowBackground h100" wx:if="{{!hasUserInfo}}">
@@ -56,28 +52,28 @@
     <view class= "card1 pt20 pb20">
         <view class=" flex row px80 justify-between items-center">
             <view class=" flex column ">
-                <text class="mt10 f40 mt30 orange1 semibold ">Hi, {{userInfo.nickName}}!</text>
+                <text class="ml40 f40 orange1 semibold ">Hi, {{userInfo.nickName}}!</text>
                 <!-- <text class="h4 mt10">You haven't edit your description yet</text> -->
             </view>
-            <image class= "avatar-md mt30" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <image class= "avatar-md mr40" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         </view>
 
     <view class=" flex row mt40 px40 justify-around items-center">
         <view class=" flex column ">
             <view class=" flex row">
-                <image class="icon-ms" src="/pages/profile/Happyhours.png"></image>
-                <text class= "f28 pl20 orange1">ENJOY</text>
+                <image class="icon" src="/pages/profile/Happyhours.png"></image>
+                <text class= "f28 pl20 pt15 orange1">ENJOY</text>
             </view>
-            <text class= "f40 pt20 whitetext">20 Happy</text>
-            <text class= "f40 whitetext"> Hours</text>
+            <text class= "f40 pt20 orange1">20 Happy</text>
+            <text class= "f40 orange1"> Hours</text>
         </view>
         <view class=" flex column ">
             <view class=" flex row">
-                <image class= "icon-ms" src="/pages/profile/happypeople.png"></image>
+                <image class= "icon" src="/pages/profile/happypeople.png"></image>
                 <text class= "f28 pl20 orange1">  HOST</text>
             </view> 
-            <text class= "f40 pt20 whitetext">27 Happy</text>
-            <text class= "f40 whitetext">People</text>
+            <text class= "f40 pt20 orange1">27 Happy</text>
+            <text class= "f40 orange1">People</text>
         </view>
     </view>
 </view>
@@ -102,17 +98,18 @@
                             </block>
                             
                         </view>
-                        <view class="eventinfo flex column">
+                        <view class="eventinfo flex column px30 mx40">
                             <text class="semibold redtext f28 my" >{{event.name}}</text>
-                            <view class="flex row justify-between text-left orange1">
-                                <image class="icon-mini" src="/pages/eventdetails/calendar.png"> icon</image>
-                                <text class="text-left">{{event.begins_at}}</text>
+                            <view>
+                                <view class="flex row text-left orange1">
+                                    <image class="icon-mini mr40" src="/pages/eventdetails/calendar.png"> icon</image>
+                                    <text class="text-left">{{event.begins_at}}</text>
+                                </view>
+                                <view class="flex row  text-left orange1">
+                                    <image class="icon-mini mr40" src="/pages/eventdetails/location.png">icon</image>
+                                    <text>{{event.location}}</text>
+                                </view>
                             </view>
-                            <view class="flex row justify-between text-left orange1">
-                                <image class="icon-mini" src="/pages/eventdetails/location.png">icon</image>
-                                <text>{{event.location}}</text>
-                            </view>
-                            
                             <!-- <text>{{event.start_time}}</text>
                             <text>{{event.location}}</text> -->
                         </view>
