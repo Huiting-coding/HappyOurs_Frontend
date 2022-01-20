@@ -30,54 +30,55 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-
-"useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "bundle": false
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.21.3",
-  "appid": "wx7a2dbbc1b8353429",
-  "projectname": "HappyOurs!",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
-  "isGameTourist": false,
-  "condition": {
-    "plugin": {
-      "list": []
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
-    "game": {
-      "list": []
+    "compileType": "miniprogram",
+    "libVersion": "2.21.3",
+    "appid": "wx7a2dbbc1b8353429",
+    "projectname": "HappyOurs!",
+    "debugOptions": {
+        "hidedInDevtools": []
     },
-    "gamePlugin": {
-      "list": []
+    "scripts": {},
+    "staticServerOptions": {
+        "baseURL": "",
+        "servePath": ""
     },
-    "miniprogram": {
-      "list": [
-        {
-          "id": 0,
-          "name": "sign up",
-          "pathName": "pages/sign-up/sign-up",
-          "query": "id=3",
-          "scene": null
+    "isGameTourist": false,
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/search/search",
-          "pathName": "pages/search/search",
-          "scene": null
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": 0,
+                    "name": "sign up",
+                    "pathName": "pages/sign-up/sign-up",
+                    "query": "id=3",
+                    "scene": null
+                },
+                {
+                    "name": "pages/search/search",
+                    "pathName": "pages/search/search",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

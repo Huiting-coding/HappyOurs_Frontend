@@ -1,4 +1,5 @@
 // pages/profile/profile.js
+const app = getApp()
 Page({
 
     /**
@@ -11,10 +12,10 @@ Page({
     hostOrNot: true,
     eventsForTest:
     [
-        { event_name: "Gin Tasting", event_date: "2020-10-12", start_time:"7:00PM", location:"Jing'an", images_url:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
+        { name: "Gin Tasting",begins_at: "2020-10-12", start_time:"7:00PM", location:"Jing'an", event_image_urls:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
     ]
     },
     onShow: function () {
@@ -39,26 +40,38 @@ Page({
         key: "user",
         success: (res) => {
           console.log("getstorage",res)
-          const nickname = userInfo.nickName
-          const id = res.data.id
+          const id = res.data.id;
+          const nickname =nickname
           page.setData({
-            nickname: nickname,
-            id: id
+            id: id,
+            nickname: nickname
           })
         }
     });
+
     wx.request({
-      url: `${getApp().globalData.baseUrl}/events`,
+      header: wx.getStorageSync('headers'),
+      url: `${getApp().globalData.baseUrl}/users/${id}`,
       method: 'GET',
       success(res) {
-          console.log(res.data)
-          page.setData({events: res.data.events})
+          console.log("get user by id",res)
+          page.setData({
+        eventsAsHost: res.data.events_as_Host,
+        eventsAsGoer: res.data.events_as_goer,
+        user: res.data.user
+          })
         }
   });  
-      let id = this.data.id;
+
+    //如何通过reeservation.event_id 取到events
+      // let id = this.data.id;
+      //如何通过eventID取她reservations? 
+      //如何通过user取到她的reservation
+      //user.reservations ---->array reeservation.event_id
+      //find event by event id
 
       wx.request({
-        url: `${getApp().globalData.baseUrl}/users/${id}/reservations`,
+        url: `${getApp().globalData.baseUrl}/events/${eventId}/reservations`,
         method: 'GET',
         success(res) {
             console.log(res.data)
@@ -68,37 +81,6 @@ Page({
 
     },
 
-      
-    // getEvents: function(){
-    //   const page = this
-    //   wx.request({
-    //     header: wx.getStorageSync('headers'),
-    //     url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
-    //     method: "GET",
-    //     success(res) {
-    //       const upcoming_events = res.data.upcoming_events;
-    //       const popular_events = res.data.popular_events;
-    
-    //       // console.log(events);
-    //       page.setData ({
-    //         upcoming_events: upcoming_events,
-    //         popular_events: popular_events
-    //       })
-    //     }
-    //   })
-    // },
-    //   wx.request({
-    //     header: wx.getStorageSync('headers'),
-    //     url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
-    //     method:'GET',
-    //     success(res){
-    //       const user = res.data
-    //       page.setData(
-    //         user
-    //       )
-    //     }
-    //   });
-    // },
       // checkingHostOrNot: function(e) {
       //   console.log('checking host or not',e)
       //   // let currentUser = wx.getStorageSync('user')
@@ -111,13 +93,13 @@ Page({
       //   // }
       // },
    
-    goToEventShow(e) {
-      console.log(e);
-      let id = e.currentTarget.dataset.id
-      wx.navigateTo({
-        url: `../eventdetails/eventdetails?id=${id}`
-      })
-    },
+    // goToEventShow(e) {
+    //   console.log(e);
+    //   let id = e.currentTarget.dataset.id
+    //   wx.navigateTo({
+    //     url: `../eventdetails/eventdetails?id=${id}`
+    //   })
+    // },
 
     // goToEventShow: function(options){
     //   let page =this;
