@@ -39,7 +39,7 @@
 
     <image class= "card2" src="/pages/profile/Slice 2.png"></image>
     
-    <view></view>
+    <view class="background"></view>
         
     </block>
     <block wx:else>

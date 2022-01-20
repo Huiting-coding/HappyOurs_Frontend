@@ -30,6 +30,7 @@ Page({
 
     onLoad: function (options) {
       let page = this;
+      
       wx.request({
         header: wx.getStorageSync('headers'),
         url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
@@ -40,23 +41,42 @@ Page({
             user
           )
         }
+      });
+    },
+      // checkingHostOrNot: function(e) {
+      //   console.log('checking host or not',e)
+      //   // let currentUser = wx.getStorageSync('user')
+      //   // let event = e.
+      //       // console.log('current user',currentUser)
+      //   // if (event.user_id == currentUser.id) {
+      //     // this.setData({
+      //       // hostOrNot: true
+      //     // })
+      //   // }
+      // },
+   
+    goToEventShow(e) {
+      console.log(e);
+      let id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: `../eventdetails/eventdetails?id=${id}`
       })
     },
 
-    goToEventShow: function(options){
-      let page =this;
-      wx.request({
-        header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/user/${page.data.options.event.id}`,
-        method:'GET',
-        success(res) {
-          const event = res.data;
-          page.setData(
-            event
-          );
-        }
-      })
-    },
+    // goToEventShow: function(options){
+    //   let page =this;
+    //   wx.request({
+    //     header: wx.getStorageSync('headers'),
+    //     url: `${getApp().globalData.baseUrl}/user/${page.data.options.event.id}`,
+    //     method:'GET',
+    //     success(res) {
+    //       const event = res.data;
+    //       page.setData(
+    //         event
+    //       );
+    //     }
+    //   })
+    // },
   
   goToCreate: function (e){
 wx.navigateTo({
@@ -74,7 +94,15 @@ wx.navigateTo({
       this.setData({
         canIUseGetUserProfile: true
       })
+    // if (wx.checkingHostOrNot) {
+    //     this.setData({
+    //       hostOrNot: true
+    //     })
+
     }
+
+
+
   },
     /**
      * 生命周期函数--监听页面加载
@@ -96,15 +124,7 @@ wx.navigateTo({
         })
       },
 
-      // checkingHostOrNot: function () {
-      //   let currentUser = wx.getStorageSync('user')
-      //   if (event.user_id == user.id) {
-      //     this.setData({
-      //       hostOrNot: true
-      //     })
-      //   }
-      // },
-
+      
 
     /**
      * 生命周期函数--监听页面初次渲染完成

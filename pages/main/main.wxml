@@ -32,8 +32,12 @@
             </scroll-view>
       </view>
 
-  <view class="mt20 ml30 mr30 titleDesign">Upcoming Events</view>
-  <view class="container">
+  <view class="mt30 ml30 mr30 mb40">
+    <text class="titleDesign">Upcoming Events</text>
+  </view>
+
+  <view class="containerEvents">
+
     <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
