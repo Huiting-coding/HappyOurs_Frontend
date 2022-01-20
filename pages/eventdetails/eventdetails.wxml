@@ -42,7 +42,7 @@
 
       <view>
         <image class="icons" src="/pages/eventdetails/calendar.png"> icon</image>
-        <text class="headerTitle">{{event.begins_at}} </text>
+        <text class="headerTitle">{{event.datetime}} </text>
       </view>
 
       <view>
@@ -52,7 +52,7 @@
 
       <view>
         <image class="icons" src="/pages/eventdetails/hourglass (1).png">icon</image>
-        <text class="headerTitle">{{event.duration}} mins</text>
+        <text class="headerTitle">{{event.hr}} hours {{event.min}} minutes</text>
       </view>
 
     </view>
@@ -61,7 +61,7 @@
   <view class="gallery">
     <text class="headerTitle">Description</text>
     <view class="mt10 ml15">
-      <text style="color: black;">{{event.summary}}</text>
+      <text style="color: black;">{{event.description}}</text>
     </view>
   </view>
 
