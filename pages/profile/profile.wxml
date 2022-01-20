@@ -1,4 +1,9 @@
 <!--pages/profile/profile.wxml-->
+<view class="logo-container">
+    <image class="logo" src="/photos/yellowlogo.png">
+    </image>
+ </view>
+
 <view class="yellowBackground">
     <block wx:if="{{!hasUserInfo}}">
       <!-- <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> LOGIN </view> -->

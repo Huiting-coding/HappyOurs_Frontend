@@ -1,12 +1,11 @@
 <!--pages/main/main.wxml-->
 
 <wxs src="/pages/main/tools.wxs" module="tools"></wxs>
-<view class="bodies card-wrapper items-center">
-  <view>
-    <image class="logo1" src="/pages/main/pngaaa.com-1812898.png">
+  <view class="logo-container">
+    <image class="logo" src="/photos/yellowlogo.png">
     </image>
   </view>
-
+  
   <view>
     <view class="mt30 ml40 titleDesign">Popular Events</view>
     <view class="page-body">
@@ -22,7 +21,7 @@
                     <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}"></image>
                   </view>
                   <view class="breaker1" style="color: black; font-weight: normal;">
-                   {{event.name}}
+                  {{event.name}}
                   </view>
                   <view class="mt20 flex">
                     <view class="circleJoined">+12{{event.seat_confirmed}}</view>
@@ -32,11 +31,7 @@
               </view>
             </view>
           </scroll-view>
-        </view>
-      </view>
     </view>
-  </view>
-
 
   <view class="mt30 ml30 mr30 mb40">
     <text class="titleDesign">Upcoming Events</text>
