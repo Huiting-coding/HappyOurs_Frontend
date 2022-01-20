@@ -44,6 +44,10 @@
         
     </block>
     <block wx:else>
+    <view class="logo-container">
+        <image class="logo" src="/photos/yellowlogo.png">
+        </image>
+    </view>
 
     <view class= "card1 pt20 pb20">
         <view class=" flex row px80 justify-between items-center">
@@ -85,7 +89,7 @@
                 <swiper-item class="swiper-item flex column text-left" >
                     <!-- <view > -->
                         <view class= "containerforposition">
-                            <image class= "eventimage" src="{{event.images_url}}"></image>
+                            <image class= "eventimage" src="{{event.event_image_urls}}"></image>
                             <block wx:if="{{hostOrNot}}">
                                 <view class="eventFilter flex row justify betweeen">
                                     <text>You will be hosting this event</text>
@@ -95,10 +99,10 @@
                             
                         </view>
                         <view class="eventinfo flex column">
-                            <text class="semibold redtext f28 my" >{{event.event_name}}</text>
+                            <text class="semibold redtext f28 my" >{{event.name}}</text>
                             <view class="flex row justify-between text-left orange1">
                                 <image class="icon-mini" src="/pages/eventdetails/calendar.png"> icon</image>
-                                <text class="text-left">{{event.event_date}}</text>
+                                <text class="text-left">{{event.begins_at}}</text>
                             </view>
                             <view class="flex row justify-between text-left orange1">
                                 <image class="icon-mini" src="/pages/eventdetails/location.png">icon</image>

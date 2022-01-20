@@ -39,7 +39,7 @@ App({
 
   globalData: {
     userInfo: null,
-    // baseUrl: "http://localhost:3000/api/v1"
-    baseUrl: "https://happyours.shanghaiwogeng.com/api/v1"
+    baseUrl: "http://localhost:3000/api/v1"
+    // baseUrl: "https://happyours.shanghaiwogeng.com/api/v1"
   }
 })
