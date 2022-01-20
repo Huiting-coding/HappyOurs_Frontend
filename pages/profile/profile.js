@@ -36,18 +36,24 @@ Page({
         })
       };
       let page = this;
-      wx.getStorage({
-        key: "user",
-        success: (res) => {
-          console.log("getstorage",res)
-          const id = res.data.id;
-          const nickname =nickname
-          page.setData({
-            id: id,
-            nickname: nickname
-          })
-        }
-    });
+    //   wx.getStorage({
+    //     key: "user",
+    //     success: (res) => {
+    //       console.log("getstorage",res)
+    //       const id = res.data.id;
+    //       const nickname =res.data.nickname
+    //       page.setData({
+    //         id: id,
+    //         nickname: nickname
+    //       })
+    //     }
+    // });
+
+    const id = app.globalData.user.id
+    user = {
+      ...user,
+      id
+    }
 
     wx.request({
       header: wx.getStorageSync('headers'),
