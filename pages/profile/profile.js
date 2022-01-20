@@ -18,31 +18,87 @@ Page({
     ]
     },
     onShow: function () {
-      const page = this
-      wx.request({
-        header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
-        success(res) {
-          page.setData(res.data)
-        }
-      })
+      // const page = this
+      // wx.request({
+      //   header: wx.getStorageSync('headers'),
+      //   url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
+      //   success(res) {
+      //     page.setData(res.data)
+      //   }
+      // })
   },
 
     onLoad: function (options) {
+      if (wx.getUserProfile) {
+        this.setData({
+          canIUseGetUserProfile: true
+        })
+      };
       let page = this;
-      
-      wx.request({
-        header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
-        method:'GET',
-        success(res){
-          const user = res.data
-          page.setData(
-            user
-          )
+      wx.getStorage({
+        key: "user",
+        success: (res) => {
+          console.log("getstorage",res)
+          const nickname = userInfo.nickName
+          const id = res.data.id
+          page.setData({
+            nickname: nickname,
+            id: id
+          })
         }
-      });
+    });
+    wx.request({
+      url: `${getApp().globalData.baseUrl}/events`,
+      method: 'GET',
+      success(res) {
+          console.log(res.data)
+          page.setData({events: res.data.events})
+        }
+  });  
+      let id = this.data.id;
+
+      wx.request({
+        url: `${getApp().globalData.baseUrl}/users/${id}/reservations`,
+        method: 'GET',
+        success(res) {
+            console.log(res.data)
+            page.setData({reservations: res.data.reservations})
+          }
+    });  
+
     },
+
+      
+    // getEvents: function(){
+    //   const page = this
+    //   wx.request({
+    //     header: wx.getStorageSync('headers'),
+    //     url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
+    //     method: "GET",
+    //     success(res) {
+    //       const upcoming_events = res.data.upcoming_events;
+    //       const popular_events = res.data.popular_events;
+    
+    //       // console.log(events);
+    //       page.setData ({
+    //         upcoming_events: upcoming_events,
+    //         popular_events: popular_events
+    //       })
+    //     }
+    //   })
+    // },
+    //   wx.request({
+    //     header: wx.getStorageSync('headers'),
+    //     url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
+    //     method:'GET',
+    //     success(res){
+    //       const user = res.data
+    //       page.setData(
+    //         user
+    //       )
+    //     }
+    //   });
+    // },
       // checkingHostOrNot: function(e) {
       //   console.log('checking host or not',e)
       //   // let currentUser = wx.getStorageSync('user')
@@ -88,22 +144,9 @@ wx.navigateTo({
     wx.navigateTo({
       url: '/pages/maintest/main',
     })
-      },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    // if (wx.checkingHostOrNot) {
-    //     this.setData({
-    //       hostOrNot: true
-    //     })
-
-    }
-
-
-
   },
+
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -174,4 +217,5 @@ wx.navigateTo({
     onShareAppMessage: function () {
 
     }
-})
+  
+    })
