@@ -1,6 +1,7 @@
 // app.js
 App({
   onLaunch() {
+    
     // 展示本地存储能力
     // let user = wx.getStorageSync("user")
     // if (user) {
@@ -35,9 +36,10 @@ App({
       })
     // }
   },
+
   globalData: {
     userInfo: null,
-    baseUrl: "http://localhost:3000/api/v1"
-    // baseUrl: "https://happyours.shanghaiwogeng.com/api/v1"
+    // baseUrl: "http://localhost:3000/api/v1"
+    baseUrl: "https://happyours.shanghaiwogeng.com/api/v1"
   }
 })

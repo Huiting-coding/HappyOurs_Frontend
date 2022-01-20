@@ -1,3 +1,8 @@
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
+
 <view class="page">
 <view class='header'>
   <text class='h1'> Booking Your Happy Hours </text>

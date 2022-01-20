@@ -1,6 +1,11 @@
 <!--pages/profile/profile.wxml-->
+
 <view class="yellowBackground h100">
-    <block class="yellowBackground h100" wx:if="{{!hasUserInfo}}">
+  <block class="yellowBackground h100" wx:if="{{!hasUserInfo}}">
+    <view class="logo-container">
+        <image class="logo" src="/photos/yellowlogo.png">
+        </image>
+     </view>
       <!-- <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> LOGIN </view> -->
       <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class= "card1 pt20 pb20">
         <view class=" flex column px80 items-center">

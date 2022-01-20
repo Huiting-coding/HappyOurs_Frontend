@@ -1,7 +1,13 @@
 
 <!--pages/eventdetails/eventdetails.wxml-->
 <!-- <text>pages/eventdetails/eventdetails.wxml</text> -->
+<view class="logo-container">
+  <image class="logo" src="/photos/yellowlogo.png">
+  </image>
+</view>
+
 <view class="contain">
+
   <view> 
     <!-- <view class="flex justify-between">
       <image class= "icons1" bindtap="bindViewTap" src="/pages/eventdetails/back.png"></image>
@@ -46,7 +52,7 @@
 
       <view>
         <image class="icons" src="/pages/eventdetails/hourglass (1).png">icon</image>
-        <text class="headerTitle">{{event.duration/60}} hours</text>
+        <text class="headerTitle">{{event.duration}} mins</text>
       </view>
 
     </view>
