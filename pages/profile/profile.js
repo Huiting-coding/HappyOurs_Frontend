@@ -1,4 +1,5 @@
 // pages/profile/profile.js
+const app = getApp()
 Page({
 
     /**
@@ -11,38 +12,93 @@ Page({
     hostOrNot: true,
     eventsForTest:
     [
-        { event_name: "Gin Tasting", event_date: "2020-10-12", start_time:"7:00PM", location:"Jing'an", images_url:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
-        { event_name: "Wine Tasting",  event_date: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",images_url:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
+        { name: "Gin Tasting",begins_at: "2020-10-12", start_time:"7:00PM", location:"Jing'an", event_image_urls:"/pages/profile/kelsey-knight-udj2tD3WKsY-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"},
+        { name: "Wine Tasting",  begins_at: "2020-10-22", start_time:"9:00PM", location:"123 Julu Road",event_image_urls:"/pages/profile/espolon-tequila-HHGtAZHZPlM-unsplash.jpg"}
     ]
     },
     onShow: function () {
-      const page = this
-      wx.request({
-        header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
-        success(res) {
-          page.setData(res.data)
-        }
-      })
+      // const page = this
+      // wx.request({
+      //   header: wx.getStorageSync('headers'),
+      //   url: `${getApp().globalData.baseUrl}/items/${page.data.options.id}`,
+      //   success(res) {
+      //     page.setData(res.data)
+      //   }
+      // })
   },
 
     onLoad: function (options) {
-      let page = this;
-      
+      if (wx.getUserProfile) {
+        this.setData({
+          canIUseGetUserProfile: true
+        })
+      };
+        // const page = this
+        console.log('headers:', wx.getStorageSync('headers'));
+        const headers = wx.getStorageSync('headers')
+        console.log('heeadere',headers)
+        if (headers){
+          this.getUser()
+        }
+      },
+    getUser: function(options){
+      console.log('options',options)
+
+      const page = this
+      // const id= app.globalData.user.id
+      const user = wx.getStorageSync('user')
+      const id = user.id
+      // console.log('user',user)
+      console.log("id",id)
       wx.request({
         header: wx.getStorageSync('headers'),
-        url: `${getApp().globalData.baseUrl}/users/${page.data.options.id}`,
-        method:'GET',
-        success(res){
-          const user = res.data
-          page.setData(
-            user
-          )
+        url: `${getApp().globalData.baseUrl}/users/${id}`,
+        method: "GET",
+        success(res) {
+          console.log("get user by id",res)
+          page.setData({
+        eventsAsHost: res.data.events_as_Host,
+        eventsAsGoer: res.data.events_as_goer,
+        user: res.data.user
+          })
         }
-      });
+      })
     },
+
+  //   wx.request({
+  //     header: wx.getStorageSync('headers'),
+  //     url: `${getApp().globalData.baseUrl}/users/${id}`,
+  //     method: 'GET',
+  //     success(res) {
+  //         console.log("get user by id",res)
+  //         page.setData({
+  //       eventsAsHost: res.data.events_as_Host,
+  //       eventsAsGoer: res.data.events_as_goer,
+  //       user: res.data.user
+  //         })
+  //       }
+  // });  
+
+    //如何通过reeservation.event_id 取到events
+      // let id = this.data.id;
+      //如何通过eventID取她reservations? 
+      //如何通过user取到她的reservation
+      //user.reservations ---->array reeservation.event_id
+      //find event by event id
+
+    //   wx.request({
+    //     url: `${getApp().globalData.baseUrl}/events/${eventId}/reservations`,
+    //     method: 'GET',
+    //     success(res) {
+    //         console.log(res.data)
+    //         page.setData({reservations: res.data.reservations})
+    //       }
+    // });  
+
+    // },
+
       // checkingHostOrNot: function(e) {
       //   console.log('checking host or not',e)
       //   // let currentUser = wx.getStorageSync('user')
@@ -55,13 +111,13 @@ Page({
       //   // }
       // },
    
-    goToEventShow(e) {
-      console.log(e);
-      let id = e.currentTarget.dataset.id
-      wx.navigateTo({
-        url: `../eventdetails/eventdetails?id=${id}`
-      })
-    },
+    // goToEventShow(e) {
+    //   console.log(e);
+    //   let id = e.currentTarget.dataset.id
+    //   wx.navigateTo({
+    //     url: `../eventdetails/eventdetails?id=${id}`
+    //   })
+    // },
 
     backMain:function () {
       wx.switchTab({
@@ -94,22 +150,9 @@ wx.navigateTo({
     wx.navigateTo({
       url: '/pages/maintest/main',
     })
-      },
-  onLoad() {
-    if (wx.getUserProfile) {
-      this.setData({
-        canIUseGetUserProfile: true
-      })
-    // if (wx.checkingHostOrNot) {
-    //     this.setData({
-    //       hostOrNot: true
-    //     })
-
-    }
-
-
-
   },
+
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -120,9 +163,14 @@ wx.navigateTo({
         wx.getUserProfile({
           desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
           success: (res) => {
+            const userInfo = res.userInfo
             this.setData({
-              userInfo: res.userInfo,
-              hasUserInfo: true
+              // userInfo: res.userInfo,
+              hasUserInfo: true,
+              userInfo:{
+                nickName: userInfo.nickName,
+                avatarUrl: userInfo.avatarUrl
+              }
             })
             console.log('res:',res);
             console.log('userInfo:',userInfo);
@@ -180,4 +228,5 @@ wx.navigateTo({
     onShareAppMessage: function () {
 
     }
-})
+  
+    })

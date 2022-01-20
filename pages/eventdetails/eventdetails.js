@@ -74,7 +74,7 @@ Page({
         const event = res.data;
         console.log(event);
         page.setData ({
-          event: event
+          event: event,
         });
         wx.hideToast();
       }

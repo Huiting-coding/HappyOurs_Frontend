@@ -1,6 +1,12 @@
 /* pages/profile/profile.wxss */
 .yellowBackground{
     background-color:#FEFCF1;
+    min-height: 100vh;
+    background-size: 100% 100%;
+}
+
+.background {
+    background-color:#FEFCF1;
 }
 
 .card1{
@@ -13,7 +19,7 @@
 
 
 .orange1 {
-color: #E9B741;
+color:  #e7cca7;
 font-weight:lighter;
 
 
@@ -48,11 +54,11 @@ color: #C36A2D;
 }
 
 .eventinfo {
-padding:0rpx 120rpx 30rpx 120rpx;
-height: 400rpx;
+padding:0rpx 200rpx 30rpx 200rpx;
+height: 170rpx;
 }
 .eventimage{
-height: 400rpx;
+height:300rpx;
 /* width:350rpx; */
 object-fit: cover;
 /* position:relative; */
@@ -61,19 +67,24 @@ object-fit: cover;
 .swiper-item{
 /* height:1000rpx;
 width:350rpx; */
-border:2px solid #E9B741;
+/* border:1px solid #E9B741; */
 background-color: white;
+border-radius: 10rpx;
+box-shadow: 6px 4px 4px #e7cca7;
+height: 580rpx;
 /* margin: 10px; */
 }
+
+
 .containerforposition{
 position: relative;
 }
 
 .eventFilter{
-background-color: #5E8B7E;
+background-color:  #e7cca7;
 opacity: 0.8;
 color:white;
-font-size: 18px;
+font-size: 16px;
 font-weight:bold;
 justify-content: center;
 height: 120rpx;
@@ -82,3 +93,13 @@ position:absolute;
 bottom: 10rpx;
 align-items: center;
 }
+.search-bar {
+    display: flex;
+    margin-top: 10rpx;
+    border: 2px solid #E9B741;
+    box-sizing: border-box;
+    border-radius: 32rpx;
+    align-items: center;
+    padding: 20rpx;
+    box-shadow: 0px 4px 0px #e7cca7;
+  }
