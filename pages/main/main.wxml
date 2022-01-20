@@ -31,6 +31,8 @@
               </view>
             </view>
           </scroll-view>
+        </view>
+      </view>
     </view>
 
   <view class="mt30 ml30 mr30 mb40">
