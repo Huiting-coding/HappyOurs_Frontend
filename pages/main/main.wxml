@@ -5,32 +5,33 @@
     <image class="logo" src="/photos/yellowlogo.png">
     </image>
   </view>
-
-  <view class="card-wrapper items-center ">
-    <!-- <view class="popular-events"> -->
-      <view class="mt20 ml40 titleDesign">Popular Events</view>
-      <view class="page-body">
-            <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-              <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
-                <view  class="flex upcomingEvent ml">
-                  <view class="ma20" style="width: 150px; height: 200px;" >
-                    <image class="upcomingImage" src="{{event.event_image_urls[0]}}"></image>
-                    <view class="flex justify-between">
-                      <text class="mt10" style="font-weight: bold; color: black;">{{event.drink}} </text>
-                      <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}"></image>
-                    </view>
-                    <view class="breaker1" style="color: black; font-weight: normal;">
-                    {{event.name}}
-                    </view>
-                    <view class="mt20 flex">
-                      <view class="circleJoined">+12{{event.seat_confirmed}}</view>
-                      <text class="joinedAlign">Joined</text>
-                    </view> 
+  
+  <view>
+    <view class="mt30 ml40 titleDesign">Popular Events</view>
+    <view class="page-body">
+      <view class="page-section">
+        <view class="page-section-spacing">
+          <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+            <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
+              <view  class="flex upcomingEvent ml">
+                <view class="ma20" style="width: 150px; height: 200px;" >
+                  <image class="upcomingImage" src="{{event.event_image_urls[0]}}"></image>
+                  <view class="flex justify-between">
+                    <text class="mt10" style="font-weight: bold; color: #E9B741;">{{event.drink_type}} </text>
+                    <image class="avatar" alt="avatar" src="{{tools.shifter(event.drink_type)}}"></image>
                   </view>
+                  <view class="breaker1" style="color: black; font-weight: normal;">
+                  {{event.name}}
+                  </view>
+                  <view class="mt20 flex">
+                    <view class="circleJoined">+12{{event.seat_confirmed}}</view>
+                    <text class="joinedAlign">Joined</text>
+                  </view> 
                 </view>
               </view>
-            </scroll-view>
-      </view>
+            </view>
+          </scroll-view>
+    </view>
 
   <view class="mt30 ml30 mr30 mb40">
     <text class="titleDesign">Upcoming Events</text>
@@ -43,13 +44,13 @@
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
-            <view class="flex" style="position: relative; left: 35px;">
+            <view class="flex" style="position: relative; left: 60px;">
               <view>
                 <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
               </view>
-              <view>
-                <text>{{event.drink}}</text>
-              </view>
+              <!-- <view class="">
+                <text>{{event.drink_type}}</text>
+              </view> -->
             </view> 
 
             <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
@@ -59,7 +60,7 @@
                 </view> 
                 <view style="position: relative; text-align: bottom; top: 20px;">
                   <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                  <text style="font-weight: normal;">{{event.event_date}}</text>
+                  <text style="font-weight: normal;">{{event.begins_at}}</text>
                 </view>
               </view>
             </view>
