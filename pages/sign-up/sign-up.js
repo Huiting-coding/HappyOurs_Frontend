@@ -45,8 +45,8 @@ Page({
       method: 'POST',
       data: reservation,
       success() {
-        wx.redirectTo({
-          url: '/pages/confirmation/confirmation',
+        wx.switchTab({
+          url: '/pages/main/main',
         });
       }
     });
