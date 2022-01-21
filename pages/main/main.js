@@ -100,7 +100,7 @@ Page({
         const upcoming_events = res.data.upcoming_events;
         const popular_events = res.data.popular_events;
   
-        // console.log(events);
+        // console.log(upcoming_events);
         page.setData ({
           upcoming_events: upcoming_events,
           popular_events: popular_events

@@ -62,7 +62,7 @@
                 </view> 
                 <view style="position: relative; text-align: bottom; top: 20px;">
                   <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                  <text style="font-weight: normal;">{{event.date}}</text>
+                  <text style="font-weight: normal;">{{event.begins_at}}</text>
                 </view>
               </view>
             </view>
