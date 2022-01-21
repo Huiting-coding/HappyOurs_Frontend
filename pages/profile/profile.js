@@ -58,10 +58,11 @@ Page({
         method: "GET",
         success(res) {
           console.log("get user by id",res)
+          const events_as_host = res.data.user.events_as_host;
+          const events_as_goer = res.data.user.events_as_goer;
           page.setData({
-        eventsAsHost: res.data.events_as_Host,
-        eventsAsGoer: res.data.events_as_goer,
-        user: res.data.user
+            events_as_host: events_as_host,
+            events_as_goer: events_as_goer,
           })
         }
       })
