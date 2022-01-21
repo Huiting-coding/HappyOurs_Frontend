@@ -85,7 +85,7 @@
             <text class="f40 semibold  redtext ">Your Next Happy Hours</text>
             <view class="pt20">
             <swiper snap-to-edge="false" display-multiple-items="1" style="height:480rpx;" previous-margin="0rpx" next-margin="0rpx" >
-                <block wx:for="{{events_as_host}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="goToEventShow">
+                <block wx:for="{{events_as_host}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
                 <swiper-item class="swiper-item flex column text-left" >
                     <!-- <view > -->
                         <view class= "containerforposition">
