@@ -73,8 +73,8 @@
     </view>
   </view>
 
-  <view>
-    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat" href="#">Book now</view>
+  <view class="mb30">
+    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat mb50 mt50" href="#">Book now</view>
   </view>
 
 </view>
