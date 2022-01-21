@@ -178,7 +178,13 @@ wx.navigateTo({
           }
         })
       },
-
+      bindViewTap(e) {
+        console.log(e);
+        let id = e.currentTarget.dataset.id
+        wx.navigateTo({
+          url: `../eventdetails/eventdetails?id=${id}`
+        })
+      },
       
 
     /**
