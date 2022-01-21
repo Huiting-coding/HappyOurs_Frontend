@@ -60,7 +60,7 @@
   <view class="gallery">
     <text class="headerTitle">Description</text>
     <view class="mt10 ml15">
-      <text style="color: black;">{{event.description}}</text>
+      <text style="color: black;">{{event.summary}}</text>
     </view>
   </view>
 

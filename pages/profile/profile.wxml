@@ -84,7 +84,7 @@
         <view class="pt20 card3 px50 text-right">
             <text class="f40 semibold  redtext ">Your Next Happy Hours</text>
             <view class="pt20">
-            <swiper snap-to-edge="false" display-multiple-items="1" style="height:480rpx;" previous-margin="0rpx" next-margin="0rpx" >
+            <swiper snap-to-edge="false" display-multiple-items="1" style="height:560rpx;" previous-margin="0rpx" next-margin="0rpx" >
                 <block wx:for="{{events_as_host}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
                 <swiper-item class="swiper-item flex column text-left" >
                     <!-- <view > -->
@@ -116,6 +116,31 @@
                     <!-- </view> -->
                 </swiper-item>
                 </block>
+
+                <block wx:for="{{events_as_goer}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
+                    <swiper-item class="swiper-item flex column text-left" >
+                        <!-- <view > -->
+                            <view class= "containerforposition">
+                                <image class= "eventimage" src="{{event.event_image_urls[0]}}"></image>
+                            </view>
+                            <view class="eventinfo flex column px30 mx40">
+                                <text class="semibold redtext f28 my" >{{event.name}}</text>
+                                <view>
+                                    <view class="flex row text-left orange1">
+                                        <image class="icon-mini mr40" src="/pages/eventdetails/calendar.png"> icon</image>
+                                        <text class="text-left">{{event.begins_at}}</text>
+                                    </view>
+                                    <view class="flex row  text-left orange1">
+                                        <image class="icon-mini mr40" src="/pages/eventdetails/location.png">icon</image>
+                                        <text>{{event.location}}</text>
+                                    </view>
+                                </view>
+                                <!-- <text>{{event.start_time}}</text>
+                                <text>{{event.location}}</text> -->
+                            </view>
+                        <!-- </view> -->
+                    </swiper-item>
+                    </block>
             </swiper>
             </view>
         </view>

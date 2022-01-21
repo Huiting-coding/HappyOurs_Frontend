@@ -55,10 +55,10 @@ color: #C36A2D;
 
 .eventinfo {
 padding:0rpx 200rpx 30rpx 200rpx;
-height: 170rpx;
+height: 200rpx;
 }
 .eventimage{
-height:300rpx;
+height:380rpx;
 /* width:350rpx; */
 object-fit: cover;
 /* position:relative; */
@@ -71,7 +71,7 @@ width:350rpx; */
 background-color: white;
 border-radius: 10rpx;
 box-shadow: 6px 4px 4px #e7cca7;
-height: 580rpx;
+height: 600rpx;
 /* margin: 10px; */
 }
 
