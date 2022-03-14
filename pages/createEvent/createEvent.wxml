@@ -52,7 +52,7 @@
         <view class="flex row pickerspace">
         <view class ="flex column ">
           <view class="page-section-title">START AT</view>
-          <picker name= "startTime" mode="time" value="{{time}}" start="09:01" end="23:01" bindchange="bindTimeChange">
+          <picker name= "startTime" mode="time" value="{{time}}" start="07:00" end="24:00" bindchange="bindTimeChange">
             <view class="greyinputarea flex row items-center">
               <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
               {{time}}
@@ -63,10 +63,14 @@
 
         <view class ="flex column ml80">
           <view class="page-section-title">END AT</view>
-          <picker name= "endTime" mode="time" value="{{endtime}}" start="09:01" end="21:01" bindchange="bindEndTimeChange">
+          <picker name= "endTime" mode="time" value="{{endtime}}" start="07:00" end="24:00" bindchange="bindEndTimeChange">
           <view class="greyinputarea flex row items-center">
               <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
-              {{endtime}}
+             <block>
+              <view wx:if = "{{endTime > startTime}}">{{endtime}}</view> 
+              <view wx:else bindconfirm="notice" ></view> 
+              </block>
+             
             
           </view>
           </picker>
