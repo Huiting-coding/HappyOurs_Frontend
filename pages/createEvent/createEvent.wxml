@@ -67,8 +67,7 @@
           <view class="greyinputarea flex row items-center">
               <image class= "icon-sm ml" src="/pages/createEvent/coolicon.png"></image>
              <block>
-              <view wx:if = "{{endTime > startTime}}">{{endtime}}</view> 
-              <view wx:else bindconfirm="notice" ></view> 
+              <view>{{endtime}}</view> 
               </block>
              
             
