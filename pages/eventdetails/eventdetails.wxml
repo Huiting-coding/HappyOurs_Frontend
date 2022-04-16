@@ -58,7 +58,7 @@
   </view>
   
   <view class="gallery">
-    <text class="headerTitle">Description</text>
+    <text class="headerTitle">About this HappyOurs</text>
     <view class="mt10 ml15">
       <text style="color: black;">{{event.summary}}</text>
     </view>
@@ -74,7 +74,7 @@
   </view>
 
   <view class="mb30">
-    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat mb50 mt50" href="#">Book now</view>
+    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat mb100 mt50" href="#">Join this HappyOurs</view>
   </view>
 
 </view>

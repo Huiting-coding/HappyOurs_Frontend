@@ -7,10 +7,10 @@
   </view>
   
   <view>
-    <view class="mt30 ml40 titleDesign">Popular Events</view>
+    <view class="mt30 ml50 titleDesign f40">Popular HappyOurs 💥</view>
     <view class="page-body">
       <view class="page-section">
-        <view class="page-section-spacing">
+        <view class="page-section-spacing ml20">
           <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
             <view id="demo1" class="scroll-view-item_H demo-text-1" wx:for="{{popular_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}" bindtap="bindViewTap">
               <view  class="flex upcomingEvent ml">
@@ -24,7 +24,7 @@
                   {{event.name}}
                   </view>
                   <view class="mt20 flex">
-                    <view class="circleJoined">+12{{event.seat_confirmed}}</view>
+                    <view class="circleJoined">+12 {{event.seat_confirmed}}</view>
                     <text class="joinedAlign">Joined</text>
                   </view> 
                 </view>
@@ -35,18 +35,17 @@
      </view>
     </view>
 
-  <view class="mt30 ml30 mr30 mb40">
-    <text class="titleDesign">Upcoming Events</text>
+  <view class=" ml50 mr30 mb10">
+    <text class="titleDesign f40 ml15">Upcoming HappyOurs 👀</text>
   </view>
 
   <view class="containerEvents">
-
     <view bindtap="bindViewTap" class="ma10 popularBackground flex" wx:for="{{upcoming_events}}" wx:for-item="event" wx:key="*this" data-id="{{event.id}}">
       <image src="{{event.event_image_urls[0]}}" class="popularImage"></image>
       <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
         <view>
           <view>
-            <view class="flex" style="position: relative; left: 60px;">
+            <view class="flex" style="position: relative; left: 60px; justify-content: center;">
               <view>
                 <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
               </view>
@@ -55,7 +54,7 @@
               </view> -->
             </view> 
 
-            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+            <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 90px; width: 160px; text-align: center;">
               <view>
                 <view>
                   <text class="breaker1" style="position: relative; top: 10px;">{{event.name}}</text>

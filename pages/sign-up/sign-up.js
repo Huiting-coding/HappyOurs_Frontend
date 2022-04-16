@@ -17,8 +17,12 @@ Page({
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('seats number choosen',this.data.array[e.detail.value]);
+    const seats = this.data.array[e.detail.value]
+
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
+      seats: seats
     })
   },
   
@@ -28,8 +32,8 @@ Page({
     })
   },
 
-  bindSubmit: function (e) {
-    console.log('=====24===', e.detail.value);
+  formSubmit: function (e) {
+    console.log('=====24===', e.detail);
     let page = this
     let reservation = e.detail.value
     console.log('=====reservation====', reservation);

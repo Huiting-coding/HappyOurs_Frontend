@@ -20,15 +20,15 @@
 }
 
 .popularImage {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 10px;
 }
 .popularBackground {
-  background-color: #FFE4A5;
+  background-color: #f5ead0;
   border-radius: 10px;
   margin: 10px;
-  height: 120px;
+  height: 140px;
   width: 320px;
   padding: 10px;
   align-items: center;

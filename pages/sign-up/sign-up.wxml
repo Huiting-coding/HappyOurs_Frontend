@@ -4,52 +4,50 @@
 </view>
 
 <view class="page">
-<view class='header'>
-  <text class='f48'> Booking Your Happy Hours </text>
-</view>
-
-<view class='eventinfo pa40 py40 rounded'>
-  <text class='h1'> Secure your seats in {{event.name}} </text>
-  <text class='h1'> {{event.summary}} </text> 
-  <text class='h1'> It will start at {{event.datetime}} </text>
-</view>
-
-<form catchsubmit="bindSubmit" catchreset="formReset">
-  <view class="page-section">
-      <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
-      <picker  bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
-        <view class="page-section-answer rounded" style="margin: 30rpx 0" placeholder= "2 seats">
-          {{array[index]}}
-        </view>
-      </picker>
+  <view class='header'>
+    <text class='f40'> Booking Your Happy Hours </text>
   </view>
 
-  <view class="page-section">
-      <view class="page-section-title" style="margin: 30rpx 0">Phone number</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-                <input class="page-section-answer rounded" name="phonenumber" placeholder= "132435367"/>
-            </view>
+  <view class='eventinfo pa40 py40 rounded'>
+    <text class='h1'> Secure your seats in: </text>
+    <text class='h1'> {{event.name}} </text>
+    <text class='h1'> {{event.summary}} </text> 
+    <text class='h1 mt20'> It will start at: </text>
+    <text class='h1'> {{event.datetime}} </text> 
+  </view>
+
+  <form bindsubmit="formSubmit" catchreset="formReset">
+    <view class="page-section">
+        <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
+        <picker mode="selector" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+          <view class="page-section-answer rounded" style="margin: 30rpx 0" placeholder= "2 seats">
+            {{array[index]}}
           </view>
+        </picker>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title" style="margin: 30rpx 0">Phone number</view>
+      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+        <input class="page-section-answer rounded" name="phonenumber" placeholder= "123435367"/>
       </view>
-  </view>
+    </view>
 
-  <view class='h3'> The event booking details will be displayed on your profile! </view>
+    <view class='h3'> The event booking details will be displayed on your profile! </view>
 
-  <view class="btn-area">
-    <button formType="submit">Submit</button>
-    <!-- <button formType="reset">Reset</button> -->
-  </view>
+    <view class="btn-area">
+      <button formType="submit">Submit</button>
+      <!-- <button formType="reset">Reset</button> -->
+    </view>
 
-  <!-- <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
-    <view> Your reservation is as below: </view>
-    <view> Happy Event:{{event.name}} </view>
-    <view> Happy Date:{{event.begins_at}} </view>
-    <view> Number of seats:{{array[index]}} </view>
-    <view> Phone Number：{{phoneNumber}} </view>
-  </modal> -->
-</form>
+    <!-- <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+      <view> Your reservation is as below: </view>
+      <view> Happy Event:{{event.name}} </view>
+      <view> Happy Date:{{event.begins_at}} </view>
+      <view> Number of seats:{{array[index]}} </view>
+      <view> Phone Number：{{phoneNumber}} </view>
+    </modal> -->
+  </form>
 </view>
 
 

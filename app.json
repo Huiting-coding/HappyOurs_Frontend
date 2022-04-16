@@ -25,7 +25,7 @@
       "selectedIconPath": "photos/search.png"
     }, {
       "pagePath": "pages/createEvent/createEvent",
-      "text": "Create",
+      "text": "Host",
       "iconPath": "photos/plus.png",
       "selectedIconPath": "photos/plus.png"
     }, {

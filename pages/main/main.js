@@ -80,27 +80,20 @@ Page({
    */
   onLoad: function (options) {
     const page = this
-    console.log('headers:', wx.getStorageSync('headers'));
-    const headers = wx.getStorageSync('headers')
-    if (headers){
-      this.getEvents()
-    }
-    else {
-      // wx.event.on('headersready', this, this.getEvents)
-    }
-  },
+    console.log('headers:', wx.getStorageSync('header'));
+    const header = wx.getStorageSync('header')
+    const auth = wx.getStorageSync('auth')
 
-  getEvents: function(){
-    const page = this
     wx.request({
-      header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events`, 
+      header: header,
       method: "GET",
       success(res) {
+        console.log(res.data);
         const upcoming_events = res.data.upcoming_events;
         const popular_events = res.data.popular_events;
   
-        // console.log(upcoming_events);
+        console.log(upcoming_events);
         page.setData ({
           upcoming_events: upcoming_events,
           popular_events: popular_events
@@ -108,6 +101,7 @@ Page({
       }
     })
   },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered
