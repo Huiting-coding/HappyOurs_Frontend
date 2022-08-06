@@ -3,6 +3,9 @@ const app = getApp()
 const chooseLocation = requirePlugin('chooseLocation');
 
 Page({
+  data:{
+    endtime :''
+  },
   showLocation: function(e) {
     const page = this;
     wx.chooseLocation({
@@ -50,8 +53,6 @@ Page({
     let event = {
       name: name,
       summary: summary,
-      // begins_at: date + '' + startTime,
-      // duration: startTime.to -
       location: location.address,
       latitude: location.latitude,
       longitude: location.longitude,
@@ -133,19 +134,40 @@ Page({
         this.setData({
           date: e.detail.value
         })
+
       },
+
     bindTimeChange: function (e){
         console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
           time: e.detail.value
-        })
+        });
+       app.globalData.time = e.detail.value
     },
 
     bindEndTimeChange: function (e){
       console.log('picker发送选择改变，携带值为', e.detail.value)
+      console.log(app.globalData)
       this.setData({
         endtime: e.detail.value
       })
+      let endTime = parseInt(e.detail.value);
+      let startTime = parseInt(app.globalData.time)
+      console.log(endTime)
+      console.log(startTime)
+      if (endTime <= startTime){
+      wx.showModal({
+        title: '🕰',
+        content: 'Please choose a valid time for your event',
+        success (res) {
+          if (res.confirm) {
+        
+             endtime: ''
+          
+          }
+        }
+      })
+    }
   },
 
     bindPickerChange: function (e) {
