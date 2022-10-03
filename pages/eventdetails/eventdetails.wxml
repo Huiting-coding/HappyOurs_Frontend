@@ -74,7 +74,7 @@
   </view>
 
   <view class="mb30">
-    <view data-id="{{event.id}}" bindtap="bindTap" class="btn btn-flat mb100 mt50" href="#">Join this HappyOurs</view>
+    <view data-id="{{event.id}}" bindtap="reserve" class="btn btn-flat mb100 mt50" href="#">Join this HappyOurs</view>
   </view>
 
 </view>

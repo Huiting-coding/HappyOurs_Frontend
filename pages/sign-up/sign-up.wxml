@@ -19,7 +19,7 @@
   <form bindsubmit="formSubmit" catchreset="formReset">
     <view class="page-section">
         <view class="page-section-title" style="margin: 30rpx 0">Number of seats</view>
-        <picker mode="selector" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+        <picker mode="selector" bindchange="bindPickerChange" name="seats" value="{{array[index]}}" range="{{array}}">
           <view class="page-section-answer rounded" style="margin: 30rpx 0" placeholder= "2 seats">
             {{array[index]}}
           </view>
@@ -28,7 +28,7 @@
 
     <view class="page-section">
       <view class="page-section-title" style="margin: 30rpx 0">Phone number</view>
-      <view class="weui-cell__bd" style="margin: 30rpx 0" >
+      <view style="margin: 30rpx 0" >
         <input class="page-section-answer rounded" name="phonenumber" placeholder= "123435367"/>
       </view>
     </view>
@@ -36,7 +36,7 @@
     <view class='h3'> The event booking details will be displayed on your profile! </view>
 
     <view class="btn-area">
-      <button formType="submit">Submit</button>
+      <button formType="submit">Book my Happy Hour!</button>
       <!-- <button formType="reset">Reset</button> -->
     </view>
 

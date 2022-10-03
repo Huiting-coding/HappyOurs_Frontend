@@ -1,0 +1,23 @@
+{
+  "name": "happyours_frontend",
+  "version": "1.0.0",
+  "description": "<h3>## About HappyOurs🍻</h3>",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.10.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huiting-coding/HappyOurs_Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huiting-coding/HappyOurs_Frontend/issues"
+  },
+  "homepage": "https://github.com/Huiting-coding/HappyOurs_Frontend#readme"
+}

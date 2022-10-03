@@ -86,6 +86,9 @@ Page({
 
     wx.request({
       url: `${getApp().globalData.baseUrl}/events`, 
+      data: {
+        x: '',
+        and: '' },
       header: header,
       method: "GET",
       success(res) {
