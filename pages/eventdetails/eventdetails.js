@@ -87,7 +87,7 @@ Page({
     })
   },
 
-  bindTap(e) {
+  reserve(e) {
     console.log(e);
     let eventId = e.currentTarget.dataset.id
     wx.navigateTo({

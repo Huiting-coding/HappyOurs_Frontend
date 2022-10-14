@@ -1,5 +1,6 @@
 <!--pages/search/search.wxml-->
 <!-- <text>pages/search/search.wxml</text> -->
+<wxs src="/pages/main/tools.wxs" module="tools"></wxs>
 
 <view class="logo-container">
   <image class="logo" src="/photos/yellowlogo.png">
@@ -21,7 +22,7 @@
     <view class="card-product" style="width: 150px; height:100px;color: black; font-weight: bold; position: relative; left: 15px;">
       <view>
         <view>
-          <view class="flex" style="position: relative; left: 35px;">
+          <view class="flex" style="position: relative; left: 60px; justify-content: center;">
             <view>
               <image src="{{tools.shifter(event.drink_type)}}" class="avatar" style="position: relative; bottom: 5px;"></image>
             </view>
@@ -30,14 +31,15 @@
             </view>
           </view> 
 
-          <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 80px; width: 160px; text-align: center;">
+          
+          <view style="background-color: rgb(247, 189, 113); border-radius: 5%; position: relative; height: 90px; width: 160px; text-align: center;">
             <view>
               <view>
                 <text class="breaker1" style="position: relative; top: 10px;">{{event.name}}</text>
               </view> 
               <view style="position: relative; text-align: bottom; top: 20px;">
                 <image style="width: 15px; height: 15px;" src="/pages/eventdetails/calendar.png"></image>
-                <text style="font-weight: normal;">{{event.date}}</text>
+                <text style="font-weight: normal;">{{event.begins_at}}</text>
               </view>
             </view>
           </view>

@@ -17,28 +17,27 @@ Page({
 
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('seats number choosen',this.data.array[e.detail.value]);
+    const seats = this.data.array[e.detail.value]
+
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
+      seats: seats
     })
-  },
-  
-  backMain:function () {
-    wx.switchTab({
-      url: '../main/main',
-    })
+
   },
 
-  bindSubmit: function (e) {
+  formSubmit: function (e) {
     console.log('=====24===', e.detail.value);
     let page = this
     let reservation = e.detail.value
     console.log('=====reservation====', reservation);
 
-    const userId = app.globalData.user.id
-    reservation = {
-      ...reservation,
-      userId
-    }
+    // const userId = app.globalData.user.id
+    // reservation = {
+    //   ...reservation,
+    //   userId
+    // }
     wx.request({
       header: wx.getStorageSync('headers'),
       url: `${getApp().globalData.baseUrl}/events/${page.data.event.id}/reservations`,
@@ -46,7 +45,7 @@ Page({
       data: reservation,
       success() {
         wx.switchTab({
-          url: '/pages/main/main',
+          url: `../reserveDetail/reserveDetail?id=${reservationId}`
         });
       }
     });
@@ -59,24 +58,11 @@ Page({
       })
     },
 
-    // modalChange: function(e) {
-    //   // this.setData({
-    //   //   modalHidden: true
-    //   // })
-    //   console.log(e);
-
-    //   wx.request({
-    //     header: wx.getStorageSync('headers'),
-    //     url: `${getApp().globalData.baseUrl}/events/${data.id}/reservations`,
-    //     method: 'POST',
-    //     data: reservation,
-    //     success() {
-    //       wx.redirectTo({
-    //         url: '../confirmation/confirmation',
-    //       });
-    //     }
-    //   });
-    // },
+    backMain:function () {
+      wx.switchTab({
+        url: '../main/main',
+      })
+    },
 
   /**
    * Lifecycle function--Called when page load
